@@ -1,0 +1,11 @@
+# Raw and respondent-level data: never commit (ODbL; size)
+data_raw/
+data_clean/
+scratch/
+*.pkl
+*.parquet
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+.DS_Store

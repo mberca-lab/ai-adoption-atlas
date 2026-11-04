@@ -1,0 +1,5 @@
+year,rows,exact_dup,low_content,screened_out,excluded,years_implausible,ai_inconsistent,straightline_flag,under18,ai_select_answered,default_base,median_items_answered
+2023,89184,1203,1214,1211,1214,68,0,915,4128,87973,87970,56
+2024,65437,487,2023,0,2023,75,0,412,2568,60907,60592,70
+2025,49191,1547,5271,0,5271,159,151,0,0,33720,33719,99
+2026,30903,1055,3872,0,3873,130,96,2092,969,17464,17462,54

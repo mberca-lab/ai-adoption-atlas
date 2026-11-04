@@ -1,0 +1,108 @@
+year,item,ai_use_status,n,pct_answered
+2023,AISent,Using,39040,99.8
+2023,AISent,"Not using, no plans",26221,0
+2023,AISent,Plan to use,22709,99.3
+2023,AIBen,Using,39040,99.6
+2023,AIBen,"Not using, no plans",26221,0
+2023,AIBen,Plan to use,22709,99.1
+2023,AIAcc,Using,39040,98.9
+2023,AIAcc,"Not using, no plans",26221,0
+2023,AIAcc,Plan to use,22709,0
+2023,AIToolCurrently Using,Using,39040,92.6
+2023,AIToolCurrently Using,"Not using, no plans",26221,0
+2023,AIToolCurrently Using,Plan to use,22709,0
+2023,AIDevHaveWorkedWith,Using,39040,53.3
+2023,AIDevHaveWorkedWith,"Not using, no plans",26221,6.7
+2023,AIDevHaveWorkedWith,Plan to use,22709,14.6
+2023,AISearchHaveWorkedWith,Using,39040,91
+2023,AISearchHaveWorkedWith,"Not using, no plans",26221,29.4
+2023,AISearchHaveWorkedWith,Plan to use,22709,57.8
+2024,AISent,Using,37457,99.7
+2024,AISent,"Not using, no plans",14790,0
+2024,AISent,Plan to use,8345,99.3
+2024,AISent,(AISelect missing),2822,0
+2024,AIAcc,Using,37457,99.4
+2024,AIAcc,"Not using, no plans",14790,0
+2024,AIAcc,Plan to use,8345,0
+2024,AIAcc,(AISelect missing),2822,0
+2024,AIBen,Using,37457,98.3
+2024,AIBen,"Not using, no plans",14790,0
+2024,AIBen,Plan to use,8345,0
+2024,AIBen,(AISelect missing),2822,0
+2024,AIComplex,Using,37457,98.7
+2024,AIComplex,"Not using, no plans",14790,0
+2024,AIComplex,Plan to use,8345,0
+2024,AIComplex,(AISelect missing),2822,0
+2024,AIThreat,Using,37457,97
+2024,AIThreat,"Not using, no plans",14790,0
+2024,AIThreat,Plan to use,8345,99.6
+2024,AIThreat,(AISelect missing),2822,0
+2024,AIChallenges,Using,37457,81.9
+2024,AIChallenges,"Not using, no plans",14790,0
+2024,AIChallenges,Plan to use,8345,82.3
+2024,AIChallenges,(AISelect missing),2822,0
+2024,AIEthics,Using,37457,90
+2024,AIEthics,"Not using, no plans",14790,0
+2024,AIEthics,Plan to use,8345,93.8
+2024,AIEthics,(AISelect missing),2822,0
+2024,AIToolCurrently Using,Using,37457,93.6
+2024,AIToolCurrently Using,"Not using, no plans",14790,0
+2024,AIToolCurrently Using,Plan to use,8345,0
+2024,AIToolCurrently Using,(AISelect missing),2822,0
+2024,AISearchDevHaveWorkedWith,Using,37457,90.7
+2024,AISearchDevHaveWorkedWith,"Not using, no plans",14790,34
+2024,AISearchDevHaveWorkedWith,Plan to use,8345,62.3
+2024,AISearchDevHaveWorkedWith,(AISelect missing),2822,9.1
+2025,AISent,Using,26469,99.1
+2025,AISent,"Not using, no plans",5453,99.5
+2025,AISent,(AISelect missing),10201,0.4
+2025,AISent,Plan to use,1797,98.4
+2025,AIAcc,Using,26469,98.7
+2025,AIAcc,"Not using, no plans",5453,98.7
+2025,AIAcc,(AISelect missing),10201,0.4
+2025,AIAcc,Plan to use,1797,97.6
+2025,AIComplex,Using,26469,98.7
+2025,AIComplex,"Not using, no plans",5453,98.6
+2025,AIComplex,(AISelect missing),10201,0.4
+2025,AIComplex,Plan to use,1797,96.8
+2025,AIThreat,Using,26469,98.9
+2025,AIThreat,"Not using, no plans",5453,95.9
+2025,AIThreat,(AISelect missing),10201,28.9
+2025,AIThreat,Plan to use,1797,95
+2025,AIAgents,Using,26469,94.4
+2025,AIAgents,"Not using, no plans",5453,96.3
+2025,AIAgents,(AISelect missing),10201,0.4
+2025,AIAgents,Plan to use,1797,90.8
+2025,AIFrustration,Using,26469,93.8
+2025,AIFrustration,"Not using, no plans",5453,92.8
+2025,AIFrustration,(AISelect missing),10201,0.3
+2025,AIFrustration,Plan to use,1797,89
+2025,AIAgentExternal,Using,26469,30.6
+2025,AIAgentExternal,"Not using, no plans",5453,1.8
+2025,AIAgentExternal,(AISelect missing),10201,0.1
+2025,AIAgentExternal,Plan to use,1797,6.8
+2025,AIToolCurrently partially AI,Using,26469,75.2
+2025,AIToolCurrently partially AI,"Not using, no plans",5453,11.2
+2025,AIToolCurrently partially AI,(AISelect missing),10201,0.1
+2025,AIToolCurrently partially AI,Plan to use,1797,28
+2026,AISentiment,Using,14556,99.1
+2026,AISentiment,Not using (no plan option),2906,0
+2026,AISentiment,(AISelect missing),9568,0
+2026,AITrust,Using,14556,98.3
+2026,AITrust,Not using (no plan option),2906,0
+2026,AITrust,(AISelect missing),9568,0
+2026,AIComplex,Using,14556,98.5
+2026,AIComplex,Not using (no plan option),2906,0
+2026,AIComplex,(AISelect missing),9568,0
+2026,AIWorkCurrentlyUse,Using,14556,77
+2026,AIWorkCurrentlyUse,Not using (no plan option),2906,0
+2026,AIWorkCurrentlyUse,(AISelect missing),9568,0
+2026,AICodeAgentHaveWorkedWith,Using,14556,75.8
+2026,AICodeAgentHaveWorkedWith,Not using (no plan option),2906,20.5
+2026,AICodeAgentHaveWorkedWith,(AISelect missing),9568,1.1
+2026,Disruption,Using,14556,78.7
+2026,Disruption,Not using (no plan option),2906,57.7
+2026,Disruption,(AISelect missing),9568,5.4
+2026,AIAvoid,Using,14556,79.3
+2026,AIAvoid,Not using (no plan option),2906,76.2
+2026,AIAvoid,(AISelect missing),9568,1.1
