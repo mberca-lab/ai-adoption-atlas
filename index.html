@@ -107,6 +107,7 @@
           <p class="chapter-label" data-copy="ch2.label"></p>
           <h2 id="ch2-title" class="chapter-title" data-copy="ch2.title"></h2>
           <p class="dek" data-copy="ch2.dek"></p>
+          <p class="analysis-note" data-copy="followup.population"></p>
         </header>
         <div class="panel panel-split reveal-up" id="panel-trust">
           <div class="panel-main">
@@ -121,6 +122,17 @@
         </div>
         <p class="pull reveal-up" data-copy="ch2.callout"></p>
         <details class="data-details"><summary>Data table</summary><div id="trust-table"></div></details>
+        <div class="panel followup-panel reveal-up" id="panel-frequency">
+          <h3 class="panel-h" data-copy="followup.frequencyTitle"></h3>
+          <p data-copy="followup.frequency"></p>
+          <p class="chart-caption" data-copy="followup.frequencyNote"></p>
+          <details class="data-details">
+            <summary>Adjusted estimates, uncertainty and sensitivity</summary>
+            <div id="frequency-table"></div>
+            <p data-copy="followup.frequencySensitivity"></p>
+            <p class="chart-caption" data-copy="followup.frequencyUncertainty"></p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -199,6 +211,16 @@
           </div>
         </div>
         <details class="data-details"><summary>Data tables</summary><div id="model-table"></div><div id="shap-table"></div></details>
+        <div class="panel followup-panel reveal-up" id="panel-stability">
+          <h3 class="panel-h" data-copy="followup.stabilityTitle"></h3>
+          <p data-copy="followup.stability"></p>
+          <p class="chart-caption" data-copy="followup.stabilityNote"></p>
+          <details class="data-details">
+            <summary>Full-data primary comparison and uncertainty</summary>
+            <div id="stability-table"></div>
+            <p class="chart-caption" data-copy="followup.stabilityUncertainty"></p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -246,6 +268,19 @@
               <li><a data-link="repo" href="https://github.com/mberca/ai-adoption-atlas">Code, codebook &amp; method notes ↗</a></li>
             </ul>
           </div>
+        </div>
+        <div class="panel followup-panel reveal-up" id="panel-source-audit">
+          <h3 class="panel-h" data-copy="followup.sourceTitle"></h3>
+          <p data-copy="followup.source"></p>
+          <p class="chart-caption" data-copy="followup.dateNote"></p>
+          <details class="data-details">
+            <summary>Population flow and pinned source audit</summary>
+            <div id="population-table"></div>
+            <p class="chart-caption" data-copy="followup.sourceNote"></p>
+            <div id="source-table"></div>
+            <p class="chart-caption">Publisher archive commit: <a id="source-pin"></a>.
+              Full hashes and aggregate evidence are included in the <a href="data/trust_trends.json">data export</a>.</p>
+          </details>
         </div>
       </div>
     </section>

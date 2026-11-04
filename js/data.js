@@ -164,7 +164,7 @@
   // name patterns: <o>_raw_2023_2025 | <o>_raw_2026 | <o>_standardised | <o>_by_experience_<band> | other extras
   function wideToLong(js) {
     if (!js || !Array.isArray(js.series) || !js.series.length || !Array.isArray(js.series[0].labels)) return js;
-    const out = { meta: Object.assign({ attribution: js.attribution, caveats: js.caveats, generated: js.generated }, js.meta || {}), raw_by_year: [], standardised_by_year: [], experience_gradient: [], extras: {} };
+    const out = { meta: Object.assign({ attribution: js.attribution, caveats: js.caveats, generated: js.generated }, js.meta || {}), followup: js.followup || null, raw_by_year: [], standardised_by_year: [], experience_gradient: [], extras: {} };
     js.series.forEach(s => {
       const name = String(s.name || ""), desc = String(s.description || "");
       const at = (arr, i) => (Array.isArray(arr) ? arr[i] : null);
@@ -231,7 +231,7 @@
 
     const meta = js.meta || {};
     const sizes = findArray(meta, ["sample_sizes"]).length ? meta.sample_sizes : findArray(js, ["sample_sizes", "n_by_year"]);
-    return { trend, std: Object.keys(std).length ? std : null, experience: { bands, rows: expRows }, meta, sizes, extras: js.extras || {} };
+    return { trend, std: Object.keys(std).length ? std : null, experience: { bands, rows: expRows }, meta, sizes, extras: js.extras || {}, followup: js.followup || null };
   }
 
   /* ------------------------- normalise modelling -------------------------- */
@@ -239,6 +239,7 @@
     const meta = js.meta || {};
     return {
       meta,
+      stability: js.primary_stability || null,
       margin: num(pick(meta.margin_that_matters || {}, ["d_auc"])),
       metrics: findArray(js, ["model_metrics", "metrics"]).map(r => ({ ...r, auc: num(r.auc), auc_lo: num(r.auc_lo), auc_hi: num(r.auc_hi) })).filter(r => r.auc !== null),
       diffs: findArray(js, ["diff_vs_logit", "diffs"]),
@@ -350,6 +351,40 @@
     }
 
     const m = d.modelling;
+    const followup = d.followup;
+    if (followup) {
+      const main = followup.frequency_contrasts[0], cc = followup.frequency_contrasts[1];
+      const levels = followup.frequency_adjusted.filter(r => r.analysis === main.analysis);
+      const one = n => (+n).toFixed(1), nfmt = n => (+n).toLocaleString("en-GB");
+      f.frequency_n = nfmt(main.n);
+      f.frequency_daily = one(levels.find(r => r.frequency === "Daily").adjusted_pct) + "%";
+      f.frequency_monthly = one(levels.find(r => r.frequency === "Monthly or infrequent").adjusted_pct) + "%";
+      f.frequency_gap = one(main.adjusted_difference_pp) + " pp";
+      f.frequency_interval = `[${one(main.lo)}, ${one(main.hi)}]`;
+      f.frequency_cc_n = nfmt(cc.n);
+      f.frequency_cc_gap = one(cc.adjusted_difference_pp) + " pp";
+      f.frequency_cc_interval = `[${one(cc.lo)}, ${one(cc.hi)}]`;
+      f.completion_2025 = one(followup.population_flow.find(r => r.year === 2025).completion_pct) + "%";
+      const issue = followup.source_audit.issues.find(i => i.id === "2025_count");
+      f.archive_2025_n = nfmt(issue.archive_rows);
+      f.published_2025_n = nfmt(issue.published_topline);
+      f.archive_2025_difference = nfmt(issue.difference);
+      f.adoption_bound_interval = `[${one(followup.adoption_change_bounds.lo)}, ${one(followup.adoption_change_bounds.hi)}]`;
+    }
+    if (m.stability) {
+      const s = m.stability, trust = s.summary.find(r => r.outcome === "trust");
+      const margin = m.meta.margin_that_matters || {};
+      f.stability_runs = String(s.meta.full_pipeline_runs_per_outcome);
+      f.stability_refits = String(s.meta.training_bootstrap_refits_per_outcome);
+      f.stability_trust_signal = trust.reference_d_auc_lo > 0 ?
+        "The reference trust interval excludes zero: a small detectable gain." :
+        "The reference trust interval includes zero: a gain is not clearly resolved.";
+      f.stability_practical = s.runs.every(r => r.d_auc < margin.d_auc && r.d_log_loss_rel > -margin.rel_log_loss) ?
+        "Neither AUC nor relative log-loss gains reach the analyst-set practical benchmarks in these runs." :
+        "The practical verdict is mixed; inspect the full comparison.";
+      f.stability_max_logloss = (100 * Math.max(...s.runs.map(r => Math.abs(r.d_log_loss_rel)))).toFixed(2) + "%";
+      f.margin_logloss = (100 * margin.rel_log_loss).toFixed(0) + "%";
+    }
     const def = A.modelDefaults(m);
     if (def) {
       f.model_outcome = (m.meta.outcomes && m.meta.outcomes[def.outcome]) || def.outcome;
@@ -435,6 +470,15 @@
          !mo.metrics.length || !sg.classes.length || !sg.baskets.length)) {
       throw new Error("An analysis export is incomplete. No illustrative values will be substituted.");
     }
+    if (A.params.get("demo") !== "1" &&
+        (!tt.followup?.meta || tt.followup.population_flow?.length !== 4 ||
+         tt.followup.source_audit?.files?.length !== 4 ||
+         tt.followup.frequency_adjusted?.length !== 6 || tt.followup.frequency_contrasts?.length !== 2 ||
+         !tt.followup.frequency_adjusted.every(r => Number.isFinite(r.adjusted_pct)) ||
+         mo.stability?.summary?.length !== 2 || mo.stability.runs?.length !== 8 ||
+         !mo.stability.summary.every(r => Number.isFinite(r.reference_d_auc)))) {
+      throw new Error("The audited analytical follow-ups are incomplete. Results cannot be displayed.");
+    }
     // A JSON that loads but lacks a section falls back per section (still flagged as fixture).
     const sectionStatus = { adoption: status.trust_trends, trend: status.trust_trends, experience: status.trust_trends, modelling: status.modelling, segments: status.segments, network: status.segments };
     if (!tt.trend.use || !tt.trend.use.length) { const f = normTrends(DEV_FIXTURES.trust_trends); tt.trend = Object.assign({}, f.trend, tt.trend); tt.trend.use = f.trend.use; tt.trend.plan = tt.trend.plan || f.trend.plan; sectionStatus.adoption = sectionStatus.trend = "fixture"; }
@@ -453,7 +497,7 @@
     const data = {
       status, sources, sectionStatus,
       anyFixture: Object.values(sectionStatus).some(s => s === "fixture"),
-      trend: tt.trend, std: tt.std, experience: tt.experience, sizes: sizes || [], extras: tt.extras || {},
+      trend: tt.trend, std: tt.std, experience: tt.experience, sizes: sizes || [], extras: tt.extras || {}, followup: tt.followup,
       modelling: mo, segments: sg,
       attribution: (mo.meta && mo.meta.attribution) || (tt.meta && tt.meta.attribution) || null
     };

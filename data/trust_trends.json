@@ -2,458 +2,2279 @@
   "dataset": "trust_trends",
   "generated": "2026-11-04",
   "attribution": "Data: Stack Overflow Developer Survey 2023-2026, Stack Exchange Inc., licensed under ODbL 1.0 (https://opendatacommons.org/licenses/odbl/1-0/; https://survey.stackoverflow.co/).",
-  "caveats": ["Unweighted, self-selected sample of Stack Overflow-engaged developers; not population estimates.", "Associations only; stated sentiment, not observed behaviour.", "2026 is a separate series (question wording/definition changed); never connect 2026 to 2023-2025 with a line.", "Attitude items (favourable, trust, complexity) are among current AI users only; user definition changes in 2025 and 2026.", "Heavy late-survey dropout in 2025-2026; CIs ignore self-selection and dropout (see Manski bounds in FINDINGS.md)."],
+  "caveats": [
+    "Unweighted, self-selected sample of Stack Overflow-engaged developers; not population estimates.",
+    "Associations only; stated sentiment, not observed behaviour.",
+    "2026 is a separate series (question wording/definition changed); never connect 2026 to 2023-2025 with a line.",
+    "Attitude items (favourable, trust, complexity) are among current AI users only; user definition changes in 2025 and 2026.",
+    "Heavy late-survey dropout in 2025-2026; CIs ignore self-selection and dropout (see Manski bounds in FINDINGS.md)."
+  ],
   "series": [
     {
       "name": "use_raw_2023_2025",
       "description": "P1 use - unweighted % with Wilson CI ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [44.1, 63.3, 80.8],
-      "ci_low": [43.7, 62.8, 80.3],
-      "ci_high": [44.4, 63.7, 81.3],
-      "n": [66684, 46296, 25974]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        44.1,
+        63.3,
+        80.8
+      ],
+      "ci_low": [
+        43.7,
+        62.8,
+        80.3
+      ],
+      "ci_high": [
+        44.4,
+        63.7,
+        81.3
+      ],
+      "n": [
+        66684,
+        46296,
+        25974
+      ]
     },
     {
       "name": "use_raw_2026",
       "description": "P1 use - unweighted % with Wilson CI (2026 series break; not comparable to A)",
       "series_group": "B",
       "unit": "%",
-      "labels": ["2026"],
-      "values": [86.1],
-      "ci_low": [85.5],
-      "ci_high": [86.7],
-      "n": [13243]
+      "labels": [
+        "2026"
+      ],
+      "values": [
+        86.1
+      ],
+      "ci_low": [
+        85.5
+      ],
+      "ci_high": [
+        86.7
+      ],
+      "n": [
+        13243
+      ]
     },
     {
       "name": "plan_raw_2023_2025",
       "description": "P1 plan - unweighted % with Wilson CI ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [26, 13.4, 4.6],
-      "ci_low": [25.6, 13.1, 4.3],
-      "ci_high": [26.3, 13.7, 4.8],
-      "n": [66684, 46296, 25974]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        26,
+        13.4,
+        4.6
+      ],
+      "ci_low": [
+        25.6,
+        13.1,
+        4.3
+      ],
+      "ci_high": [
+        26.3,
+        13.7,
+        4.8
+      ],
+      "n": [
+        66684,
+        46296,
+        25974
+      ]
     },
     {
       "name": "fav_raw_2023_2025",
       "description": "P2 fav - unweighted % with Wilson CI ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [84.9, 76.8, 73.1],
-      "ci_low": [84.5, 76.3, 72.5],
-      "ci_high": [85.3, 77.3, 73.7],
-      "n": [29325, 29217, 20810]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        84.9,
+        76.8,
+        73.1
+      ],
+      "ci_low": [
+        84.5,
+        76.3,
+        72.5
+      ],
+      "ci_high": [
+        85.3,
+        77.3,
+        73.7
+      ],
+      "n": [
+        29325,
+        29217,
+        20810
+      ]
     },
     {
       "name": "fav_raw_2026",
       "description": "P2 fav - unweighted % with Wilson CI (2026 series break; not comparable to A)",
       "series_group": "B",
       "unit": "%",
-      "labels": ["2026"],
-      "values": [62.5],
-      "ci_low": [61.6],
-      "ci_high": [63.4],
-      "n": [11314]
+      "labels": [
+        "2026"
+      ],
+      "values": [
+        62.5
+      ],
+      "ci_low": [
+        61.6
+      ],
+      "ci_high": [
+        63.4
+      ],
+      "n": [
+        11314
+      ]
     },
     {
       "name": "trust_raw_2023_2025",
       "description": "P2 trust - unweighted % with Wilson CI ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [46.2, 41.4, 38.4],
-      "ci_low": [45.6, 40.9, 37.7],
-      "ci_high": [46.8, 42, 39.1],
-      "n": [29283, 29131, 20732]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        46.2,
+        41.4,
+        38.4
+      ],
+      "ci_low": [
+        45.6,
+        40.9,
+        37.7
+      ],
+      "ci_high": [
+        46.8,
+        42,
+        39.1
+      ],
+      "n": [
+        29283,
+        29131,
+        20732
+      ]
     },
     {
       "name": "distrust_raw_2023_2025",
       "description": "P2 distrust - unweighted % with Wilson CI ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [25.1, 31.3, 37.9],
-      "ci_low": [24.6, 30.7, 37.3],
-      "ci_high": [25.6, 31.8, 38.6],
-      "n": [29283, 29131, 20732]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        25.1,
+        31.3,
+        37.9
+      ],
+      "ci_low": [
+        24.6,
+        30.7,
+        37.3
+      ],
+      "ci_high": [
+        25.6,
+        31.8,
+        38.6
+      ],
+      "n": [
+        29283,
+        29131,
+        20732
+      ]
     },
     {
       "name": "complex_good_raw_2024_2025",
       "description": "P2 complex_good - unweighted % with Wilson CI ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2024", "2025"],
-      "values": [34.2, 36.8],
-      "ci_low": [33.7, 36.1],
-      "ci_high": [34.8, 37.4],
-      "n": [28943, 19706]
+      "labels": [
+        "2024",
+        "2025"
+      ],
+      "values": [
+        34.2,
+        36.8
+      ],
+      "ci_low": [
+        33.7,
+        36.1
+      ],
+      "ci_high": [
+        34.8,
+        37.4
+      ],
+      "n": [
+        28943,
+        19706
+      ]
     },
     {
       "name": "complex_good_raw_2026",
       "description": "P2 complex_good - unweighted % with Wilson CI (2026 series break; not comparable to A)",
       "series_group": "B",
       "unit": "%",
-      "labels": ["2026"],
-      "values": [59.2],
-      "ci_low": [58.2],
-      "ci_high": [60.1],
-      "n": [10571]
+      "labels": [
+        "2026"
+      ],
+      "values": [
+        59.2
+      ],
+      "ci_low": [
+        58.2
+      ],
+      "ci_high": [
+        60.1
+      ],
+      "n": [
+        10571
+      ]
     },
     {
       "name": "threat_yes_raw_2024_2025",
       "description": "P3 threat_yes - unweighted % with Wilson CI ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2024", "2025"],
-      "values": [11.5, 15.2],
-      "ci_low": [11.2, 14.7],
-      "ci_high": [11.9, 15.7],
-      "n": [34623, 22096]
+      "labels": [
+        "2024",
+        "2025"
+      ],
+      "values": [
+        11.5,
+        15.2
+      ],
+      "ci_low": [
+        11.2,
+        14.7
+      ],
+      "ci_high": [
+        11.9,
+        15.7
+      ],
+      "n": [
+        34623,
+        22096
+      ]
     },
     {
       "name": "use_standardised_2023_2025",
       "description": "Standardised (g-computation) to pooled 2023-2025 role/experience/region/org-size mix; n not applicable ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [43.9, 62.5, 82],
-      "ci_low": [43.5, 62, 81.5],
-      "ci_high": [44.2, 62.9, 82.5],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        43.9,
+        62.5,
+        82
+      ],
+      "ci_low": [
+        43.5,
+        62,
+        81.5
+      ],
+      "ci_high": [
+        44.2,
+        62.9,
+        82.5
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "use_standardised_2026",
       "description": "Standardised (g-computation) to pooled 2023-2025 role/experience/region/org-size mix; n not applicable (2026 series B: same standardisation mix but question/definitions changed; not comparable to A)",
       "series_group": "B",
       "unit": "%",
-      "labels": ["2026"],
-      "values": [86.5],
-      "ci_low": [85.6],
-      "ci_high": [87.2],
-      "n": [null]
+      "labels": [
+        "2026"
+      ],
+      "values": [
+        86.5
+      ],
+      "ci_low": [
+        85.6
+      ],
+      "ci_high": [
+        87.2
+      ],
+      "n": [
+        null
+      ]
     },
     {
       "name": "fav_standardised_2023_2025",
       "description": "Standardised (g-computation) to pooled 2023-2025 role/experience/region/org-size mix; n not applicable ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [84.8, 76.7, 73.4],
-      "ci_low": [84.4, 76.2, 72.8],
-      "ci_high": [85.2, 77.2, 74.1],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        84.8,
+        76.7,
+        73.4
+      ],
+      "ci_low": [
+        84.4,
+        76.2,
+        72.8
+      ],
+      "ci_high": [
+        85.2,
+        77.2,
+        74.1
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "fav_standardised_2026",
       "description": "Standardised (g-computation) to pooled 2023-2025 role/experience/region/org-size mix; n not applicable (2026 series B: same standardisation mix but question/definitions changed; not comparable to A)",
       "series_group": "B",
       "unit": "%",
-      "labels": ["2026"],
-      "values": [60.9],
-      "ci_low": [59.7],
-      "ci_high": [62.1],
-      "n": [null]
+      "labels": [
+        "2026"
+      ],
+      "values": [
+        60.9
+      ],
+      "ci_low": [
+        59.7
+      ],
+      "ci_high": [
+        62.1
+      ],
+      "n": [
+        null
+      ]
     },
     {
       "name": "trust_standardised_2023_2025",
       "description": "Standardised (g-computation) to pooled 2023-2025 role/experience/region/org-size mix; n not applicable ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [46, 41.2, 39.2],
-      "ci_low": [45.4, 40.6, 38.5],
-      "ci_high": [46.5, 41.8, 39.8],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        46,
+        41.2,
+        39.2
+      ],
+      "ci_low": [
+        45.4,
+        40.6,
+        38.5
+      ],
+      "ci_high": [
+        46.5,
+        41.8,
+        39.8
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "distrust_standardised_2023_2025",
       "description": "Standardised (g-computation) to pooled 2023-2025 role/experience/region/org-size mix; n not applicable ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [25.2, 31.8, 36.9],
-      "ci_low": [24.7, 31.2, 36.3],
-      "ci_high": [25.7, 32.3, 37.6],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        25.2,
+        31.8,
+        36.9
+      ],
+      "ci_low": [
+        24.7,
+        31.2,
+        36.3
+      ],
+      "ci_high": [
+        25.7,
+        32.3,
+        37.6
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "use_while_distrusting_share_of_pros",
       "description": "% of all professional developers who use AI AND distrust its accuracy",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [11, 19.7, 30.6],
-      "ci_low": [10.8, 19.4, 30],
-      "ci_high": [11.3, 20.1, 31.1],
-      "n": [66586, 46143, 25715]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        11,
+        19.7,
+        30.6
+      ],
+      "ci_low": [
+        10.8,
+        19.4,
+        30
+      ],
+      "ci_high": [
+        11.3,
+        20.1,
+        31.1
+      ],
+      "n": [
+        66586,
+        46143,
+        25715
+      ]
     },
     {
       "name": "trust_by_experience_0_4_2023_2025",
       "description": "Standardised trust among AI users with 0-4 yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [50.4, 46.4, 46.1],
-      "ci_low": [48.7, 44.6, 43.2],
-      "ci_high": [52, 48.2, 48.9],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        50.4,
+        46.4,
+        46.1
+      ],
+      "ci_low": [
+        48.7,
+        44.6,
+        43.2
+      ],
+      "ci_high": [
+        52,
+        48.2,
+        48.9
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "trust_by_experience_5_9_2023_2025",
       "description": "Standardised trust among AI users with 5-9 yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [48.5, 42.5, 40.1],
-      "ci_low": [47.5, 41.4, 38.7],
-      "ci_high": [49.5, 43.6, 41.5],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        48.5,
+        42.5,
+        40.1
+      ],
+      "ci_low": [
+        47.5,
+        41.4,
+        38.7
+      ],
+      "ci_high": [
+        49.5,
+        43.6,
+        41.5
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "trust_by_experience_10_19_2023_2025",
       "description": "Standardised trust among AI users with 10-19 yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [44.1, 39.5, 37.5],
-      "ci_low": [43.1, 38.5, 36.4],
-      "ci_high": [45.1, 40.4, 38.5],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        44.1,
+        39.5,
+        37.5
+      ],
+      "ci_low": [
+        43.1,
+        38.5,
+        36.4
+      ],
+      "ci_high": [
+        45.1,
+        40.4,
+        38.5
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "trust_by_experience_20plus_2023_2025",
       "description": "Standardised trust among AI users with 20+ yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [43.2, 39.1, 36.9],
-      "ci_low": [41.9, 37.9, 35.8],
-      "ci_high": [44.4, 40.3, 38],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        43.2,
+        39.1,
+        36.9
+      ],
+      "ci_low": [
+        41.9,
+        37.9,
+        35.8
+      ],
+      "ci_high": [
+        44.4,
+        40.3,
+        38
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "distrust_by_experience_0_4_2023_2025",
       "description": "Standardised distrust among AI users with 0-4 yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [19.6, 25.1, 30],
-      "ci_low": [18.3, 23.5, 27.2],
-      "ci_high": [21, 26.7, 32.8],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        19.6,
+        25.1,
+        30
+      ],
+      "ci_low": [
+        18.3,
+        23.5,
+        27.2
+      ],
+      "ci_high": [
+        21,
+        26.7,
+        32.8
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "distrust_by_experience_5_9_2023_2025",
       "description": "Standardised distrust among AI users with 5-9 yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [23.3, 29.4, 35],
-      "ci_low": [22.5, 28.5, 33.7],
-      "ci_high": [24.3, 30.4, 36.5],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        23.3,
+        29.4,
+        35
+      ],
+      "ci_low": [
+        22.5,
+        28.5,
+        33.7
+      ],
+      "ci_high": [
+        24.3,
+        30.4,
+        36.5
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "distrust_by_experience_10_19_2023_2025",
       "description": "Standardised distrust among AI users with 10-19 yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [26.3, 33.9, 39.6],
-      "ci_low": [25.5, 33, 38.5],
-      "ci_high": [27.2, 34.8, 40.7],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        26.3,
+        33.9,
+        39.6
+      ],
+      "ci_low": [
+        25.5,
+        33,
+        38.5
+      ],
+      "ci_high": [
+        27.2,
+        34.8,
+        40.7
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "distrust_by_experience_20plus_2023_2025",
       "description": "Standardised distrust among AI users with 20+ yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [28, 34.3, 38.9],
-      "ci_low": [26.9, 33.2, 37.8],
-      "ci_high": [29.1, 35.4, 40.1],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        28,
+        34.3,
+        38.9
+      ],
+      "ci_low": [
+        26.9,
+        33.2,
+        37.8
+      ],
+      "ci_high": [
+        29.1,
+        35.4,
+        40.1
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "fav_by_experience_0_4_2023_2025",
       "description": "Standardised fav among AI users with 0-4 yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [85.3, 77.4, 74.2],
-      "ci_low": [84, 75.8, 71.6],
-      "ci_high": [86.5, 78.9, 76.7],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        85.3,
+        77.4,
+        74.2
+      ],
+      "ci_low": [
+        84,
+        75.8,
+        71.6
+      ],
+      "ci_high": [
+        86.5,
+        78.9,
+        76.7
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "fav_by_experience_0_4_2026",
       "description": "Standardised fav among AI users with 0-4 yrs coding (2026 series B: same standardisation mix but question/definitions changed; not comparable to A)",
       "series_group": "B",
       "unit": "%",
-      "labels": ["2026"],
-      "values": [56.5],
-      "ci_low": [52],
-      "ci_high": [60.8],
-      "n": [null]
+      "labels": [
+        "2026"
+      ],
+      "values": [
+        56.5
+      ],
+      "ci_low": [
+        52
+      ],
+      "ci_high": [
+        60.8
+      ],
+      "n": [
+        null
+      ]
     },
     {
       "name": "fav_by_experience_5_9_2023_2025",
       "description": "Standardised fav among AI users with 5-9 yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [85.4, 77.8, 72.9],
-      "ci_low": [84.7, 76.9, 71.5],
-      "ci_high": [86.2, 78.6, 74.2],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        85.4,
+        77.8,
+        72.9
+      ],
+      "ci_low": [
+        84.7,
+        76.9,
+        71.5
+      ],
+      "ci_high": [
+        86.2,
+        78.6,
+        74.2
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "fav_by_experience_5_9_2026",
       "description": "Standardised fav among AI users with 5-9 yrs coding (2026 series B: same standardisation mix but question/definitions changed; not comparable to A)",
       "series_group": "B",
       "unit": "%",
-      "labels": ["2026"],
-      "values": [57.5],
-      "ci_low": [55.1],
-      "ci_high": [59.8],
-      "n": [null]
+      "labels": [
+        "2026"
+      ],
+      "values": [
+        57.5
+      ],
+      "ci_low": [
+        55.1
+      ],
+      "ci_high": [
+        59.8
+      ],
+      "n": [
+        null
+      ]
     },
     {
       "name": "fav_by_experience_10_19_2023_2025",
       "description": "Standardised fav among AI users with 10-19 yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [84.6, 76, 73.3],
-      "ci_low": [83.9, 75.2, 72.2],
-      "ci_high": [85.3, 76.8, 74.3],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        84.6,
+        76,
+        73.3
+      ],
+      "ci_low": [
+        83.9,
+        75.2,
+        72.2
+      ],
+      "ci_high": [
+        85.3,
+        76.8,
+        74.3
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "fav_by_experience_10_19_2026",
       "description": "Standardised fav among AI users with 10-19 yrs coding (2026 series B: same standardisation mix but question/definitions changed; not comparable to A)",
       "series_group": "B",
       "unit": "%",
-      "labels": ["2026"],
-      "values": [59.9],
-      "ci_low": [58.3],
-      "ci_high": [61.6],
-      "n": [null]
+      "labels": [
+        "2026"
+      ],
+      "values": [
+        59.9
+      ],
+      "ci_low": [
+        58.3
+      ],
+      "ci_high": [
+        61.6
+      ],
+      "n": [
+        null
+      ]
     },
     {
       "name": "fav_by_experience_20plus_2023_2025",
       "description": "Standardised fav among AI users with 20+ yrs coding ",
       "series_group": "A",
       "unit": "%",
-      "labels": ["2023", "2024", "2025"],
-      "values": [84.1, 75.6, 73],
-      "ci_low": [83.2, 74.6, 71.9],
-      "ci_high": [85, 76.6, 74],
-      "n": [null, null, null]
+      "labels": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "values": [
+        84.1,
+        75.6,
+        73
+      ],
+      "ci_low": [
+        83.2,
+        74.6,
+        71.9
+      ],
+      "ci_high": [
+        85,
+        76.6,
+        74
+      ],
+      "n": [
+        null,
+        null,
+        null
+      ]
     },
     {
       "name": "fav_by_experience_20plus_2026",
       "description": "Standardised fav among AI users with 20+ yrs coding (2026 series B: same standardisation mix but question/definitions changed; not comparable to A)",
       "series_group": "B",
       "unit": "%",
-      "labels": ["2026"],
-      "values": [68.2],
-      "ci_low": [66.6],
-      "ci_high": [69.8],
-      "n": [null]
+      "labels": [
+        "2026"
+      ],
+      "values": [
+        68.2
+      ],
+      "ci_low": [
+        66.6
+      ],
+      "ci_high": [
+        69.8
+      ],
+      "n": [
+        null
+      ]
     },
     {
       "name": "paradox_change_2023_2025_use",
       "description": "Change 2023->2025 in use (pp) by subgroup (dimension: level); Newcombe CI",
       "series_group": "A",
       "unit": "pp",
-      "labels": ["Experience (years coding): 0-4 yrs", "Experience (years coding): 10-19 yrs", "Experience (years coding): 20+ yrs", "Experience (years coding): 5-9 yrs", "Region: East Asia & Pacific", "Region: Europe & C. Asia", "Region: Latin America & Carib.", "Region: MENA, Afg. & Pakistan", "Region: North America", "Region: South Asia", "Region: Sub-Saharan Africa", "Role family: Data / AI / analytics", "Role family: Developer / software engineer", "Role family: Management / exec / product", "Role family: Ops / infra / security / support", "Role family: Other", "Role family: Research / education", "Role family: Student"],
-      "values": [27.9, 40, 41.2, 35.5, 33.3, 37.5, 34.8, 34.4, 35.9, 42.2, 28.6, 33.5, 37.4, 42.2, 35.2, 28.1, 33.3, 21.9],
-      "ci_low": [25.9, 39, 40.1, 34.3, 31, 36.6, 32.4, 31.7, 34.5, 40.1, 24.7, 30.8, 36.7, 39.6, 32, 23.6, 27.4, 16.1],
-      "ci_high": [29.8, 41, 42.3, 36.6, 35.5, 38.4, 37.1, 36.9, 37.1, 44.1, 32.3, 36.1, 38.1, 44.7, 38.2, 32.4, 38.6, 27.3],
-      "n": [1321, 9328, 9965, 5140, 1768, 13074, 1498, 882, 6272, 1941, 528, 1400, 21046, 1181, 1122, 568, 282, 375]
+      "labels": [
+        "Experience (years coding): 0-4 yrs",
+        "Experience (years coding): 10-19 yrs",
+        "Experience (years coding): 20+ yrs",
+        "Experience (years coding): 5-9 yrs",
+        "Region: East Asia & Pacific",
+        "Region: Europe & C. Asia",
+        "Region: Latin America & Carib.",
+        "Region: MENA, Afg. & Pakistan",
+        "Region: North America",
+        "Region: South Asia",
+        "Region: Sub-Saharan Africa",
+        "Role family: Data / AI / analytics",
+        "Role family: Developer / software engineer",
+        "Role family: Management / exec / product",
+        "Role family: Ops / infra / security / support",
+        "Role family: Other",
+        "Role family: Research / education",
+        "Role family: Student"
+      ],
+      "values": [
+        27.9,
+        40,
+        41.2,
+        35.5,
+        33.3,
+        37.5,
+        34.8,
+        34.4,
+        35.9,
+        42.2,
+        28.6,
+        33.5,
+        37.4,
+        42.2,
+        35.2,
+        28.1,
+        33.3,
+        21.9
+      ],
+      "ci_low": [
+        25.9,
+        39,
+        40.1,
+        34.3,
+        31,
+        36.6,
+        32.4,
+        31.7,
+        34.5,
+        40.1,
+        24.7,
+        30.8,
+        36.7,
+        39.6,
+        32,
+        23.6,
+        27.4,
+        16.1
+      ],
+      "ci_high": [
+        29.8,
+        41,
+        42.3,
+        36.6,
+        35.5,
+        38.4,
+        37.1,
+        36.9,
+        37.1,
+        44.1,
+        32.3,
+        36.1,
+        38.1,
+        44.7,
+        38.2,
+        32.4,
+        38.6,
+        27.3
+      ],
+      "n": [
+        1321,
+        9328,
+        9965,
+        5140,
+        1768,
+        13074,
+        1498,
+        882,
+        6272,
+        1941,
+        528,
+        1400,
+        21046,
+        1181,
+        1122,
+        568,
+        282,
+        375
+      ]
     },
     {
       "name": "paradox_change_2023_2025_trust",
       "description": "Change 2023->2025 in trust (pp) by subgroup (dimension: level); Newcombe CI",
       "series_group": "A",
       "unit": "pp",
-      "labels": ["Experience (years coding): 0-4 yrs", "Experience (years coding): 10-19 yrs", "Experience (years coding): 20+ yrs", "Experience (years coding): 5-9 yrs", "Region: East Asia & Pacific", "Region: Europe & C. Asia", "Region: Latin America & Carib.", "Region: MENA, Afg. & Pakistan", "Region: North America", "Region: South Asia", "Region: Sub-Saharan Africa", "Role family: Data / AI / analytics", "Role family: Developer / software engineer", "Role family: Management / exec / product", "Role family: Ops / infra / security / support", "Role family: Other", "Role family: Research / education", "Role family: Student"],
-      "values": [-2.6, -6, -6.2, -7.9, -7.9, -7.3, -5.7, -2.4, -11.4, -1.8, -6, -5.3, -8.7, -3.1, -3.1, -7, -9.1, -3.1],
-      "ci_low": [-5.9, -7.5, -7.9, -9.6, -11.1, -8.5, -9.1, -6.7, -13.2, -4.9, -11.7, -9.2, -9.7, -7.1, -7.4, -12.8, -16.1, -10.6],
-      "ci_high": [0.7, -4.6, -4.6, -6.1, -4.6, -6.1, -2.2, 1.9, -9.6, 1.4, -0.3, -1.4, -7.7, 1, 1.3, -1, -1.6, 4.5],
-      "n": [1162, 7542, 7439, 4436, 1459, 10335, 1292, 792, 4710, 1677, 459, 1179, 16780, 1031, 853, 389, 202, 298]
+      "labels": [
+        "Experience (years coding): 0-4 yrs",
+        "Experience (years coding): 10-19 yrs",
+        "Experience (years coding): 20+ yrs",
+        "Experience (years coding): 5-9 yrs",
+        "Region: East Asia & Pacific",
+        "Region: Europe & C. Asia",
+        "Region: Latin America & Carib.",
+        "Region: MENA, Afg. & Pakistan",
+        "Region: North America",
+        "Region: South Asia",
+        "Region: Sub-Saharan Africa",
+        "Role family: Data / AI / analytics",
+        "Role family: Developer / software engineer",
+        "Role family: Management / exec / product",
+        "Role family: Ops / infra / security / support",
+        "Role family: Other",
+        "Role family: Research / education",
+        "Role family: Student"
+      ],
+      "values": [
+        -2.6,
+        -6,
+        -6.2,
+        -7.9,
+        -7.9,
+        -7.3,
+        -5.7,
+        -2.4,
+        -11.4,
+        -1.8,
+        -6,
+        -5.3,
+        -8.7,
+        -3.1,
+        -3.1,
+        -7,
+        -9.1,
+        -3.1
+      ],
+      "ci_low": [
+        -5.9,
+        -7.5,
+        -7.9,
+        -9.6,
+        -11.1,
+        -8.5,
+        -9.1,
+        -6.7,
+        -13.2,
+        -4.9,
+        -11.7,
+        -9.2,
+        -9.7,
+        -7.1,
+        -7.4,
+        -12.8,
+        -16.1,
+        -10.6
+      ],
+      "ci_high": [
+        0.7,
+        -4.6,
+        -4.6,
+        -6.1,
+        -4.6,
+        -6.1,
+        -2.2,
+        1.9,
+        -9.6,
+        1.4,
+        -0.3,
+        -1.4,
+        -7.7,
+        1,
+        1.3,
+        -1,
+        -1.6,
+        4.5
+      ],
+      "n": [
+        1162,
+        7542,
+        7439,
+        4436,
+        1459,
+        10335,
+        1292,
+        792,
+        4710,
+        1677,
+        459,
+        1179,
+        16780,
+        1031,
+        853,
+        389,
+        202,
+        298
+      ]
     },
     {
       "name": "paradox_change_2023_2025_distrust",
       "description": "Change 2023->2025 in distrust (pp) by subgroup (dimension: level); Newcombe CI",
       "series_group": "A",
       "unit": "pp",
-      "labels": ["Experience (years coding): 0-4 yrs", "Experience (years coding): 10-19 yrs", "Experience (years coding): 20+ yrs", "Experience (years coding): 5-9 yrs", "Region: East Asia & Pacific", "Region: Europe & C. Asia", "Region: Latin America & Carib.", "Region: MENA, Afg. & Pakistan", "Region: North America", "Region: South Asia", "Region: Sub-Saharan Africa", "Role family: Data / AI / analytics", "Role family: Developer / software engineer", "Role family: Management / exec / product", "Role family: Ops / infra / security / support", "Role family: Other", "Role family: Research / education", "Role family: Student"],
-      "values": [7.3, 12.6, 11.3, 10.6, 11.3, 13.4, 9, 5.6, 17, 4, 8.3, 9, 13.7, 6.4, 12.3, 13, 14.3, 9.8],
-      "ci_low": [4.6, 11.2, 9.7, 9, 8.4, 12.2, 6.1, 2.3, 15.2, 2, 4.1, 5.5, 12.8, 2.6, 7.9, 7, 6.8, 2.3],
-      "ci_high": [10.2, 14, 12.8, 12.2, 14.2, 14.6, 12, 9.1, 18.8, 6.1, 12.7, 12.5, 14.6, 10.1, 16.6, 19, 21.9, 17.2],
-      "n": [1162, 7542, 7439, 4436, 1459, 10335, 1292, 792, 4710, 1677, 459, 1179, 16780, 1031, 853, 389, 202, 298]
+      "labels": [
+        "Experience (years coding): 0-4 yrs",
+        "Experience (years coding): 10-19 yrs",
+        "Experience (years coding): 20+ yrs",
+        "Experience (years coding): 5-9 yrs",
+        "Region: East Asia & Pacific",
+        "Region: Europe & C. Asia",
+        "Region: Latin America & Carib.",
+        "Region: MENA, Afg. & Pakistan",
+        "Region: North America",
+        "Region: South Asia",
+        "Region: Sub-Saharan Africa",
+        "Role family: Data / AI / analytics",
+        "Role family: Developer / software engineer",
+        "Role family: Management / exec / product",
+        "Role family: Ops / infra / security / support",
+        "Role family: Other",
+        "Role family: Research / education",
+        "Role family: Student"
+      ],
+      "values": [
+        7.3,
+        12.6,
+        11.3,
+        10.6,
+        11.3,
+        13.4,
+        9,
+        5.6,
+        17,
+        4,
+        8.3,
+        9,
+        13.7,
+        6.4,
+        12.3,
+        13,
+        14.3,
+        9.8
+      ],
+      "ci_low": [
+        4.6,
+        11.2,
+        9.7,
+        9,
+        8.4,
+        12.2,
+        6.1,
+        2.3,
+        15.2,
+        2,
+        4.1,
+        5.5,
+        12.8,
+        2.6,
+        7.9,
+        7,
+        6.8,
+        2.3
+      ],
+      "ci_high": [
+        10.2,
+        14,
+        12.8,
+        12.2,
+        14.2,
+        14.6,
+        12,
+        9.1,
+        18.8,
+        6.1,
+        12.7,
+        12.5,
+        14.6,
+        10.1,
+        16.6,
+        19,
+        21.9,
+        17.2
+      ],
+      "n": [
+        1162,
+        7542,
+        7439,
+        4436,
+        1459,
+        10335,
+        1292,
+        792,
+        4710,
+        1677,
+        459,
+        1179,
+        16780,
+        1031,
+        853,
+        389,
+        202,
+        298
+      ]
     },
     {
       "name": "threat_change_2024_2025",
       "description": "Change 2024->2025 in % seeing AI as job threat (pros using/planning AI), pp",
       "series_group": "A",
       "unit": "pp",
-      "labels": ["All: All professional users + planners", "Role family: Data / AI / analytics", "Role family: Developer / software engineer", "Role family: Management / exec / product", "Role family: Ops / infra / security / support", "Role family: Other", "Role family: Research / education", "Role family: Student", "Region: East Asia & Pacific", "Region: Europe & C. Asia", "Region: Latin America & Carib.", "Region: MENA, Afg. & Pakistan", "Region: North America", "Region: South Asia", "Region: Sub-Saharan Africa"],
-      "values": [3.7, 6.3, 3.6, 4.8, 0.2, 4.5, 9.3, 7.5, 3.8, 2.9, 3.5, 2.2, 5.6, 6.2, 2.5],
-      "ci_low": [3.1, 3.9, 3, 2.2, -2.5, 0.6, 4.1, 2.6, 1.5, 2.1, 1.2, -0.8, 4.3, 4, -1],
-      "ci_high": [4.3, 8.8, 4.3, 7.4, 3, 8.9, 15.3, 12.8, 6.2, 3.7, 5.9, 5.3, 6.8, 8.5, 6.3],
-      "n": [22096, 1254, 17922, 1075, 918, 407, 211, 309, 1539, 10960, 1380, 837, 5025, 1857, 490]
+      "labels": [
+        "All: All professional users + planners",
+        "Role family: Data / AI / analytics",
+        "Role family: Developer / software engineer",
+        "Role family: Management / exec / product",
+        "Role family: Ops / infra / security / support",
+        "Role family: Other",
+        "Role family: Research / education",
+        "Role family: Student",
+        "Region: East Asia & Pacific",
+        "Region: Europe & C. Asia",
+        "Region: Latin America & Carib.",
+        "Region: MENA, Afg. & Pakistan",
+        "Region: North America",
+        "Region: South Asia",
+        "Region: Sub-Saharan Africa"
+      ],
+      "values": [
+        3.7,
+        6.3,
+        3.6,
+        4.8,
+        0.2,
+        4.5,
+        9.3,
+        7.5,
+        3.8,
+        2.9,
+        3.5,
+        2.2,
+        5.6,
+        6.2,
+        2.5
+      ],
+      "ci_low": [
+        3.1,
+        3.9,
+        3,
+        2.2,
+        -2.5,
+        0.6,
+        4.1,
+        2.6,
+        1.5,
+        2.1,
+        1.2,
+        -0.8,
+        4.3,
+        4,
+        -1
+      ],
+      "ci_high": [
+        4.3,
+        8.8,
+        4.3,
+        7.4,
+        3,
+        8.9,
+        15.3,
+        12.8,
+        6.2,
+        3.7,
+        5.9,
+        5.3,
+        6.8,
+        8.5,
+        6.3
+      ],
+      "n": [
+        22096,
+        1254,
+        17922,
+        1075,
+        918,
+        407,
+        211,
+        309,
+        1539,
+        10960,
+        1380,
+        837,
+        5025,
+        1857,
+        490
+      ]
     },
     {
       "name": "trust_by_use_frequency_2025",
       "description": "2025 AI users: trust % by self-reported use frequency (Wilson CI); cross-sectional association",
       "series_group": "A",
       "unit": "%",
-      "labels": ["Daily", "Monthly or infrequent", "Weekly"],
-      "values": [48, 15.3, 27.4],
-      "ci_low": [47.1, 14.1, 26.1],
-      "ci_high": [48.9, 16.6, 28.7],
-      "n": [12997, 3263, 4472]
+      "labels": [
+        "Daily",
+        "Monthly or infrequent",
+        "Weekly"
+      ],
+      "values": [
+        48,
+        15.3,
+        27.4
+      ],
+      "ci_low": [
+        47.1,
+        14.1,
+        26.1
+      ],
+      "ci_high": [
+        48.9,
+        16.6,
+        28.7
+      ],
+      "n": [
+        12997,
+        3263,
+        4472
+      ]
     },
     {
       "name": "distrust_by_use_frequency_2025",
       "description": "2025 AI users: distrust % by self-reported use frequency (Wilson CI); cross-sectional association",
       "series_group": "A",
       "unit": "%",
-      "labels": ["Daily", "Monthly or infrequent", "Weekly"],
-      "values": [27.6, 65.4, 48],
-      "ci_low": [26.8, 63.8, 46.5],
-      "ci_high": [28.3, 67, 49.5],
-      "n": [12997, 3263, 4472]
+      "labels": [
+        "Daily",
+        "Monthly or infrequent",
+        "Weekly"
+      ],
+      "values": [
+        27.6,
+        65.4,
+        48
+      ],
+      "ci_low": [
+        26.8,
+        63.8,
+        46.5
+      ],
+      "ci_high": [
+        28.3,
+        67,
+        49.5
+      ],
+      "n": [
+        12997,
+        3263,
+        4472
+      ]
     },
     {
       "name": "fav_by_use_frequency_2025",
       "description": "2025 AI users: fav % by self-reported use frequency (Wilson CI); cross-sectional association",
       "series_group": "A",
       "unit": "%",
-      "labels": ["Daily", "Monthly or infrequent", "Weekly"],
-      "values": [87.2, 30.4, 63.3],
-      "ci_low": [86.6, 28.8, 61.9],
-      "ci_high": [87.8, 32, 64.7],
-      "n": [13054, 3270, 4486]
+      "labels": [
+        "Daily",
+        "Monthly or infrequent",
+        "Weekly"
+      ],
+      "values": [
+        87.2,
+        30.4,
+        63.3
+      ],
+      "ci_low": [
+        86.6,
+        28.8,
+        61.9
+      ],
+      "ci_high": [
+        87.8,
+        32,
+        64.7
+      ],
+      "n": [
+        13054,
+        3270,
+        4486
+      ]
     },
     {
       "name": "aitrust_2026_conditions",
       "description": "2026 only: conditions under which users trust AI (multi-select; not comparable to 2023-25 trust)",
       "series_group": "B",
       "unit": "%",
-      "labels": ["I trust it when I can easily verify the output", "I trust it for many tasks, but not important work decisions", "I trust it for low-risk work tasks only", "I do not trust it for most work tasks", "I trust it for many tasks, including important work decisions", "Not sure / I do not use AI tools"],
-      "values": [48, 16.2, 16, 12.7, 6.8, 0.3],
-      "ci_low": [47.1, 15.5, 15.3, 12.1, 6.3, 0.2],
-      "ci_high": [48.9, 16.9, 16.6, 13.4, 7.2, 0.5],
-      "n": [11241, 11241, 11241, 11241, 11241, 11241]
+      "labels": [
+        "I trust it when I can easily verify the output",
+        "I trust it for many tasks, but not important work decisions",
+        "I trust it for low-risk work tasks only",
+        "I do not trust it for most work tasks",
+        "I trust it for many tasks, including important work decisions",
+        "Not sure / I do not use AI tools"
+      ],
+      "values": [
+        48,
+        16.2,
+        16,
+        12.7,
+        6.8,
+        0.3
+      ],
+      "ci_low": [
+        47.1,
+        15.5,
+        15.3,
+        12.1,
+        6.3,
+        0.2
+      ],
+      "ci_high": [
+        48.9,
+        16.9,
+        16.6,
+        13.4,
+        7.2,
+        0.5
+      ],
+      "n": [
+        11241,
+        11241,
+        11241,
+        11241,
+        11241,
+        11241
+      ]
     }
-  ]
+  ],
+  "followup": {
+    "meta": {
+      "seed": 20261104,
+      "year": 2025,
+      "population": "Adult professional current AI users answering accuracy trust and use frequency; same professional base as the trends.",
+      "n_current_users": 20991,
+      "n_analyzed": 20732,
+      "n_missing_trust_or_frequency": 259,
+      "n_complete_covariates": 17804,
+      "covariates": ["exp_band", "role_f", "region_f", "org_f"],
+      "method": "Grouped binomial logistic regression; marginal probabilities standardised to the observed covariate mix. Coding experience uses the existing bands; implausible years are marked Missing.",
+      "uncertainty": "95% model-based coefficient-normal simulation intervals, 4000 draws; conditional on the fitted main-effects model and observed sample. Independent-response/model assumptions; no correction for survey selection, module dropout or unmeasured confounding.",
+      "interpretation": "Exploratory follow-up selected after seeing the raw frequency gradient, not preregistered. Contemporary association, not evidence that use causes trust or that this explains the cross-year trend. Missing-category and complete-case analyses target different samples.",
+      "source_hash_format": "Source hashes normalise CRLF to LF; data hash uses exact bytes.",
+      "source_script_sha256": "502373e2d27cc77d81f08137096812ef829d09d4196b45359f31a0dbc32d7b36",
+      "helper_sha256": "40f3c045136b3ebc866f80c925cc9e0b1cdead0e4fc95515e51d4111d1b677c2",
+      "data_sha256": "832fb96dbab7b6b90cbd907bbc157299671ed799256432a7e9ed3b321d026dd8"
+    },
+    "source_audit": {
+      "checked": "2026-11-04",
+      "upstream_commit": "9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7",
+      "files": [
+        {
+          "year": 2023,
+          "rows": 89184,
+          "columns": 84,
+          "sha256": "828874a3cf0fa1bbb4c3da6a87e5822b8563bbc04b21f9869479480dbcff410c",
+          "upstream_match": true,
+          "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2023/results.csv"
+        },
+        {
+          "year": 2024,
+          "rows": 65437,
+          "columns": 114,
+          "sha256": "7f2c2dbf6989d00b80a7351de4bb3af4b52b21cc52d5c947891bbc4f4e5cbe49",
+          "upstream_match": true,
+          "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2024/results.csv"
+        },
+        {
+          "year": 2025,
+          "rows": 49191,
+          "columns": 172,
+          "sha256": "2d1f65308877282edfb4470520eabbc08cb499118432a3dcec6a66c086aa2baa",
+          "upstream_match": true,
+          "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2025/results.csv"
+        },
+        {
+          "year": 2026,
+          "rows": 30903,
+          "columns": 212,
+          "sha256": "ad520b4d5d71f240141e63f0d6f81a3b1898cbdc69efe9ea985496533b15fc2c",
+          "upstream_match": true,
+          "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2026/survey_results_public.csv"
+        }
+      ],
+      "issues": [
+        {
+          "id": "2025_count",
+          "status": "unresolved publisher discrepancy",
+          "archive_rows": 49191,
+          "published_topline": 49009,
+          "difference": 182,
+          "source": "https://survey.stackoverflow.co/2025/methodology/",
+          "decision": "Use the hash-verified public archive and our declared QC base. Do not remove 182 arbitrary rows or claim exact reproduction of the published topline."
+        },
+        {
+          "id": "2026_dates",
+          "status": "historical invalid date withdrawn; close date unverified",
+          "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2026/README.md",
+          "decision": "The current archive README no longer states the historical invalid close date. No verified replacement close date is asserted. Analyses use survey year only; 2026 remains a separate instrument series."
+        }
+      ]
+    },
+    "population_flow": [
+      {
+        "year": 2023,
+        "eligible_professionals": 66684,
+        "answered_ai_status": 66684,
+        "missing_ai_status": 0,
+        "current_ai_users": 29381,
+        "trust_answered_users": 29283,
+        "trust_missing_users": 98,
+        "completion_pct": 100
+      },
+      {
+        "year": 2024,
+        "eligible_professionals": 48470,
+        "answered_ai_status": 46296,
+        "missing_ai_status": 2174,
+        "current_ai_users": 29284,
+        "trust_answered_users": 29131,
+        "trust_missing_users": 153,
+        "completion_pct": 95.514751392614
+      },
+      {
+        "year": 2025,
+        "eligible_professionals": 33792,
+        "answered_ai_status": 25974,
+        "missing_ai_status": 7818,
+        "current_ai_users": 20991,
+        "trust_answered_users": 20732,
+        "trust_missing_users": 259,
+        "completion_pct": 76.8643465909091
+      },
+      {
+        "year": 2026,
+        "eligible_professionals": 20205,
+        "answered_ai_status": 13243,
+        "missing_ai_status": 6962,
+        "current_ai_users": 11400,
+        "trust_answered_users": null,
+        "trust_missing_users": null,
+        "completion_pct": 65.5431823805989
+      }
+    ],
+    "adoption_change_bounds": {
+      "contrast": "2024->2025",
+      "lo": -2.8,
+      "hi": 24.9,
+      "unit": "pp",
+      "interpretation": "Worst-case missing-AI-status bounds, not a confidence interval; includes zero."
+    },
+    "frequency_raw": [
+      {
+        "ai_use_freq": "Monthly or infrequent",
+        "x": 500,
+        "n": 3263,
+        "pct": 15.3233220962305,
+        "lo": 14.1282106890469,
+        "hi": 16.5999856888414
+      },
+      {
+        "ai_use_freq": "Weekly",
+        "x": 1224,
+        "n": 4472,
+        "pct": 27.3703041144902,
+        "lo": 26.0833880534403,
+        "hi": 28.6960647350128
+      },
+      {
+        "ai_use_freq": "Daily",
+        "x": 6238,
+        "n": 12997,
+        "pct": 47.99569131338,
+        "lo": 47.1375009099679,
+        "hi": 48.855066173861
+      }
+    ],
+    "frequency_adjusted": [
+      {
+        "analysis": "Missing covariates retained as categories",
+        "frequency": "Monthly or infrequent",
+        "n_target": 20732,
+        "adjusted_pct": 16.2403297849878,
+        "lo": 15.0092762356854,
+        "hi": 17.5880890509429
+      },
+      {
+        "analysis": "Missing covariates retained as categories",
+        "frequency": "Weekly",
+        "n_target": 20732,
+        "adjusted_pct": 28.361822114341,
+        "lo": 27.0820986476877,
+        "hi": 29.7232557360046
+      },
+      {
+        "analysis": "Missing covariates retained as categories",
+        "frequency": "Daily",
+        "n_target": 20732,
+        "adjusted_pct": 47.2375434377414,
+        "lo": 46.3953244264249,
+        "hi": 48.1091191421492
+      },
+      {
+        "analysis": "Complete-covariate sensitivity",
+        "frequency": "Monthly or infrequent",
+        "n_target": 17804,
+        "adjusted_pct": 15.710545050997,
+        "lo": 14.4508322440234,
+        "hi": 17.1315305108195
+      },
+      {
+        "analysis": "Complete-covariate sensitivity",
+        "frequency": "Weekly",
+        "n_target": 17804,
+        "adjusted_pct": 28.7853305840392,
+        "lo": 27.3951473759859,
+        "hi": 30.2510490466695
+      },
+      {
+        "analysis": "Complete-covariate sensitivity",
+        "frequency": "Daily",
+        "n_target": 17804,
+        "adjusted_pct": 46.9249990938261,
+        "lo": 46.0021454299726,
+        "hi": 47.8833968856326
+      }
+    ],
+    "frequency_contrasts": [
+      {
+        "analysis": "Missing covariates retained as categories",
+        "comparison": "Daily minus monthly or infrequent",
+        "n": 20732,
+        "adjusted_difference_pp": 30.9972136527536,
+        "lo": 29.4295658831362,
+        "hi": 32.5460110952794
+      },
+      {
+        "analysis": "Complete-covariate sensitivity",
+        "comparison": "Daily minus monthly or infrequent",
+        "n": 17804,
+        "adjusted_difference_pp": 31.214454042829,
+        "lo": 29.4695585052796,
+        "hi": 32.8071562796836
+      }
+    ],
+    "missing_covariates": [
+      {
+        "variable": "exp_band",
+        "missing_n": 177
+      },
+      {
+        "variable": "role_f",
+        "missing_n": 0
+      },
+      {
+        "variable": "region_f",
+        "missing_n": 8
+      },
+      {
+        "variable": "org_f",
+        "missing_n": 2780
+      }
+    ],
+    "frequency_overlap": [
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "0-4 yrs",
+        "n": 103,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "0-4 yrs",
+        "n": 211,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Daily",
+        "level": "0-4 yrs",
+        "n": 845,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "5-9 yrs",
+        "n": 571,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "5-9 yrs",
+        "n": 932,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Daily",
+        "level": "5-9 yrs",
+        "n": 2931,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "10-19 yrs",
+        "n": 1197,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "10-19 yrs",
+        "n": 1635,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Daily",
+        "level": "10-19 yrs",
+        "n": 4708,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "20+ yrs",
+        "n": 1364,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "20+ yrs",
+        "n": 1669,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Daily",
+        "level": "20+ yrs",
+        "n": 4389,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Missing",
+        "n": 28,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Missing",
+        "n": 25,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Missing",
+        "n": 124,
+        "variable": "exp_band"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Developer / software engineer",
+        "n": 2688,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Developer / software engineer",
+        "n": 3635,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Developer / software engineer",
+        "n": 10457,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Data / AI / analytics",
+        "n": 151,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Data / AI / analytics",
+        "n": 220,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Data / AI / analytics",
+        "n": 808,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Ops / infra / security / support",
+        "n": 143,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Ops / infra / security / support",
+        "n": 199,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Ops / infra / security / support",
+        "n": 511,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Management / exec / product",
+        "n": 117,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Management / exec / product",
+        "n": 199,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Management / exec / product",
+        "n": 715,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Research / education",
+        "n": 33,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Research / education",
+        "n": 55,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Research / education",
+        "n": 114,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Student",
+        "n": 50,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Student",
+        "n": 76,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Student",
+        "n": 172,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Other",
+        "n": 81,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Other",
+        "n": 88,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Other",
+        "n": 220,
+        "variable": "role_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Europe & C. Asia",
+        "n": 1741,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Europe & C. Asia",
+        "n": 2354,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Europe & C. Asia",
+        "n": 6240,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "North America",
+        "n": 868,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "North America",
+        "n": 1122,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "North America",
+        "n": 2720,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "East Asia & Pacific",
+        "n": 195,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "East Asia & Pacific",
+        "n": 266,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "East Asia & Pacific",
+        "n": 998,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "South Asia",
+        "n": 185,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "South Asia",
+        "n": 253,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "South Asia",
+        "n": 1239,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Latin America & Carib.",
+        "n": 149,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Latin America & Carib.",
+        "n": 289,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Latin America & Carib.",
+        "n": 854,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "MENA, Afg. & Pakistan",
+        "n": 68,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "MENA, Afg. & Pakistan",
+        "n": 118,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "MENA, Afg. & Pakistan",
+        "n": 606,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Sub-Saharan Africa",
+        "n": 55,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Sub-Saharan Africa",
+        "n": 69,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Sub-Saharan Africa",
+        "n": 335,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Missing",
+        "n": 2,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Missing",
+        "n": 1,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Missing",
+        "n": 5,
+        "variable": "region_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Just me",
+        "n": 89,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Just me",
+        "n": 103,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Just me",
+        "n": 453,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "2-19",
+        "n": 425,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "2-19",
+        "n": 581,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "2-19",
+        "n": 2078,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "20-99",
+        "n": 537,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "20-99",
+        "n": 750,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "20-99",
+        "n": 2514,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "100-499",
+        "n": 581,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "100-499",
+        "n": 759,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "100-499",
+        "n": 2066,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "500-999",
+        "n": 208,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "500-999",
+        "n": 276,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "500-999",
+        "n": 753,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "1,000-4,999",
+        "n": 357,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "1,000-4,999",
+        "n": 558,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "1,000-4,999",
+        "n": 1240,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "5,000-9,999",
+        "n": 117,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "5,000-9,999",
+        "n": 200,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "5,000-9,999",
+        "n": 483,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "10,000+",
+        "n": 450,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "10,000+",
+        "n": 589,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "10,000+",
+        "n": 1495,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Don't know",
+        "n": 58,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Don't know",
+        "n": 80,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Don't know",
+        "n": 152,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Monthly or infrequent",
+        "level": "Missing",
+        "n": 441,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Weekly",
+        "level": "Missing",
+        "n": 576,
+        "variable": "org_f"
+      },
+      {
+        "frequency": "Daily",
+        "level": "Missing",
+        "n": 1763,
+        "variable": "org_f"
+      }
+    ],
+    "diagnostics": {
+      "main": {
+        "converged": true,
+        "rank": 29,
+        "parameters": 29,
+        "aggregated_patterns": 2170,
+        "fitted_probability_min": 0.0381854769983765,
+        "fitted_probability_max": 0.797343013241643
+      },
+      "complete": {
+        "converged": true,
+        "rank": 26,
+        "parameters": 26,
+        "aggregated_patterns": 1770,
+        "fitted_probability_min": 0.0663608803780814,
+        "fitted_probability_max": 0.777488417707467
+      }
+    }
+  }
 }
