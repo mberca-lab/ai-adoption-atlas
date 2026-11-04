@@ -1,5 +1,5 @@
 /* =============================================================================
-   AI Adoption Atlas — NARRATIVE COPY
+   AI, in Practice — NARRATIVE COPY
    -----------------------------------------------------------------------------
    All prose lives here. Never type a finding's number into this file: use a
    {{placeholder}}. Placeholders are filled from Atlas.data.facts (see
@@ -23,7 +23,7 @@
    ========================================================================== */
 window.AtlasStory = {
   meta: {
-    title: "AI Adoption Atlas",
+    title: "AI, in Practice",
     edition: "Edition 01 · {{years_span}}",
     author: "Margarita Bermejo Cano",
     links: {
@@ -41,7 +41,7 @@ window.AtlasStory = {
 
   hero: {
     kicker: "Stack Overflow Developer Survey · {{years_span}}",
-    title: "AI Adoption <em>Atlas.</em>",
+    title: "AI, <em>in Practice.</em>",
     promise: "Developers are adopting AI at speed. Do they trust what they use?",
     note: "{{n_respondents}} professional-developer responses across four independent surveys. Each dot represents a share, not a tracked person. Scroll to follow the story.",
     cue: "Scroll to begin"
