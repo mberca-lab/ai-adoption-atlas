@@ -143,7 +143,7 @@ window.AtlasStory = {
     ],
     sourcesTitle: "Data & attribution",
     attribution: "Data: Stack Overflow Developer Survey 2023–2026, Stack Exchange Inc., made available under the <a href=\"https://opendatacommons.org/licenses/odbl/1-0/\">Open Database License (ODbL) 1.0</a>. This site shows aggregates only; no respondent-level data is published here.",
-    builtBy: "Designed, analysed and built by Margarita Bermejo Cano. No tracking, no cookies, no external requests."
+    builtBy: "An independent study, from public data to interactive story."
   },
 
   followup: {
