@@ -96,7 +96,9 @@ python -m http.server 8000 --bind 127.0.0.1 --directory site
 Open `http://127.0.0.1:8000/`. Serving the site is necessary; `file://` cannot load JSON.
 Browser QA checks every chapter at desktop/mobile sizes, dark/reduced-motion variants,
 keyboard interactions, real-data status, missing-data failure, and console errors.
-GitHub Actions runs release checks and browser QA before deploying **only `site/`** to Pages.
+GitHub Actions runs release checks and browser QA before publishing **only `site/`**
+to the `gh-pages` branch and requesting a native Pages build. Raw data and analysis
+outputs outside the website are never included in the deployed branch.
 
 ## Limits
 

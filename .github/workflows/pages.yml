@@ -5,8 +5,6 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -28,17 +26,36 @@ jobs:
       - run: python site/tools/qa.py
         env:
           ATLAS_SCREENSHOTS: '0'
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
   deploy:
     needs: validate
     runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pages: write
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://mberca.github.io/ai-adoption-atlas/
     steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Publish validated static snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          snapshot=$(git subtree split --prefix=site)
+          git push origin "$snapshot:gh-pages"
+          gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent
+          for attempt in $(seq 1 40); do
+            result=$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest")
+            status=$(printf '%s' "$result" | jq -r .status)
+            commit=$(printf '%s' "$result" | jq -r .commit)
+            if [ "$commit" = "$snapshot" ] && [ "$status" = "built" ]; then exit 0; fi
+            if [ "$commit" = "$snapshot" ] && [ "$status" = "errored" ]; then
+              printf '%s\n' "$result" | jq '{status,error}'
+              exit 1
+            fi
+            sleep 15
+          done
+          echo "Pages build did not finish in ten minutes."
+          exit 1
