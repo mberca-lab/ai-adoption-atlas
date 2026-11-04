@@ -19,8 +19,26 @@ confirms the `CodeMain` primary-job definition and all four work-related `AISele
 [`AITrust`](https://github.com/StackExchange/Survey/blob/releases/2026/questions/ai/AITrust.yaml)
 confirms that 2026 measures conditions of trust, not the earlier accuracy scale.
 The [2026 archive](https://github.com/StackExchange/Survey/tree/main/packages/archive/2026)
-now directs instrument users to that release. These checks support treating 2026 as a separate series;
-they do not resolve the previously recorded fieldwork-date typo or 2025 row-count discrepancy.
+now directs instrument users to that release. These checks support treating 2026 as a separate series.
+
+### Pinned source and population audit
+
+The follow-up verifies all four local file hashes and shapes against the publisher's Git LFS
+pointers at commit [`9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7`](https://github.com/StackExchange/Survey/tree/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7).
+Full hashes, source links and explicit discrepancy decisions are saved in
+`outputs/trust_followup/source_audit.json`; `population_flow.csv` records the professional
+eligibility, AI-status response, current-user and trust-response counts.
+
+**2025 remains an unresolved publisher discrepancy:** the hash-matched archive has 49,191
+records; the [official methodology](https://survey.stackoverflow.co/2025/methodology/) reports
+49,009 responses. The 182-record difference has not been explained. We analyse the pinned
+archive with our documented QC rules; we do not remove arbitrary records or claim to reproduce
+the results website's exact topline.
+
+**2026 date correction:** the current archive README no longer states the previously recorded,
+chronologically invalid close date. Neither it nor the consulted
+[current methodology](https://survey.stackoverflow.co/2026/methodology/) establishes a replacement
+close date. Field dates remain unverified; no corrected close date is invented or used analytically.
 
 ### File verification (done before any analysis)
 * Every file is the year its name says — confirmed by row/column counts, year-only questions
@@ -55,7 +73,7 @@ weights** — none of the four files contains a weight column (checked).
 | 2023 | 8–19 May 2023 | consent + required questions; ~2,000 dropped | sections 2–5 in random order (AI section position varies); median ~18 min |
 | 2024 | 19/20 May–20 Jun 2024 | attention check (`Check`), consent, `MainBranch`; ~20K dropped | median ~21 min |
 | 2025 | 29 May–23 Jun 2025 | age, consent, `MainBranch`; ~15K dropped | <2% recruited via Reddit ads; no Under-18 in public file |
-| 2026 | opened 23 Jun 2026; close date listed as "2025-07-31" in archive README **[VERIFY — typo]** | consent + employment + Qualtrics bot/duplicate/straight-lining/duration checks, **or** answered all 10 core questions | promoted as "for human developers only"; bot screen can be overridden by the completion rule |
+| 2026 | field dates unverified in consulted current sources; historical invalid close date removed | consent + employment + Qualtrics bot/duplicate/straight-lining/duration checks, **or** answered all 10 core questions | promoted as "for human developers only"; bot screen can be overridden by the completion rule |
 
 ## 4. Data quality — findings and handling
 
@@ -76,7 +94,7 @@ Raw profile (`docs/tables/profile_raw_by_year.csv`): overall cell missingness 34
 Other issues: 2025–26 `YearsCode`/`WorkExp` are free numbers (2023–24 dropdowns); 2026 `AIToolCount`
 contains absurd values (e.g. 999,999,999,999) — never use unbounded; `ConvertedCompYearly` has extreme
 outliers in all years (trim/winsorise per analysis); 2025 file has 49,191 rows but the results site
-reports 49,009 responses **[VERIFY — 182 difference unexplained]**; country is asked late so missingness
+reports 49,009 responses **[confirmed mismatch — 182 difference unresolved]**; country is asked late so missingness
 rises to 28–31% in 2025–26 (country estimates are biased toward completers).
 
 ## 5. Sampling caveats (read before every chart)
@@ -94,6 +112,24 @@ rises to 28–31% in 2025–26 (country estimates are biased toward completers).
 6. 2026 is newly fielded with bot controls; 2023–24 relied on attention checks only.
 7. Results are descriptive; no causal claims; report n and use uncertainty intervals (e.g. Wilson CIs)
    with the caveat that they ignore self-selection bias.
+
+### Do not conflate types of missingness or target populations
+
+The professional trend base requires known adult age, professional-developer status, declared QC
+eligibility and an answered AI-status question. In 2025, 33,792 professionals were eligible before
+AI-status missingness; 25,974 answered (76.9%). Of 20,991 current users, 20,732 answered accuracy trust
+and 259 did not. The 7,818 professionals missing AI status are **not** included in that item-missingness
+count. Trust-item bounds apply only to identified users; they do not solve module nonresponse.
+
+Worst-case missing-AI-status bounds for the 2024–2025 adoption change are **[-2.8, 24.9] percentage
+points**, including zero. These are assumption bounds, not a 95% confidence interval. Completion
+weighting uses observed age/employment; it cannot adjust unknown AI attitudes or establish
+missing-at-random. Counts describe separate survey responses, not tracked people.
+
+The adjusted frequency follow-up targets observed 2025 adult-professional AI users. The original
+predictive models and new full-base primary modelling check use default-base AI users of all
+eligible ages and developer statuses. Segments use a separate complete-case 2025 population.
+These denominators are not interchangeable. The follow-ups are post-hoc, not preregistered.
 
 ## 6. Eight most promising analysis questions (given what is truly comparable)
 

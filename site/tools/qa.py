@@ -41,6 +41,12 @@ def main():
         assert page.locator(".chart-host svg").count() >= 7, "Missing chart"
         assert page.evaluate("Atlas.data.std.use.length >= 3"), "Mix-adjusted series not loaded"
         assert page.evaluate("Atlas.data.experience.bands.length === 4")
+        assert "31.0 pp" in page.locator("#panel-frequency").text_content()
+        assert "small detectable gain" in page.locator("#panel-stability").text_content()
+        assert "182-row discrepancy remains unresolved" in page.locator("#panel-source-audit").text_content()
+        assert page.locator("#frequency-table tbody tr").count() == 3
+        assert page.locator("#stability-table tbody tr").count() == 2
+        assert page.locator("#population-table tbody tr").count() == 4
         checked += 1
 
     def screenshot(page, name):
@@ -89,6 +95,13 @@ def main():
         page.locator("#trust-mode button[data-value=std]").click()
         assert "mix-adjusted" in page.locator("#trust-table caption").text_content()
         assert page.locator(".gap-wedge").count() == 0, "Invalid cross-population gap"
+        for panel in ["panel-frequency", "panel-stability", "panel-source-audit"]:
+            details = page.locator(f"#{panel} details")
+            details.locator("summary").focus()
+            page.keyboard.press("Enter")
+            assert details.get_attribute("open") is not None, "Follow-up evidence is not keyboard accessible"
+            assert details.locator("table").first.is_visible()
+        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
         page.locator("#theme-toggle").click()
         assert page.locator("html").get_attribute("data-theme") == "dark"
         for button in page.locator("#model-outcome button").all():

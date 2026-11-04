@@ -30,6 +30,16 @@ Their populations and computational budgets differ from the full professional-de
 read the linked findings before quoting their results. All thresholds are analyst choices,
 not an externally preregistered protocol.
 
+The scoped analytical follow-up adds a pinned source/population audit, an adjusted 2025
+frequency–trust comparison and full-base repeated primary model comparisons. Adjusted trust is
+**47.2% for daily users vs 16.2% for monthly/infrequent users** (difference **31.0 pp**,
+95% model-based interval **[29.4, 32.5] pp**). This is an association, not a causal effect.
+The full-base reference trust comparison finds a **small detectable ensemble advantage**
+(ΔAUC **0.00265**, conditional 95% interval **[0.00096, 0.00415]**), still below the analyst-set
+**0.01** practical benchmark. Three training-bootstrap refits support a similarly small gain;
+their range is descriptive, not a confidence interval. The original subset charts are retained
+and explicitly distinguished from this follow-up.
+
 ## Explore without installing anything
 
 The [published story](https://mberca.github.io/ai-adoption-atlas/) is a static website.
@@ -48,6 +58,8 @@ No analytics, trackers, cookies, or external runtime dependencies are used.
 | `docs/tables/` | Aggregate data-quality profiles |
 | `outputs/trust_trends/` | Full professional-developer trends, models, sensitivity analyses and figures |
 | `outputs/modelling/` | Exploratory predictive model comparison and diagnostics |
+| `outputs/trust_followup/` | Pinned source audit, population flow, adjusted frequency estimates and sensitivity |
+| `outputs/model_stability/` | Full-base primary comparisons with repeated tuning/refitting/calibration |
 | `outputs/segments/` | Exploratory segmentation and within-year association rules |
 | `site_data/` | Aggregate JSON exports, mirrored to `site/data/` for publication |
 | `site/` | Self-hosted D3 scrollytelling site; no build step |
@@ -80,6 +92,24 @@ Rscript scripts\02_trust_trends_verify.R
 Predictive modelling and segmentation have separate reproduction commands in their
 `FINDINGS.md` files. Large bootstrap/model-search budgets can be slow; do not describe
 a smoke test or a subset analysis as a full-data run.
+
+After generating the original trust and model exports, run these follow-ups **last**, before
+copying data to the site. They add sections without replacing the original exploratory results:
+
+```powershell
+Rscript scripts\05_trust_followup.R
+python scripts\05_model_stability.py
+Rscript scripts\05_trust_followup.R --verify-only
+python scripts\05_model_stability.py --verify-only
+python -B -m unittest discover -s tests -p test_followup.py
+```
+
+The source audit requires authenticated `gh` access to the public publisher repository and access
+to the official methodology page. It verifies large local files but fetches only small upstream
+Git LFS pointers, not the survey data again. The model follow-up uses all eligible outcome rows,
+two threads and a bounded search. Details and limits are in each follow-up's `FINDINGS.md`.
+Rerunning an original export generator removes its nested follow-up; rerun the corresponding
+follow-up afterwards. Release checks reject missing, stale or mismatched follow-up evidence.
 
 ## Preview and check the story
 

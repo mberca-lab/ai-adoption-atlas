@@ -1,0 +1,55 @@
+{
+  "checked": "2026-11-04",
+  "upstream_commit": "9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7",
+  "files": [
+    {
+      "year": 2023,
+      "rows": 89184,
+      "columns": 84,
+      "sha256": "828874a3cf0fa1bbb4c3da6a87e5822b8563bbc04b21f9869479480dbcff410c",
+      "upstream_match": true,
+      "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2023/results.csv"
+    },
+    {
+      "year": 2024,
+      "rows": 65437,
+      "columns": 114,
+      "sha256": "7f2c2dbf6989d00b80a7351de4bb3af4b52b21cc52d5c947891bbc4f4e5cbe49",
+      "upstream_match": true,
+      "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2024/results.csv"
+    },
+    {
+      "year": 2025,
+      "rows": 49191,
+      "columns": 172,
+      "sha256": "2d1f65308877282edfb4470520eabbc08cb499118432a3dcec6a66c086aa2baa",
+      "upstream_match": true,
+      "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2025/results.csv"
+    },
+    {
+      "year": 2026,
+      "rows": 30903,
+      "columns": 212,
+      "sha256": "ad520b4d5d71f240141e63f0d6f81a3b1898cbdc69efe9ea985496533b15fc2c",
+      "upstream_match": true,
+      "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2026/survey_results_public.csv"
+    }
+  ],
+  "issues": [
+    {
+      "id": "2025_count",
+      "status": "unresolved publisher discrepancy",
+      "archive_rows": 49191,
+      "published_topline": 49009,
+      "difference": 182,
+      "source": "https://survey.stackoverflow.co/2025/methodology/",
+      "decision": "Use the hash-verified public archive and our declared QC base. Do not remove 182 arbitrary rows or claim exact reproduction of the published topline."
+    },
+    {
+      "id": "2026_dates",
+      "status": "historical invalid date withdrawn; close date unverified",
+      "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2026/README.md",
+      "decision": "The current archive README no longer states the historical invalid close date. No verified replacement close date is asserted. Analyses use survey year only; 2026 remains a separate instrument series."
+    }
+  ]
+}

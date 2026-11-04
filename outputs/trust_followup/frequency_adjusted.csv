@@ -1,0 +1,7 @@
+analysis,frequency,n_target,adjusted_pct,lo,hi
+Missing covariates retained as categories,Monthly or infrequent,20732,16.2403297849878,15.0092762356854,17.5880890509429
+Missing covariates retained as categories,Weekly,20732,28.361822114341,27.0820986476877,29.7232557360046
+Missing covariates retained as categories,Daily,20732,47.2375434377414,46.3953244264249,48.1091191421492
+Complete-covariate sensitivity,Monthly or infrequent,17804,15.710545050997,14.4508322440234,17.1315305108195
+Complete-covariate sensitivity,Weekly,17804,28.7853305840392,27.3951473759859,30.2510490466695
+Complete-covariate sensitivity,Daily,17804,46.9249990938261,46.0021454299726,47.8833968856326

@@ -103,7 +103,7 @@ window.AtlasStory = {
   ch5: {
     label: "05 / What predicts trust?",
     title: "Does complexity <em>earn its place?</em>",
-    dek: "Can a complex model beat a simple one on a later survey? The highest-AUC complex candidate reaches {{auc_best}}, against {{auc_logit}} for {{baseline_model}} (ΔAUC {{d_auc}}, 95% CI {{d_auc_ci}}). This is an exploratory selection, not a confirmed winner. The analyst-set benchmark for a useful gain is {{margin_auc}}.",
+    dek: "Can a complex model beat a simple one on a later survey? The highest-AUC complex candidate reaches {{auc_best}}, against {{auc_logit}} for {{baseline_model}} (ΔAUC {{d_auc}}, 95% CI {{d_auc_ci}}). This is an exploratory selection, not a confirmed winner. The analyst-set benchmark for a useful gain is {{margin_auc}}. These charts retain the original exploratory subset; a full-data primary check follows.",
     verdictLead: "Verdict:",
     verdictNote: "Verdicts are the analysis team's labels and combine ΔAUC with relative log-loss, so a model can pass on calibration while its AUC gain stays inside the margin.",
     howto: "Switch outcome and feature set. The shaded band marks the gain that would justify a more complex model.",
@@ -128,7 +128,7 @@ window.AtlasStory = {
       { h: "Unweighted estimates", p: "No survey weights exist for this data. Composition shifts year to year (fewer respondents, a different mix of countries and roles), so we also show mix-adjusted (standardised) estimates where possible." },
       { h: "Associations, not causes", p: "Nothing here shows that experience <em>causes</em> distrust, or that a tool <em>causes</em> adoption. Model drivers describe patterns that help prediction, not levers." },
       { h: "Series breaks", p: "Question wording, routing and answer options changed between years. Comparisons are drawn only where items are comparable, and breaks are marked." },
-      { h: "Dropout can change the story", p: "Only 76.9% of eligible professional respondents reached the AI question in 2025. Worst-case missing-response bounds allow no adoption increase from 2024 to 2025. Confidence intervals do not account for that selection bias." },
+      { h: "Dropout can change the story", p: "Only {{completion_2025}} of eligible professional respondents answered the AI-status question in 2025. Worst-case missing-response bounds allow no adoption increase from 2024 to 2025. Trust-item missingness bounds cover observed AI users, not whole-module dropouts. Completion weighting cannot repair unobserved AI attitudes." },
       { h: "Different people, not a panel", p: "The user pool grew while average trust fell. This does not show that the same people lost trust, or that individual planners converted. The 2026 redesign is shown separately, never as a connected trend." },
       { h: "Stated, not observed", p: "These are self-reports of use and sentiment, not telemetry. Saying you trust a tool is not the same as relying on it." }
     ],
@@ -136,12 +136,31 @@ window.AtlasStory = {
     method: [
       "Harmonised AI items across four survey waves with an item-level comparability verdict per year (codebook in the repo).",
       "Proportions with Wilson 95% intervals. Mix-adjusted trends use logistic g-computation over the pooled 2023–2025 covariate mix.",
+      "The 2025 frequency follow-up standardises accuracy trust over its own observed covariate mix, adjusting for experience, role, region and organisation size. A complete-covariate analysis is a sensitivity check, not the same target sample.",
       "Prediction: logistic regression against gradient boosting with temporal hold-out (train 2023–24, test 2025), bootstrap ΔAUC and calibration.",
+      "The full-data primary follow-up repeats tuning, refitting and calibration. Split original respondents before within-block resampling to keep calibration separate. Cross-run ranges are descriptive, not confidence intervals.",
       "Segments and tool baskets are exploratory, within-year analyses. Their populations and validation budgets differ from the professional-developer trends; see each chapter and the repository findings."
     ],
     sourcesTitle: "Data & attribution",
     attribution: "Data: Stack Overflow Developer Survey 2023–2026, Stack Exchange Inc., made available under the <a href=\"https://opendatacommons.org/licenses/odbl/1-0/\">Open Database License (ODbL) 1.0</a>. This site shows aggregates only; no respondent-level data is published here.",
     builtBy: "Designed, analysed and built by Margarita Bermejo Cano. No tracking, no cookies, no external requests."
+  },
+
+  followup: {
+    population: "Selection matters here: {{completion_2025}} of eligible professionals answered AI status in 2025. Worst-case bounds for the 2024–2025 adoption change are {{adoption_bound_interval}} pp and include zero. Trust-item missingness bounds do not cover whole-module dropouts.",
+    frequencyTitle: "More frequent use. More trust. Even after adjustment.",
+    frequency: "Among {{frequency_n}} professional AI users in 2025, adjusted accuracy trust is {{frequency_daily}} for daily users versus {{frequency_monthly}} for monthly or infrequent users: a {{frequency_gap}} difference (95% model-based interval {{frequency_interval}} pp).",
+    frequencyNote: "Adjusted for coding experience, role, region and organisation size; missing covariates retained as categories. This is a within-2025 association, not evidence that frequent use causes trust or explains the historical decline.",
+    frequencySensitivity: "Complete-covariate sensitivity: {{frequency_cc_n}} respondents, daily-minus-monthly difference {{frequency_cc_gap}} (95% model-based interval {{frequency_cc_interval}} pp). This subset has its own covariate mix, not the main analysis target.",
+    frequencyUncertainty: "Wilson intervals for raw shares; coefficient-simulation intervals for standardised shares and their paired contrast. These intervals are conditional on the fitted main-effects model and do not account for self-selection or unmeasured confounding. The comparison was selected after seeing the raw pattern, not preregistered.",
+    stabilityTitle: "Full-data check: does the verdict hold?",
+    stability: "{{stability_trust_signal}} {{stability_practical}} The largest absolute relative log-loss change is {{stability_max_logloss}}, against a {{margin_logloss}} practical benchmark.",
+    stabilityNote: "All eligible default-base AI users with observed outcomes, not only adult professionals. Context-only models; {{stability_runs}} complete runs per outcome: one full-data reference and {{stability_refits}} training-bootstrap refits. Equal-weight logistic/XGBoost/LightGBM ensemble and logistic both calibrated on a separate 2024 block; fixed 2025 test set. Original subset charts above are unchanged.",
+    stabilityUncertainty: "Reference intervals are paired bootstraps of the fixed test predictions, conditional on that fitted pipeline. Ranges span all complete runs, including the reference: they are not confidence intervals or proof of equivalence. The bounded search is not an exhaustive algorithm comparison; this is a post-hoc robustness check, not external replication.",
+    sourceTitle: "Trace every denominator.",
+    source: "All four local archive files match the pinned publisher hashes. The 2025 archive contains {{archive_2025_n}} rows, while the official methodology reports {{published_2025_n}}: the {{archive_2025_difference}}-row discrepancy remains unresolved. We use the verified archive, not an asserted reproduction of the website topline.",
+    sourceNote: "Eligible means adult professional, before missing AI status, after declared quality exclusions. Current users are a deliberate subpopulation, not all AI-status respondents. Missing trust counts are among identified users only. The 2026 accuracy-trust cells are blank because the instrument changed.",
+    dateNote: "The current 2026 archive README no longer states the historical invalid fieldwork close date. No replacement close date has been verified or used to interpret the results."
   },
 
   badges: {

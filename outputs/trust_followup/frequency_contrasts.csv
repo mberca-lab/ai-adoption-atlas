@@ -1,0 +1,3 @@
+analysis,comparison,n,adjusted_difference_pp,lo,hi
+Missing covariates retained as categories,Daily minus monthly or infrequent,20732,30.9972136527536,29.4295658831362,32.5460110952794
+Complete-covariate sensitivity,Daily minus monthly or infrequent,17804,31.214454042829,29.4695585052796,32.8071562796836

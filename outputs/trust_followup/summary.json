@@ -1,0 +1,795 @@
+{
+  "meta": {
+    "seed": 20261104,
+    "year": 2025,
+    "population": "Adult professional current AI users answering accuracy trust and use frequency; same professional base as the trends.",
+    "n_current_users": 20991,
+    "n_analyzed": 20732,
+    "n_missing_trust_or_frequency": 259,
+    "n_complete_covariates": 17804,
+    "covariates": ["exp_band", "role_f", "region_f", "org_f"],
+    "method": "Grouped binomial logistic regression; marginal probabilities standardised to the observed covariate mix. Coding experience uses the existing bands; implausible years are marked Missing.",
+    "uncertainty": "95% model-based coefficient-normal simulation intervals, 4000 draws; conditional on the fitted main-effects model and observed sample. Independent-response/model assumptions; no correction for survey selection, module dropout or unmeasured confounding.",
+    "interpretation": "Exploratory follow-up selected after seeing the raw frequency gradient, not preregistered. Contemporary association, not evidence that use causes trust or that this explains the cross-year trend. Missing-category and complete-case analyses target different samples.",
+    "source_hash_format": "Source hashes normalise CRLF to LF; data hash uses exact bytes.",
+    "source_script_sha256": "502373e2d27cc77d81f08137096812ef829d09d4196b45359f31a0dbc32d7b36",
+    "helper_sha256": "40f3c045136b3ebc866f80c925cc9e0b1cdead0e4fc95515e51d4111d1b677c2",
+    "data_sha256": "832fb96dbab7b6b90cbd907bbc157299671ed799256432a7e9ed3b321d026dd8"
+  },
+  "source_audit": {
+    "checked": "2026-11-04",
+    "upstream_commit": "9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7",
+    "files": [
+      {
+        "year": 2023,
+        "rows": 89184,
+        "columns": 84,
+        "sha256": "828874a3cf0fa1bbb4c3da6a87e5822b8563bbc04b21f9869479480dbcff410c",
+        "upstream_match": true,
+        "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2023/results.csv"
+      },
+      {
+        "year": 2024,
+        "rows": 65437,
+        "columns": 114,
+        "sha256": "7f2c2dbf6989d00b80a7351de4bb3af4b52b21cc52d5c947891bbc4f4e5cbe49",
+        "upstream_match": true,
+        "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2024/results.csv"
+      },
+      {
+        "year": 2025,
+        "rows": 49191,
+        "columns": 172,
+        "sha256": "2d1f65308877282edfb4470520eabbc08cb499118432a3dcec6a66c086aa2baa",
+        "upstream_match": true,
+        "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2025/results.csv"
+      },
+      {
+        "year": 2026,
+        "rows": 30903,
+        "columns": 212,
+        "sha256": "ad520b4d5d71f240141e63f0d6f81a3b1898cbdc69efe9ea985496533b15fc2c",
+        "upstream_match": true,
+        "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2026/survey_results_public.csv"
+      }
+    ],
+    "issues": [
+      {
+        "id": "2025_count",
+        "status": "unresolved publisher discrepancy",
+        "archive_rows": 49191,
+        "published_topline": 49009,
+        "difference": 182,
+        "source": "https://survey.stackoverflow.co/2025/methodology/",
+        "decision": "Use the hash-verified public archive and our declared QC base. Do not remove 182 arbitrary rows or claim exact reproduction of the published topline."
+      },
+      {
+        "id": "2026_dates",
+        "status": "historical invalid date withdrawn; close date unverified",
+        "source": "https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2026/README.md",
+        "decision": "The current archive README no longer states the historical invalid close date. No verified replacement close date is asserted. Analyses use survey year only; 2026 remains a separate instrument series."
+      }
+    ]
+  },
+  "population_flow": [
+    {
+      "year": 2023,
+      "eligible_professionals": 66684,
+      "answered_ai_status": 66684,
+      "missing_ai_status": 0,
+      "current_ai_users": 29381,
+      "trust_answered_users": 29283,
+      "trust_missing_users": 98,
+      "completion_pct": 100
+    },
+    {
+      "year": 2024,
+      "eligible_professionals": 48470,
+      "answered_ai_status": 46296,
+      "missing_ai_status": 2174,
+      "current_ai_users": 29284,
+      "trust_answered_users": 29131,
+      "trust_missing_users": 153,
+      "completion_pct": 95.514751392614
+    },
+    {
+      "year": 2025,
+      "eligible_professionals": 33792,
+      "answered_ai_status": 25974,
+      "missing_ai_status": 7818,
+      "current_ai_users": 20991,
+      "trust_answered_users": 20732,
+      "trust_missing_users": 259,
+      "completion_pct": 76.8643465909091
+    },
+    {
+      "year": 2026,
+      "eligible_professionals": 20205,
+      "answered_ai_status": 13243,
+      "missing_ai_status": 6962,
+      "current_ai_users": 11400,
+      "trust_answered_users": null,
+      "trust_missing_users": null,
+      "completion_pct": 65.5431823805989
+    }
+  ],
+  "adoption_change_bounds": {
+    "contrast": "2024->2025",
+    "lo": -2.8,
+    "hi": 24.9,
+    "unit": "pp",
+    "interpretation": "Worst-case missing-AI-status bounds, not a confidence interval; includes zero."
+  },
+  "frequency_raw": [
+    {
+      "ai_use_freq": "Monthly or infrequent",
+      "x": 500,
+      "n": 3263,
+      "pct": 15.3233220962305,
+      "lo": 14.1282106890469,
+      "hi": 16.5999856888414
+    },
+    {
+      "ai_use_freq": "Weekly",
+      "x": 1224,
+      "n": 4472,
+      "pct": 27.3703041144902,
+      "lo": 26.0833880534403,
+      "hi": 28.6960647350128
+    },
+    {
+      "ai_use_freq": "Daily",
+      "x": 6238,
+      "n": 12997,
+      "pct": 47.99569131338,
+      "lo": 47.1375009099679,
+      "hi": 48.855066173861
+    }
+  ],
+  "frequency_adjusted": [
+    {
+      "analysis": "Missing covariates retained as categories",
+      "frequency": "Monthly or infrequent",
+      "n_target": 20732,
+      "adjusted_pct": 16.2403297849878,
+      "lo": 15.0092762356854,
+      "hi": 17.5880890509429
+    },
+    {
+      "analysis": "Missing covariates retained as categories",
+      "frequency": "Weekly",
+      "n_target": 20732,
+      "adjusted_pct": 28.361822114341,
+      "lo": 27.0820986476877,
+      "hi": 29.7232557360046
+    },
+    {
+      "analysis": "Missing covariates retained as categories",
+      "frequency": "Daily",
+      "n_target": 20732,
+      "adjusted_pct": 47.2375434377414,
+      "lo": 46.3953244264249,
+      "hi": 48.1091191421492
+    },
+    {
+      "analysis": "Complete-covariate sensitivity",
+      "frequency": "Monthly or infrequent",
+      "n_target": 17804,
+      "adjusted_pct": 15.710545050997,
+      "lo": 14.4508322440234,
+      "hi": 17.1315305108195
+    },
+    {
+      "analysis": "Complete-covariate sensitivity",
+      "frequency": "Weekly",
+      "n_target": 17804,
+      "adjusted_pct": 28.7853305840392,
+      "lo": 27.3951473759859,
+      "hi": 30.2510490466695
+    },
+    {
+      "analysis": "Complete-covariate sensitivity",
+      "frequency": "Daily",
+      "n_target": 17804,
+      "adjusted_pct": 46.9249990938261,
+      "lo": 46.0021454299726,
+      "hi": 47.8833968856326
+    }
+  ],
+  "frequency_contrasts": [
+    {
+      "analysis": "Missing covariates retained as categories",
+      "comparison": "Daily minus monthly or infrequent",
+      "n": 20732,
+      "adjusted_difference_pp": 30.9972136527536,
+      "lo": 29.4295658831362,
+      "hi": 32.5460110952794
+    },
+    {
+      "analysis": "Complete-covariate sensitivity",
+      "comparison": "Daily minus monthly or infrequent",
+      "n": 17804,
+      "adjusted_difference_pp": 31.214454042829,
+      "lo": 29.4695585052796,
+      "hi": 32.8071562796836
+    }
+  ],
+  "missing_covariates": [
+    {
+      "variable": "exp_band",
+      "missing_n": 177
+    },
+    {
+      "variable": "role_f",
+      "missing_n": 0
+    },
+    {
+      "variable": "region_f",
+      "missing_n": 8
+    },
+    {
+      "variable": "org_f",
+      "missing_n": 2780
+    }
+  ],
+  "frequency_overlap": [
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "0-4 yrs",
+      "n": 103,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "0-4 yrs",
+      "n": 211,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Daily",
+      "level": "0-4 yrs",
+      "n": 845,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "5-9 yrs",
+      "n": 571,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "5-9 yrs",
+      "n": 932,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Daily",
+      "level": "5-9 yrs",
+      "n": 2931,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "10-19 yrs",
+      "n": 1197,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "10-19 yrs",
+      "n": 1635,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Daily",
+      "level": "10-19 yrs",
+      "n": 4708,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "20+ yrs",
+      "n": 1364,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "20+ yrs",
+      "n": 1669,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Daily",
+      "level": "20+ yrs",
+      "n": 4389,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Missing",
+      "n": 28,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Missing",
+      "n": 25,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Missing",
+      "n": 124,
+      "variable": "exp_band"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Developer / software engineer",
+      "n": 2688,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Developer / software engineer",
+      "n": 3635,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Developer / software engineer",
+      "n": 10457,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Data / AI / analytics",
+      "n": 151,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Data / AI / analytics",
+      "n": 220,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Data / AI / analytics",
+      "n": 808,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Ops / infra / security / support",
+      "n": 143,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Ops / infra / security / support",
+      "n": 199,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Ops / infra / security / support",
+      "n": 511,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Management / exec / product",
+      "n": 117,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Management / exec / product",
+      "n": 199,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Management / exec / product",
+      "n": 715,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Research / education",
+      "n": 33,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Research / education",
+      "n": 55,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Research / education",
+      "n": 114,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Student",
+      "n": 50,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Student",
+      "n": 76,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Student",
+      "n": 172,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Other",
+      "n": 81,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Other",
+      "n": 88,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Other",
+      "n": 220,
+      "variable": "role_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Europe & C. Asia",
+      "n": 1741,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Europe & C. Asia",
+      "n": 2354,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Europe & C. Asia",
+      "n": 6240,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "North America",
+      "n": 868,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "North America",
+      "n": 1122,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "North America",
+      "n": 2720,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "East Asia & Pacific",
+      "n": 195,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "East Asia & Pacific",
+      "n": 266,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "East Asia & Pacific",
+      "n": 998,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "South Asia",
+      "n": 185,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "South Asia",
+      "n": 253,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "South Asia",
+      "n": 1239,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Latin America & Carib.",
+      "n": 149,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Latin America & Carib.",
+      "n": 289,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Latin America & Carib.",
+      "n": 854,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "MENA, Afg. & Pakistan",
+      "n": 68,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "MENA, Afg. & Pakistan",
+      "n": 118,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "MENA, Afg. & Pakistan",
+      "n": 606,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Sub-Saharan Africa",
+      "n": 55,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Sub-Saharan Africa",
+      "n": 69,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Sub-Saharan Africa",
+      "n": 335,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Missing",
+      "n": 2,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Missing",
+      "n": 1,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Missing",
+      "n": 5,
+      "variable": "region_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Just me",
+      "n": 89,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Just me",
+      "n": 103,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Just me",
+      "n": 453,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "2-19",
+      "n": 425,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "2-19",
+      "n": 581,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "2-19",
+      "n": 2078,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "20-99",
+      "n": 537,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "20-99",
+      "n": 750,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "20-99",
+      "n": 2514,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "100-499",
+      "n": 581,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "100-499",
+      "n": 759,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "100-499",
+      "n": 2066,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "500-999",
+      "n": 208,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "500-999",
+      "n": 276,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "500-999",
+      "n": 753,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "1,000-4,999",
+      "n": 357,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "1,000-4,999",
+      "n": 558,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "1,000-4,999",
+      "n": 1240,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "5,000-9,999",
+      "n": 117,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "5,000-9,999",
+      "n": 200,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "5,000-9,999",
+      "n": 483,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "10,000+",
+      "n": 450,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "10,000+",
+      "n": 589,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "10,000+",
+      "n": 1495,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Don't know",
+      "n": 58,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Don't know",
+      "n": 80,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Don't know",
+      "n": 152,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Monthly or infrequent",
+      "level": "Missing",
+      "n": 441,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Weekly",
+      "level": "Missing",
+      "n": 576,
+      "variable": "org_f"
+    },
+    {
+      "frequency": "Daily",
+      "level": "Missing",
+      "n": 1763,
+      "variable": "org_f"
+    }
+  ],
+  "diagnostics": {
+    "main": {
+      "converged": true,
+      "rank": 29,
+      "parameters": 29,
+      "aggregated_patterns": 2170,
+      "fitted_probability_min": 0.0381854769983765,
+      "fitted_probability_max": 0.797343013241643
+    },
+    "complete": {
+      "converged": true,
+      "rank": 26,
+      "parameters": 26,
+      "aggregated_patterns": 1770,
+      "fitted_probability_min": 0.0663608803780814,
+      "fitted_probability_max": 0.777488417707467
+    }
+  }
+}

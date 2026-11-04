@@ -1,0 +1,5 @@
+year,rows,columns,sha256,upstream_match,source
+2023,89184,84,828874a3cf0fa1bbb4c3da6a87e5822b8563bbc04b21f9869479480dbcff410c,TRUE,https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2023/results.csv
+2024,65437,114,7f2c2dbf6989d00b80a7351de4bb3af4b52b21cc52d5c947891bbc4f4e5cbe49,TRUE,https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2024/results.csv
+2025,49191,172,2d1f65308877282edfb4470520eabbc08cb499118432a3dcec6a66c086aa2baa,TRUE,https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2025/results.csv
+2026,30903,212,ad520b4d5d71f240141e63f0d6f81a3b1898cbdc69efe9ea985496533b15fc2c,TRUE,https://github.com/StackExchange/Survey/blob/9dd5c163b7ec09ce5503f711c37a99dbd80ff3c7/packages/archive/2026/survey_results_public.csv

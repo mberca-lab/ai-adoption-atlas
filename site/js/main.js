@@ -32,10 +32,49 @@
     document.querySelectorAll(".chapter-nav a").forEach((a, i) => { const l = a.querySelector(".nav-label"); if (l && STORY.nav[i]) l.textContent = STORY.nav[i]; });
     // caveats + method
     document.getElementById("caveats").innerHTML = STORY.ch7.caveats.map((c, i) =>
-      `<article class="caveat reveal-up"><span class="caveat-n">${String(i + 1).padStart(2, "0")}</span><h3>${c.h}</h3><p>${c.p}</p></article>`).join("");
+      `<article class="caveat reveal-up"><span class="caveat-n">${String(i + 1).padStart(2, "0")}</span><h3>${c.h}</h3><p>${A.fill(c.p, facts)}</p></article>`).join("");
     document.getElementById("method-list").innerHTML = STORY.ch7.method.map(m => `<li>${m}</li>`).join("");
     const L = STORY.meta.links;
     document.querySelectorAll("[data-link]").forEach(a => { const u = L[a.dataset.link]; if (u) a.href = u; });
+  }
+
+  function initFollowups() {
+    const D = A.data, f = D.followup, stability = D.modelling.stability;
+    if (!f || !stability) {
+      ["panel-frequency", "panel-stability", "panel-source-audit"].forEach(id => {
+        document.getElementById(id).hidden = true;
+      });
+      return;
+    }
+    const n = v => v == null ? "n/a" : (+v).toLocaleString("en-GB");
+    const delta = v => (v >= 0 ? "+" : "") + (+v).toFixed(4);
+    const primary = f.frequency_adjusted.filter(r => r.analysis === f.frequency_contrasts[0].analysis);
+    A.srTable(document.getElementById("frequency-table"),
+      "Accuracy trust among observed 2025 professional AI users, raw and standardised to the same covariate mix",
+      ["Frequency", "n", "Raw trust", "Raw 95% CI", "Adjusted trust", "Model-based 95% interval"],
+      primary.map(r => {
+        const raw = f.frequency_raw.find(v => v.ai_use_freq === r.frequency);
+        return [r.frequency, n(raw.n), A.fmtPct(raw.pct, 1), A.fmtCI(raw.lo, raw.hi) + "%",
+          A.fmtPct(r.adjusted_pct, 1), A.fmtCI(r.lo, r.hi) + "%"];
+      }));
+    A.srTable(document.getElementById("population-table"),
+      "Distinct respondent counts by year and analysis stage; not a longitudinal panel",
+      ["Year", "Eligible adult professionals", "Answered AI status", "Missing AI status", "Current AI users", "Trust answered (users)", "Missing trust (users)", "AI completion"],
+      f.population_flow.map(r => [r.year, n(r.eligible_professionals), n(r.answered_ai_status),
+        n(r.missing_ai_status), n(r.current_ai_users), n(r.trust_answered_users),
+        n(r.trust_missing_users), A.fmtPct(r.completion_pct, 1)]));
+    A.srTable(document.getElementById("source-table"), "Local public archive files, matched to pinned upstream Git LFS hashes",
+      ["Year", "All archive responses", "Columns", "SHA-256 prefix", "Match"],
+      f.source_audit.files.map(r => [r.year, n(r.rows), r.columns, r.sha256.slice(0, 12), r.upstream_match ? "Verified" : "Unverified"]));
+    const pin = document.getElementById("source-pin");
+    pin.textContent = f.source_audit.upstream_commit.slice(0, 12);
+    pin.href = "https://github.com/StackExchange/Survey/tree/" + f.source_audit.upstream_commit;
+    A.srTable(document.getElementById("stability-table"),
+      "Full-base context-only calibrated ensemble minus calibrated logistic; ranges across four runs are descriptive",
+      ["Outcome", "2025 test n", "Reference ΔAUC", "Conditional 95% CI", "ΔAUC range across runs"],
+      stability.summary.map(r => [r.outcome === "trust" ? "Accuracy trust" : "Favourability",
+        n(r.n_test), delta(r.reference_d_auc), `[${delta(r.reference_d_auc_lo)}, ${delta(r.reference_d_auc_hi)}]`,
+        `[${delta(r.d_auc_min)}, ${delta(r.d_auc_max)}]`]));
   }
 
   /* ---------------- fixture badge ---------------- */
@@ -169,6 +208,7 @@
     initTheme();
     const D = await A.loadData();
     fillCopy(D.facts);
+    initFollowups();
     const meta = D.modelling.meta;
     document.getElementById("modelling-scope").textContent =
       meta.analysis_note || "Exploratory model comparison. Sample sizes and computational budget are documented in the repository.";

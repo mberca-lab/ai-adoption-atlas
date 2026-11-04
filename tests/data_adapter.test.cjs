@@ -5,7 +5,7 @@ const test = require("node:test");
 const vm = require("node:vm");
 const root = path.resolve(__dirname, "..");
 
-function adapter({ missing = false, demo = false, segments = null } = {}) {
+function adapter({ missing = false, demo = false, segments = null, omitFollowup = false } = {}) {
   const context = {
     window: { Atlas: { params: new URLSearchParams(demo ? "demo=1" : "") } },
     console: { info() {}, warn() {} },
@@ -23,7 +23,14 @@ function adapter({ missing = false, demo = false, segments = null } = {}) {
           items: [{ basket: "B24", item: "Test A", support: 0.1 }]
         }) };
       }
-      return { ok: true, json: async () => JSON.parse(readFileSync(path.join(root, "site_data", file), "utf8")) };
+      return { ok: true, json: async () => {
+        const data = JSON.parse(readFileSync(path.join(root, "site_data", file), "utf8"));
+        if (omitFollowup) {
+          delete data.followup;
+          delete data.primary_stability;
+        }
+        return data;
+      } };
     }
   };
   vm.createContext(context);
@@ -40,6 +47,24 @@ test("wide exports load mix-adjusted series and four experience bands", async ()
   assert.equal(data.experience.bands.length, 4);
   assert.equal(data.facts.use_distrust_2025, "31%");
   assert.equal(data.trend.trust.some(p => p.year === 2026), false);
+});
+
+test("audited follow-ups survive wide normalization and preserve original exploratory metrics", async () => {
+  const data = await adapter().loadData();
+  const source = JSON.parse(readFileSync(path.join(root, "site_data", "modelling.json"), "utf8"));
+  assert.equal(data.followup.population_flow.length, 4);
+  assert.equal(data.followup.meta.n_analyzed, 20732);
+  assert.equal(data.facts.frequency_gap, "31.0 pp");
+  assert.equal(data.facts.completion_2025, "76.9%");
+  assert.equal(data.modelling.stability.meta.sample_fraction, 1);
+  assert.equal(data.modelling.metrics.length, source.model_metrics.length);
+  assert.equal(data.modelling.stability.runs.length, 8);
+  assert.match(data.facts.stability_trust_signal, /small detectable gain/);
+  assert.match(data.facts.stability_practical, /Neither AUC nor relative log-loss gains/);
+});
+
+test("missing follow-ups fail closed rather than silently reverting to old evidence", async () => {
+  await assert.rejects(adapter({ omitFollowup: true }).loadData(), /follow-ups are incomplete/);
 });
 
 test("missing results reject rather than inventing public findings", async () => {

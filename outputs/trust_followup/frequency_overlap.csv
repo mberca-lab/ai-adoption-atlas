@@ -1,0 +1,91 @@
+frequency,level,n,variable
+Monthly or infrequent,0-4 yrs,103,exp_band
+Weekly,0-4 yrs,211,exp_band
+Daily,0-4 yrs,845,exp_band
+Monthly or infrequent,5-9 yrs,571,exp_band
+Weekly,5-9 yrs,932,exp_band
+Daily,5-9 yrs,2931,exp_band
+Monthly or infrequent,10-19 yrs,1197,exp_band
+Weekly,10-19 yrs,1635,exp_band
+Daily,10-19 yrs,4708,exp_band
+Monthly or infrequent,20+ yrs,1364,exp_band
+Weekly,20+ yrs,1669,exp_band
+Daily,20+ yrs,4389,exp_band
+Monthly or infrequent,Missing,28,exp_band
+Weekly,Missing,25,exp_band
+Daily,Missing,124,exp_band
+Monthly or infrequent,Developer / software engineer,2688,role_f
+Weekly,Developer / software engineer,3635,role_f
+Daily,Developer / software engineer,10457,role_f
+Monthly or infrequent,Data / AI / analytics,151,role_f
+Weekly,Data / AI / analytics,220,role_f
+Daily,Data / AI / analytics,808,role_f
+Monthly or infrequent,Ops / infra / security / support,143,role_f
+Weekly,Ops / infra / security / support,199,role_f
+Daily,Ops / infra / security / support,511,role_f
+Monthly or infrequent,Management / exec / product,117,role_f
+Weekly,Management / exec / product,199,role_f
+Daily,Management / exec / product,715,role_f
+Monthly or infrequent,Research / education,33,role_f
+Weekly,Research / education,55,role_f
+Daily,Research / education,114,role_f
+Monthly or infrequent,Student,50,role_f
+Weekly,Student,76,role_f
+Daily,Student,172,role_f
+Monthly or infrequent,Other,81,role_f
+Weekly,Other,88,role_f
+Daily,Other,220,role_f
+Monthly or infrequent,Europe & C. Asia,1741,region_f
+Weekly,Europe & C. Asia,2354,region_f
+Daily,Europe & C. Asia,6240,region_f
+Monthly or infrequent,North America,868,region_f
+Weekly,North America,1122,region_f
+Daily,North America,2720,region_f
+Monthly or infrequent,East Asia & Pacific,195,region_f
+Weekly,East Asia & Pacific,266,region_f
+Daily,East Asia & Pacific,998,region_f
+Monthly or infrequent,South Asia,185,region_f
+Weekly,South Asia,253,region_f
+Daily,South Asia,1239,region_f
+Monthly or infrequent,Latin America & Carib.,149,region_f
+Weekly,Latin America & Carib.,289,region_f
+Daily,Latin America & Carib.,854,region_f
+Monthly or infrequent,"MENA, Afg. & Pakistan",68,region_f
+Weekly,"MENA, Afg. & Pakistan",118,region_f
+Daily,"MENA, Afg. & Pakistan",606,region_f
+Monthly or infrequent,Sub-Saharan Africa,55,region_f
+Weekly,Sub-Saharan Africa,69,region_f
+Daily,Sub-Saharan Africa,335,region_f
+Monthly or infrequent,Missing,2,region_f
+Weekly,Missing,1,region_f
+Daily,Missing,5,region_f
+Monthly or infrequent,Just me,89,org_f
+Weekly,Just me,103,org_f
+Daily,Just me,453,org_f
+Monthly or infrequent,2-19,425,org_f
+Weekly,2-19,581,org_f
+Daily,2-19,2078,org_f
+Monthly or infrequent,20-99,537,org_f
+Weekly,20-99,750,org_f
+Daily,20-99,2514,org_f
+Monthly or infrequent,100-499,581,org_f
+Weekly,100-499,759,org_f
+Daily,100-499,2066,org_f
+Monthly or infrequent,500-999,208,org_f
+Weekly,500-999,276,org_f
+Daily,500-999,753,org_f
+Monthly or infrequent,"1,000-4,999",357,org_f
+Weekly,"1,000-4,999",558,org_f
+Daily,"1,000-4,999",1240,org_f
+Monthly or infrequent,"5,000-9,999",117,org_f
+Weekly,"5,000-9,999",200,org_f
+Daily,"5,000-9,999",483,org_f
+Monthly or infrequent,"10,000+",450,org_f
+Weekly,"10,000+",589,org_f
+Daily,"10,000+",1495,org_f
+Monthly or infrequent,Don't know,58,org_f
+Weekly,Don't know,80,org_f
+Daily,Don't know,152,org_f
+Monthly or infrequent,Missing,441,org_f
+Weekly,Missing,576,org_f
+Daily,Missing,1763,org_f

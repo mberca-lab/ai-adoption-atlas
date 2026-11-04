@@ -1,0 +1,3 @@
+outcome,n_test,reference_d_auc,reference_d_auc_lo,reference_d_auc_hi,d_auc_min,d_auc_max,d_log_loss_rel_min,d_log_loss_rel_max
+fav,26230,0.00119704,-0.00093427,0.00293052,-0.00082186,0.00201141,-0.00083185,0.00051952
+trust,26126,0.00265356,0.00095592,0.00415348,0.00154010,0.00292524,-0.00190795,-0.00062558

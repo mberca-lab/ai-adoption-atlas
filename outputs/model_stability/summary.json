@@ -1,0 +1,1105 @@
+{
+  "meta": {
+    "sample_fraction": 1,
+    "seeds": [
+      20261104,
+      20261105,
+      20261106,
+      20261107
+    ],
+    "full_pipeline_runs_per_outcome": 4,
+    "training_bootstrap_refits_per_outcome": 3,
+    "threads": 2,
+    "conditional_test_bootstrap_reps": 200,
+    "population": "All default-base current AI users with observed outcome, 2023-2025; all default-base ages, not the adult-professional trend population.",
+    "design": "Fit 2023; split 2024 original respondents into tuning/calibration before any within-block bootstrap; refit 2023+tuning; fixed 2025 test. Equal-weight logistic/XGB/LGBM ensemble and logistic both Platt-calibrated.",
+    "tuning": "Five logistic C values; two seeded configurations per booster, up to 350 rounds, patience 50; validation log-loss only. Same bounded recipe, not an exhaustive algorithm search.",
+    "interpretation": "Exploratory follow-up after observing the original results, not preregistered. Three full training-bootstrap refits vary fitting, tuning, partition and calibration; ranges are descriptive, not confidence intervals. Per-run paired test-bootstrap intervals condition on each fitted pipeline. No population, causal or equivalence claim.",
+    "source_hash_format": "Source hashes normalise CRLF to LF; data hash uses exact bytes.",
+    "script_sha256": "480ed703e74b7698ee2520f4d6de944edb2b658af107b50a5f14604d44c842c8",
+    "original_script_sha256": "3688a7056a92c51185823d35c027dc8ad89daa1055d11e92bd2a4e410d7f4079",
+    "data_sha256": "832fb96dbab7b6b90cbd907bbc157299671ed799256432a7e9ed3b321d026dd8",
+    "versions": {
+      "numpy": "2.4.3",
+      "pandas": "2.2.2",
+      "sklearn": "1.9.1",
+      "xgboost": "3.2.0",
+      "lightgbm": "4.7.0"
+    },
+    "elapsed_seconds": 88.1
+  },
+  "summary": [
+    {
+      "outcome": "fav",
+      "n_test": 26230,
+      "reference_d_auc": 0.0011970432892612903,
+      "reference_d_auc_lo": -0.0009342745087383586,
+      "reference_d_auc_hi": 0.002930516134114466,
+      "d_auc_min": -0.0008218640348188755,
+      "d_auc_max": 0.00201140812448819,
+      "d_log_loss_rel_min": -0.0008318544561773321,
+      "d_log_loss_rel_max": 0.0005195242456377112
+    },
+    {
+      "outcome": "trust",
+      "n_test": 26126,
+      "reference_d_auc": 0.0026535560410979597,
+      "reference_d_auc_lo": 0.0009559154141623782,
+      "reference_d_auc_hi": 0.004153483734226579,
+      "d_auc_min": 0.0015400970233439004,
+      "d_auc_max": 0.002925243258188881,
+      "d_log_loss_rel_min": -0.0019079524589054307,
+      "d_log_loss_rel_max": -0.0006255804590283494
+    }
+  ],
+  "runs": [
+    {
+      "outcome": "fav",
+      "seed": 20261104,
+      "training_bootstrap": false,
+      "n_inner_fit": 38945,
+      "n_tune": 18680,
+      "n_calibration": 18680,
+      "n_refit": 57625,
+      "n_unique_refit": 57625,
+      "n_test": 26230,
+      "fit_calibration_overlap": 0,
+      "test_fit_overlap": 0,
+      "test_calibration_overlap": 0,
+      "d_auc": 0.0011970432892612903,
+      "d_log_loss_rel": -7.893259952802569e-05,
+      "metrics": {
+        "logit_recal": {
+          "auc": 0.5941653844387559,
+          "log_loss": 0.5841953060011258,
+          "brier": 0.1977550605478908,
+          "calibration_gap": 0.053533606769812114,
+          "false_positive": 736,
+          "false_negative": 15262
+        },
+        "ensemble": {
+          "auc": 0.5953624277280172,
+          "log_loss": 0.584149193946991,
+          "brier": 0.1977291474756609,
+          "calibration_gap": 0.05338996966834486,
+          "false_positive": 742,
+          "false_negative": 15390
+        }
+      },
+      "tuning": [
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.003
+          },
+          "tuning_log_loss": 0.5567839444410618
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.01
+          },
+          "tuning_log_loss": 0.554774306998332
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.03
+          },
+          "tuning_log_loss": 0.5535855091584065
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.1
+          },
+          "tuning_log_loss": 0.5529527320841143
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 1.0
+          },
+          "tuning_log_loss": 0.552791839062777
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 0.6,
+            "max_depth": 8,
+            "min_child_weight": 50.0,
+            "reg_lambda": 5.0,
+            "rounds": 52
+          },
+          "tuning_log_loss": 0.5560428500175476
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "max_depth": 6,
+            "min_child_weight": 20.0,
+            "reg_lambda": 1.0,
+            "rounds": 133
+          },
+          "tuning_log_loss": 0.5557878017425537
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 0.7,
+            "colsample_bytree": 1.0,
+            "num_leaves": 63,
+            "min_child_samples": 50,
+            "subsample_freq": 1,
+            "reg_lambda": 20.0,
+            "cat_smooth": 50.0,
+            "rounds": 82
+          },
+          "tuning_log_loss": 0.5560754355476424
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 0.85,
+            "colsample_bytree": 0.8,
+            "num_leaves": 7,
+            "min_child_samples": 500,
+            "subsample_freq": 1,
+            "reg_lambda": 0.0,
+            "cat_smooth": 10.0,
+            "rounds": 79
+          },
+          "tuning_log_loss": 0.5546669208234076
+        }
+      ],
+      "d_auc_lo": -0.0009342745087383586,
+      "d_auc_hi": 0.002930516134114466,
+      "d_log_loss_rel_lo": -0.0006598444395386876,
+      "d_log_loss_rel_hi": 0.00048522528117625366
+    },
+    {
+      "outcome": "fav",
+      "seed": 20261105,
+      "training_bootstrap": true,
+      "n_inner_fit": 38945,
+      "n_tune": 18680,
+      "n_calibration": 18680,
+      "n_refit": 57625,
+      "n_unique_refit": 36534,
+      "n_test": 26230,
+      "fit_calibration_overlap": 0,
+      "test_fit_overlap": 0,
+      "test_calibration_overlap": 0,
+      "d_auc": 0.00201140812448819,
+      "d_log_loss_rel": -0.0006743898603844321,
+      "metrics": {
+        "logit_recal": {
+          "auc": 0.5907555656285545,
+          "log_loss": 0.5832740650083837,
+          "brier": 0.19747311870092835,
+          "calibration_gap": 0.04737408580097946,
+          "false_positive": 518,
+          "false_negative": 16235
+        },
+        "ensemble": {
+          "auc": 0.5927669737530427,
+          "log_loss": 0.5828807108931169,
+          "brier": 0.1973350215263036,
+          "calibration_gap": 0.046696559508242697,
+          "false_positive": 496,
+          "false_negative": 16283
+        }
+      },
+      "tuning": [
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.003
+          },
+          "tuning_log_loss": 0.5482406264010226
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.01
+          },
+          "tuning_log_loss": 0.5467482191869402
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.03
+          },
+          "tuning_log_loss": 0.54610316986652
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.1
+          },
+          "tuning_log_loss": 0.5456781777459845
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 1.0
+          },
+          "tuning_log_loss": 0.5455448539568698
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 0.8,
+            "max_depth": 8,
+            "min_child_weight": 50.0,
+            "reg_lambda": 20.0,
+            "rounds": 22
+          },
+          "tuning_log_loss": 0.5479251146316528
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 0.85,
+            "colsample_bytree": 0.6,
+            "max_depth": 6,
+            "min_child_weight": 1.0,
+            "reg_lambda": 1.0,
+            "rounds": 27
+          },
+          "tuning_log_loss": 0.5484155416488647
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 0.7,
+            "colsample_bytree": 1.0,
+            "num_leaves": 7,
+            "min_child_samples": 20,
+            "subsample_freq": 1,
+            "reg_lambda": 20.0,
+            "cat_smooth": 50.0,
+            "rounds": 192
+          },
+          "tuning_log_loss": 0.5465974137708036
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 0.85,
+            "colsample_bytree": 0.8,
+            "num_leaves": 15,
+            "min_child_samples": 500,
+            "subsample_freq": 1,
+            "reg_lambda": 5.0,
+            "cat_smooth": 50.0,
+            "rounds": 32
+          },
+          "tuning_log_loss": 0.5466874454441544
+        }
+      ],
+      "d_auc_lo": -0.0002675948689105228,
+      "d_auc_hi": 0.004156131276441255,
+      "d_log_loss_rel_lo": -0.0012089572500613383,
+      "d_log_loss_rel_hi": -0.00012335569477761891
+    },
+    {
+      "outcome": "fav",
+      "seed": 20261106,
+      "training_bootstrap": true,
+      "n_inner_fit": 38945,
+      "n_tune": 18680,
+      "n_calibration": 18680,
+      "n_refit": 57625,
+      "n_unique_refit": 36515,
+      "n_test": 26230,
+      "fit_calibration_overlap": 0,
+      "test_fit_overlap": 0,
+      "test_calibration_overlap": 0,
+      "d_auc": -0.0008218640348188755,
+      "d_log_loss_rel": 0.0005195242456377112,
+      "metrics": {
+        "logit_recal": {
+          "auc": 0.5890215767248409,
+          "log_loss": 0.5848211995103669,
+          "brier": 0.19796761883606467,
+          "calibration_gap": 0.052795886660957136,
+          "false_positive": 698,
+          "false_negative": 15581
+        },
+        "ensemble": {
+          "auc": 0.588199712690022,
+          "log_loss": 0.5851250283028755,
+          "brier": 0.19804006809982933,
+          "calibration_gap": 0.053296700321891044,
+          "false_positive": 797,
+          "false_negative": 15270
+        }
+      },
+      "tuning": [
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.003
+          },
+          "tuning_log_loss": 0.5544357827073761
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.01
+          },
+          "tuning_log_loss": 0.5520848477676855
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.03
+          },
+          "tuning_log_loss": 0.5506443384569549
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.1
+          },
+          "tuning_log_loss": 0.5499983893191921
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 1.0
+          },
+          "tuning_log_loss": 0.5498368059899756
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 0.7,
+            "colsample_bytree": 0.8,
+            "max_depth": 6,
+            "min_child_weight": 5.0,
+            "reg_lambda": 1.0,
+            "rounds": 87
+          },
+          "tuning_log_loss": 0.5536482930183411
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 0.85,
+            "colsample_bytree": 1.0,
+            "max_depth": 8,
+            "min_child_weight": 1.0,
+            "reg_lambda": 5.0,
+            "rounds": 11
+          },
+          "tuning_log_loss": 0.5567014813423157
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 0.7,
+            "colsample_bytree": 0.8,
+            "num_leaves": 31,
+            "min_child_samples": 20,
+            "subsample_freq": 1,
+            "reg_lambda": 5.0,
+            "cat_smooth": 10.0,
+            "rounds": 38
+          },
+          "tuning_log_loss": 0.5541575748930389
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.05,
+            "subsample": 1.0,
+            "colsample_bytree": 0.8,
+            "num_leaves": 31,
+            "min_child_samples": 50,
+            "subsample_freq": 1,
+            "reg_lambda": 20.0,
+            "cat_smooth": 10.0,
+            "rounds": 48
+          },
+          "tuning_log_loss": 0.5542557517853134
+        }
+      ],
+      "d_auc_lo": -0.00394479076444122,
+      "d_auc_hi": 0.00248215765876968,
+      "d_log_loss_rel_lo": -0.0003633299677789259,
+      "d_log_loss_rel_hi": 0.0014149648375694232
+    },
+    {
+      "outcome": "fav",
+      "seed": 20261107,
+      "training_bootstrap": true,
+      "n_inner_fit": 38945,
+      "n_tune": 18680,
+      "n_calibration": 18680,
+      "n_refit": 57625,
+      "n_unique_refit": 36395,
+      "n_test": 26230,
+      "fit_calibration_overlap": 0,
+      "test_fit_overlap": 0,
+      "test_calibration_overlap": 0,
+      "d_auc": 0.0017392661182411562,
+      "d_log_loss_rel": -0.0008318544561773321,
+      "metrics": {
+        "logit_recal": {
+          "auc": 0.5890220810569773,
+          "log_loss": 0.5845322405602905,
+          "brier": 0.19786329982914624,
+          "calibration_gap": 0.051375020733472665,
+          "false_positive": 684,
+          "false_negative": 15608
+        },
+        "ensemble": {
+          "auc": 0.5907613471752184,
+          "log_loss": 0.5840459948112011,
+          "brier": 0.19773293965127922,
+          "calibration_gap": 0.05120760632428223,
+          "false_positive": 689,
+          "false_negative": 15543
+        }
+      },
+      "tuning": [
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.003
+          },
+          "tuning_log_loss": 0.5577985316628379
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.01
+          },
+          "tuning_log_loss": 0.5568590375004717
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.03
+          },
+          "tuning_log_loss": 0.5565212643124464
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.1
+          },
+          "tuning_log_loss": 0.5564926536929373
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 1.0
+          },
+          "tuning_log_loss": 0.5568870113490897
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 1.0,
+            "colsample_bytree": 0.6,
+            "max_depth": 6,
+            "min_child_weight": 5.0,
+            "reg_lambda": 1.0,
+            "rounds": 76
+          },
+          "tuning_log_loss": 0.5586702823638916
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 1.0,
+            "colsample_bytree": 0.8,
+            "max_depth": 3,
+            "min_child_weight": 50.0,
+            "reg_lambda": 1.0,
+            "rounds": 121
+          },
+          "tuning_log_loss": 0.5577002167701721
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 0.6,
+            "num_leaves": 63,
+            "min_child_samples": 200,
+            "subsample_freq": 1,
+            "reg_lambda": 0.0,
+            "cat_smooth": 50.0,
+            "rounds": 15
+          },
+          "tuning_log_loss": 0.5590557065203968
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.05,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "num_leaves": 7,
+            "min_child_samples": 500,
+            "subsample_freq": 1,
+            "reg_lambda": 20.0,
+            "cat_smooth": 50.0,
+            "rounds": 53
+          },
+          "tuning_log_loss": 0.5573159583460522
+        }
+      ],
+      "d_auc_lo": -0.000439228313122808,
+      "d_auc_hi": 0.004093405061597658,
+      "d_log_loss_rel_lo": -0.0014897373724183894,
+      "d_log_loss_rel_hi": -0.00024530647655870313
+    },
+    {
+      "outcome": "trust",
+      "seed": 20261104,
+      "training_bootstrap": false,
+      "n_inner_fit": 38888,
+      "n_tune": 18618,
+      "n_calibration": 18619,
+      "n_refit": 57506,
+      "n_unique_refit": 57506,
+      "n_test": 26126,
+      "fit_calibration_overlap": 0,
+      "test_fit_overlap": 0,
+      "test_calibration_overlap": 0,
+      "d_auc": 0.0026535560410979597,
+      "d_log_loss_rel": -0.0019079524589054307,
+      "metrics": {
+        "logit_recal": {
+          "auc": 0.6331260948644319,
+          "log_loss": 0.6445116933170928,
+          "brier": 0.22630817200655687,
+          "calibration_gap": 0.024652901670499106,
+          "false_positive": 3408,
+          "false_negative": 6144
+        },
+        "ensemble": {
+          "auc": 0.6357796509055299,
+          "log_loss": 0.6432819956470351,
+          "brier": 0.22571794704464765,
+          "calibration_gap": 0.02511284987014728,
+          "false_positive": 3459,
+          "false_negative": 6088
+        }
+      },
+      "tuning": [
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.003
+          },
+          "tuning_log_loss": 0.6725225046382661
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.01
+          },
+          "tuning_log_loss": 0.671398555960644
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.03
+          },
+          "tuning_log_loss": 0.6709042263015658
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.1
+          },
+          "tuning_log_loss": 0.6707154153703655
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 1.0
+          },
+          "tuning_log_loss": 0.6707869992852837
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 0.6,
+            "max_depth": 8,
+            "min_child_weight": 50.0,
+            "reg_lambda": 5.0,
+            "rounds": 49
+          },
+          "tuning_log_loss": 0.6715237498283386
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "max_depth": 6,
+            "min_child_weight": 20.0,
+            "reg_lambda": 1.0,
+            "rounds": 174
+          },
+          "tuning_log_loss": 0.6721330881118774
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 0.7,
+            "colsample_bytree": 1.0,
+            "num_leaves": 63,
+            "min_child_samples": 50,
+            "subsample_freq": 1,
+            "reg_lambda": 20.0,
+            "cat_smooth": 50.0,
+            "rounds": 127
+          },
+          "tuning_log_loss": 0.6717670060463863
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 0.85,
+            "colsample_bytree": 0.8,
+            "num_leaves": 7,
+            "min_child_samples": 500,
+            "subsample_freq": 1,
+            "reg_lambda": 0.0,
+            "cat_smooth": 10.0,
+            "rounds": 95
+          },
+          "tuning_log_loss": 0.6704335233752493
+        }
+      ],
+      "d_auc_lo": 0.0009559154141623782,
+      "d_auc_hi": 0.004153483734226579,
+      "d_log_loss_rel_lo": -0.002792746898619884,
+      "d_log_loss_rel_hi": -0.001089826303355121
+    },
+    {
+      "outcome": "trust",
+      "seed": 20261105,
+      "training_bootstrap": true,
+      "n_inner_fit": 38888,
+      "n_tune": 18618,
+      "n_calibration": 18619,
+      "n_refit": 57506,
+      "n_unique_refit": 36406,
+      "n_test": 26126,
+      "fit_calibration_overlap": 0,
+      "test_fit_overlap": 0,
+      "test_calibration_overlap": 0,
+      "d_auc": 0.0015400970233439004,
+      "d_log_loss_rel": -0.0011631442186462592,
+      "metrics": {
+        "logit_recal": {
+          "auc": 0.6299990429528177,
+          "log_loss": 0.6451914706450838,
+          "brier": 0.22663149990858514,
+          "calibration_gap": 0.017770737704209172,
+          "false_positive": 3116,
+          "false_negative": 6446
+        },
+        "ensemble": {
+          "auc": 0.6315391399761616,
+          "log_loss": 0.644441019916083,
+          "brier": 0.22626332373614913,
+          "calibration_gap": 0.019127673274602297,
+          "false_positive": 3217,
+          "false_negative": 6288
+        }
+      },
+      "tuning": [
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.003
+          },
+          "tuning_log_loss": 0.6722091972266632
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.01
+          },
+          "tuning_log_loss": 0.670821666801498
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.03
+          },
+          "tuning_log_loss": 0.6703474187101602
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.1
+          },
+          "tuning_log_loss": 0.6702787063114765
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 1.0
+          },
+          "tuning_log_loss": 0.670447862117881
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 0.8,
+            "max_depth": 8,
+            "min_child_weight": 50.0,
+            "reg_lambda": 20.0,
+            "rounds": 26
+          },
+          "tuning_log_loss": 0.6737338900566101
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 0.85,
+            "colsample_bytree": 0.6,
+            "max_depth": 6,
+            "min_child_weight": 1.0,
+            "reg_lambda": 1.0,
+            "rounds": 32
+          },
+          "tuning_log_loss": 0.6720225214958191
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 0.7,
+            "colsample_bytree": 1.0,
+            "num_leaves": 7,
+            "min_child_samples": 20,
+            "subsample_freq": 1,
+            "reg_lambda": 20.0,
+            "cat_smooth": 50.0,
+            "rounds": 201
+          },
+          "tuning_log_loss": 0.6706412614119293
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 0.85,
+            "colsample_bytree": 0.8,
+            "num_leaves": 15,
+            "min_child_samples": 500,
+            "subsample_freq": 1,
+            "reg_lambda": 5.0,
+            "cat_smooth": 50.0,
+            "rounds": 42
+          },
+          "tuning_log_loss": 0.6710274153300066
+        }
+      ],
+      "d_auc_lo": -6.533674919477202e-05,
+      "d_auc_hi": 0.003131428571907294,
+      "d_log_loss_rel_lo": -0.0019885421693912496,
+      "d_log_loss_rel_hi": -0.0003618775084078063
+    },
+    {
+      "outcome": "trust",
+      "seed": 20261106,
+      "training_bootstrap": true,
+      "n_inner_fit": 38888,
+      "n_tune": 18618,
+      "n_calibration": 18619,
+      "n_refit": 57506,
+      "n_unique_refit": 36302,
+      "n_test": 26126,
+      "fit_calibration_overlap": 0,
+      "test_fit_overlap": 0,
+      "test_calibration_overlap": 0,
+      "d_auc": 0.002925243258188881,
+      "d_log_loss_rel": -0.0006255804590283494,
+      "metrics": {
+        "logit_recal": {
+          "auc": 0.6274221120748291,
+          "log_loss": 0.6463204093980752,
+          "brier": 0.22716622532081654,
+          "calibration_gap": 0.02713702732555273,
+          "false_positive": 3532,
+          "false_negative": 6057
+        },
+        "ensemble": {
+          "auc": 0.630347355333018,
+          "log_loss": 0.6459160839796846,
+          "brier": 0.22696124221598665,
+          "calibration_gap": 0.029470728362970933,
+          "false_positive": 3584,
+          "false_negative": 6053
+        }
+      },
+      "tuning": [
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.003
+          },
+          "tuning_log_loss": 0.673266751525259
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.01
+          },
+          "tuning_log_loss": 0.6723230268612539
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.03
+          },
+          "tuning_log_loss": 0.672002208445595
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.1
+          },
+          "tuning_log_loss": 0.6721266150717519
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 1.0
+          },
+          "tuning_log_loss": 0.6722287930349077
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 0.7,
+            "colsample_bytree": 0.8,
+            "max_depth": 6,
+            "min_child_weight": 5.0,
+            "reg_lambda": 1.0,
+            "rounds": 158
+          },
+          "tuning_log_loss": 0.6707578301429749
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 0.85,
+            "colsample_bytree": 1.0,
+            "max_depth": 8,
+            "min_child_weight": 1.0,
+            "reg_lambda": 5.0,
+            "rounds": 18
+          },
+          "tuning_log_loss": 0.6722301840782166
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 0.7,
+            "colsample_bytree": 0.8,
+            "num_leaves": 31,
+            "min_child_samples": 20,
+            "subsample_freq": 1,
+            "reg_lambda": 5.0,
+            "cat_smooth": 10.0,
+            "rounds": 52
+          },
+          "tuning_log_loss": 0.6700782808751952
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.05,
+            "subsample": 1.0,
+            "colsample_bytree": 0.8,
+            "num_leaves": 31,
+            "min_child_samples": 50,
+            "subsample_freq": 1,
+            "reg_lambda": 20.0,
+            "cat_smooth": 10.0,
+            "rounds": 98
+          },
+          "tuning_log_loss": 0.6705569208225154
+        }
+      ],
+      "d_auc_lo": 0.0009900006762547375,
+      "d_auc_hi": 0.005474296944058504,
+      "d_log_loss_rel_lo": -0.0019891646895303194,
+      "d_log_loss_rel_hi": 0.000593401462048271
+    },
+    {
+      "outcome": "trust",
+      "seed": 20261107,
+      "training_bootstrap": true,
+      "n_inner_fit": 38888,
+      "n_tune": 18618,
+      "n_calibration": 18619,
+      "n_refit": 57506,
+      "n_unique_refit": 36344,
+      "n_test": 26126,
+      "fit_calibration_overlap": 0,
+      "test_fit_overlap": 0,
+      "test_calibration_overlap": 0,
+      "d_auc": 0.0022871463222622346,
+      "d_log_loss_rel": -0.0014476310618895731,
+      "metrics": {
+        "logit_recal": {
+          "auc": 0.6303688597350667,
+          "log_loss": 0.6454264836272442,
+          "brier": 0.22673774591029355,
+          "calibration_gap": 0.024768090377675023,
+          "false_positive": 3351,
+          "false_negative": 6209
+        },
+        "ensemble": {
+          "auc": 0.632656006057329,
+          "log_loss": 0.6444921442013792,
+          "brier": 0.2262739370158442,
+          "calibration_gap": 0.024111253238391805,
+          "false_positive": 3245,
+          "false_negative": 6260
+        }
+      },
+      "tuning": [
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.003
+          },
+          "tuning_log_loss": 0.6738745037101757
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.01
+          },
+          "tuning_log_loss": 0.6728735710498408
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.03
+          },
+          "tuning_log_loss": 0.6723191311346511
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 0.1
+          },
+          "tuning_log_loss": 0.6721397237368403
+        },
+        {
+          "model": "logit",
+          "config": {
+            "C": 1.0
+          },
+          "tuning_log_loss": 0.6725149228336753
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 1.0,
+            "colsample_bytree": 0.6,
+            "max_depth": 6,
+            "min_child_weight": 5.0,
+            "reg_lambda": 1.0,
+            "rounds": 163
+          },
+          "tuning_log_loss": 0.6713990569114685
+        },
+        {
+          "model": "xgb",
+          "config": {
+            "learning_rate": 0.03,
+            "subsample": 1.0,
+            "colsample_bytree": 0.8,
+            "max_depth": 3,
+            "min_child_weight": 50.0,
+            "reg_lambda": 1.0,
+            "rounds": 340
+          },
+          "tuning_log_loss": 0.6703824996948242
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.1,
+            "subsample": 1.0,
+            "colsample_bytree": 0.6,
+            "num_leaves": 63,
+            "min_child_samples": 200,
+            "subsample_freq": 1,
+            "reg_lambda": 0.0,
+            "cat_smooth": 50.0,
+            "rounds": 29
+          },
+          "tuning_log_loss": 0.6744890232008485
+        },
+        {
+          "model": "lgbm",
+          "config": {
+            "learning_rate": 0.05,
+            "subsample": 1.0,
+            "colsample_bytree": 1.0,
+            "num_leaves": 7,
+            "min_child_samples": 500,
+            "subsample_freq": 1,
+            "reg_lambda": 20.0,
+            "cat_smooth": 50.0,
+            "rounds": 137
+          },
+          "tuning_log_loss": 0.6724462242027501
+        }
+      ],
+      "d_auc_lo": 0.0011038048455005,
+      "d_auc_hi": 0.003587689240344971,
+      "d_log_loss_rel_lo": -0.002046074177566059,
+      "d_log_loss_rel_hi": -0.0007715617317581764
+    }
+  ]
+}
