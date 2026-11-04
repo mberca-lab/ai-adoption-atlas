@@ -1,0 +1,18 @@
+outcome,comparison,spearman
+fav,lgbm vs xgb (temporal test),0.9909
+fav,lgbm vs logit (temporal test),0.9727
+fav,xgb vs logit (temporal test),0.9545
+trust,lgbm vs xgb (temporal test),0.9545
+trust,lgbm vs logit (temporal test),0.9818
+trust,xgb vs logit (temporal test),0.9545
+use,lgbm vs xgb (temporal test),0.9727
+use,lgbm vs logit (temporal test),0.9636
+use,xgb vs logit (temporal test),0.9545
+fav,lgbm: across years (min pairwise),0.5273
+fav,lgbm: across years (mean pairwise),0.6376
+fav,logit: across years (min pairwise),0.3000
+fav,logit: across years (mean pairwise),0.4803
+trust,lgbm: across years (min pairwise),0.6000
+trust,lgbm: across years (mean pairwise),0.7333
+trust,logit: across years (min pairwise),0.4818
+trust,logit: across years (mean pairwise),0.5636

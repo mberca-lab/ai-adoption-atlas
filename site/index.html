@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Adoption Atlas · How developers adopt, trust and feel about AI</title>
+  <meta name="description" content="An interactive, scroll-driven data story about how developers adopt, trust and feel about AI, based on the public Stack Overflow Developer Survey 2023–2026.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer">
+  <meta property="og:title" content="AI Adoption Atlas">
+  <meta property="og:description" content="Developers are adopting AI at speed. Do they trust what they use?">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' transform='rotate(45 8 8)' fill='%23b11f4b'/%3E%3C/svg%3E">
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var q = params.get("scoutTheme") || params.get("theme"), s = null;
+      try { s = localStorage.getItem("atlas-theme"); } catch (e) {}
+      var t = q || s || (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <link rel="stylesheet" href="css/atlas.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the story</a>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="#ch0"><span class="brand-symbol" aria-hidden="true">◆</span>AI ADOPTION ATLAS</a>
+      <nav class="chapter-nav" aria-label="Chapters">
+        <ol>
+          <li><a href="#ch0"><span class="nav-n">00</span><span class="nav-label">Intro</span></a></li>
+          <li><a href="#ch1"><span class="nav-n">01</span><span class="nav-label">The wave</span></a></li>
+          <li><a href="#ch2"><span class="nav-n">02</span><span class="nav-label">Paradox</span></a></li>
+          <li><a href="#ch3"><span class="nav-n">03</span><span class="nav-label">Experience</span></a></li>
+          <li><a href="#ch4"><span class="nav-n">04</span><span class="nav-label">Profiles</span></a></li>
+          <li><a href="#ch5"><span class="nav-n">05</span><span class="nav-label">Models</span></a></li>
+          <li><a href="#ch6"><span class="nav-n">06</span><span class="nav-label">Tools</span></a></li>
+          <li><a href="#ch7"><span class="nav-n">07</span><span class="nav-label">Limits</span></a></li>
+        </ol>
+      </nav>
+      <span class="nav-current" id="nav-current" aria-hidden="true">00 · Intro</span>
+      <button type="button" class="theme-button" id="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode"><span>Dark</span></button>
+    </div>
+    <div class="progress" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
+  </header>
+
+  <div class="fixture-badge" id="fixture-badge" role="status" hidden>
+    <span class="fb-icon" aria-hidden="true">◇</span><span class="fb-text">Illustrative data</span><span class="fb-detail"></span>
+  </div>
+
+  <main id="main">
+    <!-- ============ 00 + 01 · hero and the adoption wave (scrollytelling) ============ -->
+    <section class="scrolly" id="scrolly" aria-label="Introduction and the adoption wave">
+      <div class="stage" id="stage" data-panel="adoption">
+        <canvas id="field" role="img" aria-label="Animated field of dots representing developers."></canvas>
+        <div class="stage-overlay" aria-hidden="false">
+          <div class="stage-legend" id="stage-legend" aria-live="polite"></div>
+          <div class="grid-frame" aria-hidden="true"><span class="grid-frame-label" data-copy="ch1.legend.newSeries"></span></div>
+        </div>
+        <div class="year-ticker" id="year-ticker" role="group" aria-label="Jump to year"></div>
+        <div class="stage-panel" id="panel-adoption"></div>
+      </div>
+
+      <div class="steps">
+        <article class="step step-hero" id="ch0">
+          <div class="hero-card">
+            <p class="eyebrow" data-copy="hero.kicker"></p>
+            <h1 class="hero-title" data-copy="hero.title">AI Adoption <em>Atlas.</em></h1>
+            <p class="standfirst" data-copy="hero.promise"></p>
+            <p class="hero-note" data-copy="hero.note"></p>
+            <a class="scroll-cue" href="#ch1"><span data-copy="hero.cue">Scroll to begin</span><span class="cue-arrow" aria-hidden="true">↓</span></a>
+          </div>
+        </article>
+        <article class="step" id="ch1" data-year="2023">
+          <div class="step-card">
+            <p class="chapter-label" data-copy="ch1.label"></p>
+            <h2 class="step-title"></h2>
+            <p class="step-body"></p>
+            <p class="step-stat"></p>
+          </div>
+        </article>
+        <article class="step" id="ch1-2024" data-year="2024">
+          <div class="step-card"><h2 class="step-title"></h2><p class="step-body"></p><p class="step-stat"></p></div>
+        </article>
+        <article class="step" id="ch1-2025" data-year="2025">
+          <div class="step-card"><h2 class="step-title"></h2><p class="step-body"></p><p class="step-stat"></p></div>
+        </article>
+        <article class="step step-break" id="ch1-2026" data-year="2026">
+          <div class="step-card"><p class="break-flag">⫽ <span data-copy="ch1.breakLabel"></span></p><h2 class="step-title"></h2><p class="step-body"></p><p class="step-stat"></p></div>
+        </article>
+      </div>
+      <div class="sr-only" id="adoption-table"></div>
+    </section>
+
+    <!-- ============ 02 · the trust paradox ============ -->
+    <section class="chapter" id="ch2" aria-labelledby="ch2-title">
+      <div class="wrap">
+        <header class="chapter-head reveal-up">
+          <p class="chapter-label" data-copy="ch2.label"></p>
+          <h2 id="ch2-title" class="chapter-title" data-copy="ch2.title"></h2>
+          <p class="dek" data-copy="ch2.dek"></p>
+        </header>
+        <div class="panel panel-split reveal-up" id="panel-trust">
+          <div class="panel-main">
+            <div class="controls">
+              <div class="chips" id="trust-series"></div>
+              <div class="segmented" id="trust-mode"></div>
+            </div>
+            <div class="chart-host" id="trust-chart"></div>
+            <p class="chart-caption" data-copy="ch2.howto"></p>
+          </div>
+          <aside class="readout" id="trust-readout" aria-live="polite"></aside>
+        </div>
+        <p class="pull reveal-up" data-copy="ch2.callout"></p>
+        <details class="data-details"><summary>Data table</summary><div id="trust-table"></div></details>
+      </div>
+    </section>
+
+    <!-- ============ 03 · the experience gradient ============ -->
+    <section class="chapter" id="ch3" aria-labelledby="ch3-title">
+      <div class="wrap">
+        <header class="chapter-head reveal-up">
+          <p class="chapter-label" data-copy="ch3.label"></p>
+          <h2 id="ch3-title" class="chapter-title" data-copy="ch3.title"></h2>
+          <p class="dek" data-copy="ch3.dek"></p>
+        </header>
+        <div class="panel reveal-up" id="panel-exp">
+          <div class="controls"><div class="segmented" id="exp-outcome"></div></div>
+          <div class="chart-host" id="exp-chart"></div>
+          <p class="gap-note" id="exp-note"></p>
+          <p class="chart-caption" data-copy="ch3.howto"></p>
+        </div>
+        <details class="data-details"><summary>Data table</summary><div id="exp-table"></div></details>
+      </div>
+    </section>
+
+    <!-- ============ 04 · archetypes ============ -->
+    <section class="chapter chapter-dark" id="ch4" aria-labelledby="ch4-title">
+      <div class="wrap">
+        <header class="chapter-head reveal-up">
+          <p class="chapter-label" data-copy="ch4.label"></p>
+          <h2 id="ch4-title" class="chapter-title" data-copy="ch4.title"></h2>
+          <p class="dek" data-copy="ch4.dek"></p>
+          <p class="analysis-note" id="segments-scope"></p>
+          <p class="provisional" id="seg-provisional" hidden><span aria-hidden="true">◌</span> <span data-copy="ch4.provisional"></span></p>
+        </header>
+        <div class="panel panel-split reveal-up" id="panel-seg">
+          <div class="panel-main">
+            <div class="chart-host" id="seg-chart"></div>
+            <div class="seg-list" id="seg-list" role="group" aria-label="Developer profiles"></div>
+            <p class="chart-caption" data-copy="ch4.howto"></p>
+          </div>
+          <aside class="profile" id="seg-profile" aria-live="polite"></aside>
+        </div>
+        <details class="data-details"><summary>Data table</summary><div id="seg-table"></div></details>
+      </div>
+    </section>
+
+    <!-- ============ 05 · what predicts trust ============ -->
+    <section class="chapter" id="ch5" aria-labelledby="ch5-title">
+      <div class="wrap">
+        <header class="chapter-head reveal-up">
+          <p class="chapter-label" data-copy="ch5.label"></p>
+          <h2 id="ch5-title" class="chapter-title" data-copy="ch5.title"></h2>
+          <p class="dek" data-copy="ch5.dek"></p>
+          <p class="analysis-note" id="modelling-scope"></p>
+        </header>
+        <div class="panel reveal-up" id="panel-models">
+          <div class="controls">
+            <div class="field"><span class="field-label">Predict</span><div class="segmented" id="model-outcome"></div></div>
+            <div class="field"><span class="field-label">Inputs</span><div class="segmented" id="model-fs"></div></div>
+            <div class="field" hidden><label class="field-label" for="model-scheme">Validation</label><select id="model-scheme"></select></div>
+          </div>
+          <p class="fs-note muted" id="model-fs-note"></p>
+          <div class="duel-grid">
+            <div><h3 class="panel-h">Does complexity earn its place?</h3><div class="chart-host" id="model-duel"></div></div>
+            <div class="verdict" id="model-verdict" aria-live="polite"></div>
+          </div>
+          <p class="chart-caption" data-copy="ch5.howto"></p>
+          <div class="model-grid">
+            <div class="calib-wrap">
+              <h3 class="panel-h" data-copy="ch5.calibTitle"></h3>
+              <div class="chart-host calib-host" id="model-calib"></div>
+              <div class="legend" id="calib-legend"></div>
+            </div>
+            <div>
+              <div class="shap-head"><h3 class="panel-h" data-copy="ch5.shapTitle"></h3><div class="segmented small" id="shap-model"></div></div>
+              <div class="chart-host" id="model-shap"></div>
+              <p class="chart-caption" data-copy="ch5.shapNote"></p>
+            </div>
+          </div>
+        </div>
+        <details class="data-details"><summary>Data tables</summary><div id="model-table"></div><div id="shap-table"></div></details>
+      </div>
+    </section>
+
+    <!-- ============ 06 · tool constellations ============ -->
+    <section class="chapter chapter-night" id="ch6" aria-labelledby="ch6-title">
+      <div class="wrap">
+        <header class="chapter-head reveal-up">
+          <p class="chapter-label" data-copy="ch6.label"></p>
+          <h2 id="ch6-title" class="chapter-title" data-copy="ch6.title"></h2>
+          <p class="dek" data-copy="ch6.dek"></p>
+        </header>
+        <div class="panel panel-split reveal-up" id="panel-net">
+          <div class="panel-main">
+            <div class="controls"><span class="field-label">Survey basket</span><div class="segmented" id="net-basket"></div></div>
+            <div class="chart-host net-host" id="net-chart"></div>
+            <div class="legend" id="net-legend"></div>
+            <p class="chart-caption" data-copy="ch6.howto"></p>
+          </div>
+          <aside class="profile" id="net-info" aria-live="polite"></aside>
+        </div>
+        <details class="data-details"><summary>Data table</summary><div id="net-table"></div></details>
+      </div>
+    </section>
+
+    <!-- ============ 07 · honest limits ============ -->
+    <section class="chapter" id="ch7" aria-labelledby="ch7-title">
+      <div class="wrap">
+        <header class="chapter-head reveal-up">
+          <p class="chapter-label" data-copy="ch7.label"></p>
+          <h2 id="ch7-title" class="chapter-title" data-copy="ch7.title"></h2>
+        </header>
+        <div class="caveats" id="caveats"></div>
+        <div class="method-grid reveal-up">
+          <div>
+            <h3 class="panel-h" data-copy="ch7.methodTitle"></h3>
+            <ol class="method-list" id="method-list"></ol>
+          </div>
+          <div>
+            <h3 class="panel-h" data-copy="ch7.sourcesTitle"></h3>
+            <p class="attribution" data-copy="ch7.attribution"></p>
+            <ul class="source-links">
+              <li><a data-link="survey" href="https://survey.stackoverflow.co/">Stack Overflow Developer Survey ↗</a></li>
+              <li><a data-link="surveyArchive" href="https://github.com/StackExchange/Survey">Survey data archive (GitHub) ↗</a></li>
+              <li><a data-link="odbl" href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License 1.0 ↗</a></li>
+              <li><a data-link="repo" href="https://github.com/mberca/ai-adoption-atlas">Code, codebook &amp; method notes ↗</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="eyebrow">Made by</p>
+        <p class="footer-name" data-copy="meta.author">Margarita Bermejo Cano</p>
+        <p class="muted small" data-copy="ch7.builtBy"></p>
+      </div>
+      <ul class="footer-links">
+        <li><a data-link="cv" href="https://mberca.github.io/cv-margarita/">CV <span aria-hidden="true">→</span></a></li>
+        <li><a data-link="linkedin" href="https://www.linkedin.com/in/margaritabermejocano/">LinkedIn <span aria-hidden="true">→</span></a></li>
+        <li><a data-link="repo" href="https://github.com/mberca/ai-adoption-atlas">Repository <span aria-hidden="true">→</span></a></li>
+        <li><a data-link="sibling" href="https://mberca.github.io/engagement-atlas/">The Engagement Atlas <span aria-hidden="true">→</span></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+  <noscript><p class="noscript">This story needs JavaScript for its charts. Read the <a href="https://github.com/mberca/ai-adoption-atlas">data tables and method notes in the repository</a>.</p></noscript>
+
+  <script src="vendor/d3.v7.min.js"></script>
+  <script src="js/story.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/charts/trust.js"></script>
+  <script src="js/charts/experience.js"></script>
+  <script src="js/charts/segments.js"></script>
+  <script src="js/charts/models.js"></script>
+  <script src="js/charts/network.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

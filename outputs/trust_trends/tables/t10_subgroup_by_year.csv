@@ -1,0 +1,337 @@
+dimension,level,outcome,year,x,n,pct,lo,hi
+Age band,18-24,distrust,2023,1522,6387,23.8,22.8,24.9
+Age band,18-24,distrust,2024,1719,5899,29.1,28,30.3
+Age band,18-24,distrust,2025,1005,2623,38.3,36.5,40.2
+Age band,18-24,fav,2023,5440,6402,85,84.1,85.8
+Age band,18-24,fav,2024,4541,5918,76.7,75.6,77.8
+Age band,18-24,fav,2025,1864,2643,70.5,68.8,72.2
+Age band,18-24,fav,2026,663,1315,50.4,47.7,53.1
+Age band,18-24,trust,2023,3073,6387,48.1,46.9,49.3
+Age band,18-24,trust,2024,2519,5899,42.7,41.4,44
+Age band,18-24,trust,2025,957,2623,36.5,34.7,38.3
+Age band,18-24,use,2023,6419,11002,58.3,57.4,59.3
+Age band,18-24,use,2024,5943,8101,73.4,72.4,74.3
+Age band,18-24,use,2025,2676,3158,84.7,83.4,85.9
+Age band,18-24,use,2026,1330,1641,81,79.1,82.9
+Age band,25-34,distrust,2023,3249,13257,24.5,23.8,25.2
+Age band,25-34,distrust,2024,3857,12726,30.3,29.5,31.1
+Age band,25-34,distrust,2025,2926,7674,38.1,37,39.2
+Age band,25-34,fav,2023,11330,13276,85.3,84.7,85.9
+Age band,25-34,fav,2024,9867,12768,77.3,76.5,78
+Age band,25-34,fav,2025,5626,7716,72.9,71.9,73.9
+Age band,25-34,fav,2026,2017,3550,56.8,55.2,58.4
+Age band,25-34,trust,2023,6167,13257,46.5,45.7,47.4
+Age band,25-34,trust,2024,5287,12726,41.5,40.7,42.4
+Age band,25-34,trust,2025,2989,7674,38.9,37.9,40
+Age band,25-34,use,2023,13307,28848,46.1,45.6,46.7
+Age band,25-34,use,2024,12796,19312,66.3,65.6,66.9
+Age band,25-34,use,2025,7803,9346,83.5,82.7,84.2
+Age band,25-34,use,2026,3578,4138,86.5,85.4,87.5
+Age band,35-44,distrust,2023,1822,6764,26.9,25.9,28
+Age band,35-44,distrust,2024,2435,7057,34.5,33.4,35.6
+Age band,35-44,distrust,2025,2431,6369,38.2,37,39.4
+Age band,35-44,fav,2023,5719,6769,84.5,83.6,85.3
+Age band,35-44,fav,2024,5365,7077,75.8,74.8,76.8
+Age band,35-44,fav,2025,4676,6378,73.3,72.2,74.4
+Age band,35-44,fav,2026,2316,3557,65.1,63.5,66.7
+Age band,35-44,trust,2023,3025,6764,44.7,43.5,45.9
+Age band,35-44,trust,2024,2768,7057,39.2,38.1,40.4
+Age band,35-44,trust,2025,2405,6369,37.8,36.6,39
+Age band,35-44,use,2023,6776,17304,39.2,38.4,39.9
+Age band,35-44,use,2024,7089,12015,59,58.1,59.9
+Age band,35-44,use,2025,6416,7919,81,80.1,81.9
+Age band,35-44,use,2026,3587,4086,87.8,86.7,88.8
+Age band,45-54,distrust,2023,588,2137,27.5,25.7,29.4
+Age band,45-54,distrust,2024,822,2556,32.2,30.4,34
+Age band,45-54,distrust,2025,1095,2897,37.8,36,39.6
+Age band,45-54,fav,2023,1783,2140,83.3,81.7,84.8
+Age band,45-54,fav,2024,1967,2560,76.8,75.2,78.4
+Age band,45-54,fav,2025,2167,2900,74.7,73.1,76.3
+Age band,45-54,fav,2026,1288,1843,69.9,67.8,71.9
+Age band,45-54,trust,2023,931,2137,43.6,41.5,45.7
+Age band,45-54,trust,2024,1101,2556,43.1,41.2,45
+Age band,45-54,trust,2025,1116,2897,38.5,36.8,40.3
+Age band,45-54,use,2023,2141,6487,33,31.9,34.2
+Age band,45-54,use,2024,2562,4732,54.1,52.7,55.6
+Age band,45-54,use,2025,2917,3725,78.3,77,79.6
+Age band,45-54,use,2026,1852,2115,87.6,86.1,88.9
+Age band,55-64,distrust,2023,149,640,23.3,20.2,26.7
+Age band,55-64,distrust,2024,247,761,32.5,29.2,35.9
+Age band,55-64,distrust,2025,346,973,35.6,32.6,38.6
+Age band,55-64,fav,2023,536,640,83.8,80.7,86.4
+Age band,55-64,fav,2024,594,761,78.1,75,80.9
+Age band,55-64,fav,2025,729,975,74.8,71.9,77.4
+Age band,55-64,fav,2026,595,801,74.3,71.1,77.2
+Age band,55-64,trust,2023,289,640,45.2,41.3,49
+Age band,55-64,trust,2024,318,761,41.8,38.3,45.3
+Age band,55-64,trust,2025,408,973,41.9,38.9,45.1
+Age band,55-64,use,2023,640,2449,26.1,24.4,27.9
+Age band,55-64,use,2024,761,1792,42.5,40.2,44.8
+Age band,55-64,use,2025,981,1478,66.4,63.9,68.7
+Age band,55-64,use,2026,804,949,84.7,82.3,86.9
+Age band,65+,distrust,2023,27,98,27.6,19.7,37.1
+Age band,65+,distrust,2024,28,132,21.2,15.1,28.9
+Age band,65+,distrust,2025,60,196,30.6,24.6,37.4
+Age band,65+,fav,2023,83,98,84.7,76.3,90.5
+Age band,65+,fav,2024,108,133,81.2,73.7,86.9
+Age band,65+,fav,2025,159,198,80.3,74.2,85.2
+Age band,65+,fav,2026,195,248,78.6,73.1,83.3
+Age band,65+,trust,2023,48,98,49,39.3,58.7
+Age band,65+,trust,2024,73,132,55.3,46.8,63.5
+Age band,65+,trust,2025,87,196,44.4,37.6,51.4
+Age band,65+,use,2023,98,594,16.5,13.7,19.7
+Age band,65+,use,2024,133,344,38.7,33.7,43.9
+Age band,65+,use,2025,198,348,56.9,51.6,62
+Age band,65+,use,2026,249,314,79.3,74.5,83.4
+Experience (years coding),0-4 yrs,distrust,2023,635,3642,17.4,16.2,18.7
+Experience (years coding),0-4 yrs,distrust,2024,648,2915,22.2,20.8,23.8
+Experience (years coding),0-4 yrs,distrust,2025,288,1162,24.8,22.4,27.3
+Experience (years coding),0-4 yrs,fav,2023,3149,3653,86.2,85,87.3
+Experience (years coding),0-4 yrs,fav,2024,2296,2922,78.6,77.1,80
+Experience (years coding),0-4 yrs,fav,2025,903,1178,76.7,74.2,79
+Experience (years coding),0-4 yrs,fav,2026,334,582,57.4,53.3,61.3
+Experience (years coding),0-4 yrs,trust,2023,1955,3642,53.7,52.1,55.3
+Experience (years coding),0-4 yrs,trust,2024,1437,2915,49.3,47.5,51.1
+Experience (years coding),0-4 yrs,trust,2025,594,1162,51.1,48.2,54
+Experience (years coding),0-4 yrs,use,2023,3664,5818,63,61.7,64.2
+Experience (years coding),0-4 yrs,use,2024,2932,3742,78.4,77,79.6
+Experience (years coding),0-4 yrs,use,2025,1201,1321,90.9,89.2,92.3
+Experience (years coding),0-4 yrs,use,2026,591,656,90.1,87.6,92.1
+Experience (years coding),10-19 yrs,distrust,2023,2727,10078,27.1,26.2,27.9
+Experience (years coding),10-19 yrs,distrust,2024,3418,9990,34.2,33.3,35.2
+Experience (years coding),10-19 yrs,distrust,2025,2990,7542,39.6,38.5,40.8
+Experience (years coding),10-19 yrs,fav,2023,8522,10090,84.5,83.7,85.2
+Experience (years coding),10-19 yrs,fav,2024,7587,10003,75.8,75,76.7
+Experience (years coding),10-19 yrs,fav,2025,5542,7566,73.2,72.2,74.2
+Experience (years coding),10-19 yrs,fav,2026,2424,4073,59.5,58,61
+Experience (years coding),10-19 yrs,trust,2023,4372,10078,43.4,42.4,44.4
+Experience (years coding),10-19 yrs,trust,2024,3897,9990,39,38.1,40
+Experience (years coding),10-19 yrs,trust,2025,2818,7542,37.4,36.3,38.5
+Experience (years coding),10-19 yrs,use,2023,10106,24331,41.5,40.9,42.2
+Experience (years coding),10-19 yrs,use,2024,10016,16362,61.2,60.5,62
+Experience (years coding),10-19 yrs,use,2025,7606,9328,81.5,80.7,82.3
+Experience (years coding),10-19 yrs,use,2026,4098,4735,86.5,85.5,87.5
+Experience (years coding),20+ yrs,distrust,2023,1934,6411,30.2,29.1,31.3
+Experience (years coding),20+ yrs,distrust,2024,2433,6646,36.6,35.5,37.8
+Experience (years coding),20+ yrs,distrust,2025,3082,7439,41.4,40.3,42.6
+Experience (years coding),20+ yrs,fav,2023,5369,6413,83.7,82.8,84.6
+Experience (years coding),20+ yrs,fav,2024,4989,6655,75,73.9,76
+Experience (years coding),20+ yrs,fav,2025,5366,7444,72.1,71.1,73.1
+Experience (years coding),20+ yrs,fav,2026,3158,4632,68.2,66.8,69.5
+Experience (years coding),20+ yrs,trust,2023,2657,6411,41.4,40.2,42.7
+Experience (years coding),20+ yrs,trust,2024,2485,6646,37.4,36.2,38.6
+Experience (years coding),20+ yrs,trust,2025,2619,7439,35.2,34.1,36.3
+Experience (years coding),20+ yrs,use,2023,6414,18949,33.8,33.2,34.5
+Experience (years coding),20+ yrs,use,2024,6658,12821,51.9,51.1,52.8
+Experience (years coding),20+ yrs,use,2025,7478,9965,75,74.2,75.9
+Experience (years coding),20+ yrs,use,2026,4657,5524,84.3,83.3,85.2
+Experience (years coding),5-9 yrs,distrust,2023,2039,9012,22.6,21.8,23.5
+Experience (years coding),5-9 yrs,distrust,2024,2363,8355,28.3,27.3,29.3
+Experience (years coding),5-9 yrs,distrust,2025,1474,4436,33.2,31.9,34.6
+Experience (years coding),5-9 yrs,fav,2023,7726,9019,85.7,84.9,86.4
+Experience (years coding),5-9 yrs,fav,2024,6525,8361,78,77.1,78.9
+Experience (years coding),5-9 yrs,fav,2025,3281,4459,73.6,72.3,74.9
+Experience (years coding),5-9 yrs,fav,2026,1109,1937,57.3,55,59.4
+Experience (years coding),5-9 yrs,trust,2023,4464,9012,49.5,48.5,50.6
+Experience (years coding),5-9 yrs,trust,2024,3627,8355,43.4,42.4,44.5
+Experience (years coding),5-9 yrs,trust,2025,1848,4436,41.7,40.2,43.1
+Experience (years coding),5-9 yrs,use,2023,9036,17280,52.3,51.5,53
+Experience (years coding),5-9 yrs,use,2024,8381,11839,70.8,70,71.6
+Experience (years coding),5-9 yrs,use,2025,4512,5140,87.8,86.9,88.6
+Experience (years coding),5-9 yrs,use,2026,1955,2219,88.1,86.7,89.4
+Region,East Asia & Pacific,distrust,2023,467,2296,20.3,18.7,22
+Region,East Asia & Pacific,distrust,2024,510,2009,25.4,23.5,27.3
+Region,East Asia & Pacific,distrust,2025,462,1459,31.7,29.3,34.1
+Region,East Asia & Pacific,fav,2023,1986,2300,86.3,84.9,87.7
+Region,East Asia & Pacific,fav,2024,1591,2013,79,77.2,80.8
+Region,East Asia & Pacific,fav,2025,1110,1468,75.6,73.4,77.7
+Region,East Asia & Pacific,fav,2026,495,767,64.5,61.1,67.8
+Region,East Asia & Pacific,trust,2023,1194,2296,52,50,54
+Region,East Asia & Pacific,trust,2024,969,2009,48.2,46.1,50.4
+Region,East Asia & Pacific,trust,2025,644,1459,44.1,41.6,46.7
+Region,East Asia & Pacific,use,2023,2306,4608,50,48.6,51.5
+Region,East Asia & Pacific,use,2024,2014,3043,66.2,64.5,67.8
+Region,East Asia & Pacific,use,2025,1474,1768,83.4,81.6,85
+Region,East Asia & Pacific,use,2026,772,885,87.2,84.9,89.3
+Region,Europe & C. Asia,distrust,2023,3955,13823,28.6,27.9,29.4
+Region,Europe & C. Asia,distrust,2024,4930,14089,35,34.2,35.8
+Region,Europe & C. Asia,distrust,2025,4340,10335,42,41,42.9
+Region,Europe & C. Asia,fav,2023,11525,13836,83.3,82.7,83.9
+Region,Europe & C. Asia,fav,2024,10395,14104,73.7,73,74.4
+Region,Europe & C. Asia,fav,2025,7316,10357,70.6,69.8,71.5
+Region,Europe & C. Asia,fav,2026,3513,5772,60.9,59.6,62.1
+Region,Europe & C. Asia,trust,2023,5577,13823,40.3,39.5,41.2
+Region,Europe & C. Asia,trust,2024,5060,14089,35.9,35.1,36.7
+Region,Europe & C. Asia,trust,2025,3412,10335,33,32.1,33.9
+Region,Europe & C. Asia,use,2023,13853,32720,42.3,41.8,42.9
+Region,Europe & C. Asia,use,2024,14130,23065,61.3,60.6,61.9
+Region,Europe & C. Asia,use,2025,10440,13074,79.9,79.2,80.5
+Region,Europe & C. Asia,use,2026,5803,6757,85.9,85,86.7
+Region,Latin America & Carib.,distrust,2023,355,2015,17.6,16,19.3
+Region,Latin America & Carib.,distrust,2024,409,1677,24.4,22.4,26.5
+Region,Latin America & Carib.,distrust,2025,344,1292,26.6,24.3,29.1
+Region,Latin America & Carib.,fav,2023,1837,2018,91,89.7,92.2
+Region,Latin America & Carib.,fav,2024,1431,1680,85.2,83.4,86.8
+Region,Latin America & Carib.,fav,2025,1077,1294,83.2,81.1,85.2
+Region,Latin America & Carib.,fav,2026,392,532,73.7,69.8,77.2
+Region,Latin America & Carib.,trust,2023,1100,2015,54.6,52.4,56.8
+Region,Latin America & Carib.,trust,2024,829,1677,49.4,47,51.8
+Region,Latin America & Carib.,trust,2025,632,1292,48.9,46.2,51.6
+Region,Latin America & Carib.,use,2023,2019,3855,52.4,50.8,53.9
+Region,Latin America & Carib.,use,2024,1680,2470,68,66.2,69.8
+Region,Latin America & Carib.,use,2025,1306,1498,87.2,85.4,88.8
+Region,Latin America & Carib.,use,2026,538,591,91,88.5,93.1
+Region,"MENA, Afg. & Pakistan",distrust,2023,234,1455,16.1,14.3,18.1
+Region,"MENA, Afg. & Pakistan",distrust,2024,294,1348,21.8,19.7,24.1
+Region,"MENA, Afg. & Pakistan",distrust,2025,172,792,21.7,19,24.7
+Region,"MENA, Afg. & Pakistan",fav,2023,1243,1458,85.3,83.3,87
+Region,"MENA, Afg. & Pakistan",fav,2024,1096,1350,81.2,79,83.2
+Region,"MENA, Afg. & Pakistan",fav,2025,651,803,81.1,78.2,83.6
+Region,"MENA, Afg. & Pakistan",fav,2026,221,331,66.8,61.5,71.6
+Region,"MENA, Afg. & Pakistan",trust,2023,796,1455,54.7,52.1,57.2
+Region,"MENA, Afg. & Pakistan",trust,2024,641,1348,47.6,44.9,50.2
+Region,"MENA, Afg. & Pakistan",trust,2025,414,792,52.3,48.8,55.7
+Region,"MENA, Afg. & Pakistan",use,2023,1471,2552,57.6,55.7,59.5
+Region,"MENA, Afg. & Pakistan",use,2024,1357,1794,75.6,73.6,77.6
+Region,"MENA, Afg. & Pakistan",use,2025,812,882,92.1,90.1,93.7
+Region,"MENA, Afg. & Pakistan",use,2026,337,352,95.7,93.1,97.4
+Region,North America,distrust,2023,2044,6768,30.2,29.1,31.3
+Region,North America,distrust,2024,2282,5689,40.1,38.8,41.4
+Region,North America,distrust,2025,2222,4710,47.2,45.8,48.6
+Region,North America,fav,2023,5725,6775,84.5,83.6,85.3
+Region,North America,fav,2024,4271,5696,75,73.8,76.1
+Region,North America,fav,2025,3247,4711,68.9,67.6,70.2
+Region,North America,fav,2026,1804,2919,61.8,60,63.5
+Region,North America,trust,2023,3048,6768,45,43.9,46.2
+Region,North America,trust,2024,2185,5689,38.4,37.2,39.7
+Region,North America,trust,2025,1584,4710,33.6,32.3,35
+Region,North America,use,2023,6779,17107,39.6,38.9,40.4
+Region,North America,use,2024,5710,9992,57.1,56.2,58.1
+Region,North America,use,2025,4734,6272,75.5,74.4,76.5
+Region,North America,use,2026,2936,3590,81.8,80.5,83
+Region,South Asia,distrust,2023,208,2160,9.6,8.5,10.9
+Region,South Asia,distrust,2024,302,2385,12.7,11.4,14.1
+Region,South Asia,distrust,2025,229,1677,13.7,12.1,15.4
+Region,South Asia,fav,2023,1888,2170,87,85.5,88.4
+Region,South Asia,fav,2024,2028,2396,84.6,83.1,86
+Region,South Asia,fav,2025,1436,1704,84.3,82.5,85.9
+Region,South Asia,fav,2026,461,721,63.9,60.4,67.4
+Region,South Asia,trust,2023,1340,2160,62,60,64.1
+Region,South Asia,trust,2024,1376,2385,57.7,55.7,59.7
+Region,South Asia,trust,2025,1011,1677,60.3,57.9,62.6
+Region,South Asia,use,2023,2183,4568,47.8,46.3,49.2
+Region,South Asia,use,2024,2402,3436,69.9,68.4,71.4
+Region,South Asia,use,2025,1746,1941,90,88.5,91.2
+Region,South Asia,use,2026,739,770,96,94.3,97.1
+Region,Sub-Saharan Africa,distrust,2023,86,745,11.5,9.4,14
+Region,Sub-Saharan Africa,distrust,2024,119,663,17.9,15.2,21.1
+Region,Sub-Saharan Africa,distrust,2025,91,459,19.8,16.4,23.7
+Region,Sub-Saharan Africa,fav,2023,669,747,89.6,87.2,91.6
+Region,Sub-Saharan Africa,fav,2024,559,663,84.3,81.3,86.9
+Region,Sub-Saharan Africa,fav,2025,381,465,81.9,78.2,85.2
+Region,Sub-Saharan Africa,fav,2026,179,258,69.4,63.5,74.7
+Region,Sub-Saharan Africa,trust,2023,473,745,63.5,60,66.9
+Region,Sub-Saharan Africa,trust,2024,386,663,58.2,54.4,61.9
+Region,Sub-Saharan Africa,trust,2025,264,459,57.5,53,62
+Region,Sub-Saharan Africa,use,2023,748,1235,60.6,57.8,63.3
+Region,Sub-Saharan Africa,use,2024,664,877,75.7,72.8,78.4
+Region,Sub-Saharan Africa,use,2025,471,528,89.2,86.3,91.6
+Region,Sub-Saharan Africa,use,2026,261,279,93.5,90,95.9
+Role family,Data / AI / analytics,distrust,2023,326,1377,23.7,21.5,26
+Role family,Data / AI / analytics,distrust,2024,355,1246,28.5,26.1,31.1
+Role family,Data / AI / analytics,distrust,2025,385,1179,32.7,30,35.4
+Role family,Data / AI / analytics,fav,2023,1220,1379,88.5,86.7,90
+Role family,Data / AI / analytics,fav,2024,1023,1249,81.9,79.7,83.9
+Role family,Data / AI / analytics,fav,2025,938,1187,79,76.6,81.2
+Role family,Data / AI / analytics,fav,2026,461,707,65.2,61.6,68.6
+Role family,Data / AI / analytics,trust,2023,690,1377,50.1,47.5,52.7
+Role family,Data / AI / analytics,trust,2024,573,1246,46,43.2,48.8
+Role family,Data / AI / analytics,trust,2025,528,1179,44.8,42,47.6
+Role family,Data / AI / analytics,use,2023,1381,2669,51.7,49.8,53.6
+Role family,Data / AI / analytics,use,2024,1249,1880,66.4,64.3,68.5
+Role family,Data / AI / analytics,use,2025,1193,1400,85.2,83.3,87
+Role family,Data / AI / analytics,use,2026,714,810,88.1,85.7,90.2
+Role family,Developer / software engineer,distrust,2023,5477,22598,24.2,23.7,24.8
+Role family,Developer / software engineer,distrust,2024,6960,22474,31,30.4,31.6
+Role family,Developer / software engineer,distrust,2025,6364,16780,37.9,37.2,38.7
+Role family,Developer / software engineer,fav,2023,19214,22622,84.9,84.5,85.4
+Role family,Developer / software engineer,fav,2024,17171,22497,76.3,75.8,76.9
+Role family,Developer / software engineer,fav,2025,12228,16840,72.6,71.9,73.3
+Role family,Developer / software engineer,fav,2026,5512,8807,62.6,61.6,63.6
+Role family,Developer / software engineer,trust,2023,10576,22598,46.8,46.2,47.5
+Role family,Developer / software engineer,trust,2024,9299,22474,41.4,40.7,42
+Role family,Developer / software engineer,trust,2025,6398,16780,38.1,37.4,38.9
+Role family,Developer / software engineer,use,2023,22652,52337,43.3,42.9,43.7
+Role family,Developer / software engineer,use,2024,22531,36109,62.4,61.9,62.9
+Role family,Developer / software engineer,use,2025,16983,21046,80.7,80.2,81.2
+Role family,Developer / software engineer,use,2026,8865,10199,86.9,86.3,87.6
+Role family,Management / exec / product,distrust,2023,359,1311,27.4,25,29.9
+Role family,Management / exec / product,distrust,2024,376,1162,32.4,29.7,35.1
+Role family,Management / exec / product,distrust,2025,348,1031,33.8,30.9,36.7
+Role family,Management / exec / product,fav,2023,1134,1312,86.4,84.5,88.2
+Role family,Management / exec / product,fav,2024,930,1163,80,77.6,82.2
+Role family,Management / exec / product,fav,2025,843,1032,81.7,79.2,83.9
+Role family,Management / exec / product,fav,2026,337,432,78,73.9,81.7
+Role family,Management / exec / product,trust,2023,577,1311,44,41.3,46.7
+Role family,Management / exec / product,trust,2024,472,1162,40.6,37.8,43.5
+Role family,Management / exec / product,trust,2025,422,1031,40.9,38,44
+Role family,Management / exec / product,use,2023,1313,2855,46,44.2,47.8
+Role family,Management / exec / product,use,2024,1165,1735,67.1,64.9,69.3
+Role family,Management / exec / product,use,2025,1042,1181,88.2,86.3,89.9
+Role family,Management / exec / product,use,2026,435,473,92,89.2,94.1
+Role family,Ops / infra / security / support,distrust,2023,341,1088,31.3,28.7,34.2
+Role family,Ops / infra / security / support,distrust,2024,397,1026,38.7,35.8,41.7
+Role family,Ops / infra / security / support,distrust,2025,372,853,43.6,40.3,47
+Role family,Ops / infra / security / support,fav,2023,908,1089,83.4,81.1,85.5
+Role family,Ops / infra / security / support,fav,2024,770,1028,74.9,72.2,77.5
+Role family,Ops / infra / security / support,fav,2025,621,858,72.4,69.3,75.3
+Role family,Ops / infra / security / support,fav,2026,368,611,60.2,56.3,64
+Role family,Ops / infra / security / support,trust,2023,421,1088,38.7,35.8,41.6
+Role family,Ops / infra / security / support,trust,2024,380,1026,37,34.1,40
+Role family,Ops / infra / security / support,trust,2025,304,853,35.6,32.5,38.9
+Role family,Ops / infra / security / support,use,2023,1091,2599,42,40.1,43.9
+Role family,Ops / infra / security / support,use,2024,1033,1738,59.4,57.1,61.7
+Role family,Ops / infra / security / support,use,2025,866,1122,77.2,74.6,79.5
+Role family,Ops / infra / security / support,use,2026,616,718,85.8,83,88.2
+Role family,Other,distrust,2023,221,714,31,27.7,34.4
+Role family,Other,distrust,2024,246,687,35.8,32.3,39.5
+Role family,Other,distrust,2025,171,389,44,39.1,48.9
+Role family,Other,fav,2023,594,716,83,80,85.5
+Role family,Other,fav,2024,515,687,75,71.6,78.1
+Role family,Other,fav,2025,261,391,66.8,61.9,71.2
+Role family,Other,fav,2026,94,147,63.9,55.9,71.3
+Role family,Other,trust,2023,292,714,40.9,37.3,44.5
+Role family,Other,trust,2024,266,687,38.7,35.1,42.4
+Role family,Other,trust,2025,132,389,33.9,29.4,38.8
+Role family,Other,use,2023,717,1702,42.1,39.8,44.5
+Role family,Other,use,2024,690,1161,59.4,56.6,62.2
+Role family,Other,use,2025,399,568,70.2,66.4,73.9
+Role family,Other,use,2026,151,199,75.9,69.5,81.3
+Role family,Research / education,distrust,2023,222,722,30.7,27.5,34.2
+Role family,Research / education,distrust,2024,310,767,40.4,37,43.9
+Role family,Research / education,distrust,2025,91,202,45,38.3,51.9
+Role family,Research / education,fav,2023,594,725,81.9,79,84.6
+Role family,Research / education,fav,2024,596,771,77.3,74.2,80.1
+Role family,Research / education,fav,2025,142,203,70,63.3,75.8
+Role family,Research / education,fav,2026,129,250,51.6,45.4,57.7
+Role family,Research / education,trust,2023,291,722,40.3,36.8,43.9
+Role family,Research / education,trust,2024,258,767,33.6,30.4,37.1
+Role family,Research / education,trust,2025,63,202,31.2,25.2,37.9
+Role family,Research / education,use,2023,726,1825,39.8,37.6,42
+Role family,Research / education,use,2024,773,1344,57.5,54.9,60.1
+Role family,Research / education,use,2025,206,282,73,67.6,77.9
+Role family,Research / education,use,2026,254,343,74.1,69.2,78.4
+Role family,Student,distrust,2023,120,348,34.5,29.7,39.6
+Role family,Student,distrust,2024,209,526,39.7,35.6,44
+Role family,Student,distrust,2025,132,298,44.3,38.8,50
+Role family,Student,fav,2023,282,349,80.8,76.3,84.6
+Role family,Student,fav,2024,390,527,74,70.1,77.6
+Role family,Student,fav,2025,188,299,62.9,57.3,68.2
+Role family,Student,fav,2026,166,345,48.1,42.9,53.4
+Role family,Student,trust,2023,145,348,41.7,36.6,46.9
+Role family,Student,trust,2024,197,526,37.5,33.4,41.7
+Role family,Student,trust,2025,115,298,38.6,33.2,44.2
+Role family,Student,use,2023,349,595,58.7,54.7,62.5
+Role family,Student,use,2024,527,763,69.1,65.7,72.2
+Role family,Student,use,2025,302,375,80.5,76.2,84.2
+Role family,Student,use,2026,348,473,73.6,69.4,77.3

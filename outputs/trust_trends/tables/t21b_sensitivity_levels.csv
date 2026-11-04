@@ -1,0 +1,51 @@
+year,x,n,pct,lo,hi,outcome,method,n_eff
+2023,7357,29283,25.1,24.6,25.6,distrust,S1a include QC-excluded,
+2024,9109,29142,31.3,30.7,31.8,distrust,S1a include QC-excluded,
+2025,7863,20732,37.9,37.3,38.6,distrust,S1a include QC-excluded,
+2023,7302,28859,25.3,24.8,25.8,distrust,S1b strict QC,
+2024,9056,28853,31.4,30.9,31.9,distrust,S1b strict QC,
+2025,7855,20708,37.9,37.3,38.6,distrust,S1b strict QC,
+2023,,29283,25.1,24.6,25.6,distrust,S2b IPW (completion propensity),29283
+2024,,29131,31.2,30.7,31.8,distrust,S2b IPW (completion propensity),29125.5139853077
+2025,,20732,37.9,37.3,38.6,distrust,S2b IPW (completion propensity),20681.9118286133
+2023,7357,29283,25.1,24.6,25.6,distrust,raw (default base),
+2024,9108,29131,31.3,30.7,31.8,distrust,raw (default base),
+2025,7863,20732,37.9,37.3,38.6,distrust,raw (default base),
+2023,24891,29325,84.9,84.5,85.3,fav,S1a include QC-excluded,
+2024,22515,29307,76.8,76.3,77.3,fav,S1a include QC-excluded,
+2025,15221,20810,73.1,72.5,73.7,fav,S1a include QC-excluded,
+2023,24528,28900,84.9,84.5,85.3,fav,S1b strict QC,
+2024,22211,28939,76.8,76.3,77.2,fav,S1b strict QC,
+2025,15203,20786,73.1,72.5,73.7,fav,S1b strict QC,
+2023,,29325,84.9,84.5,85.3,fav,S2b IPW (completion propensity),29325
+2024,,29217,76.8,76.3,77.3,fav,S2b IPW (completion propensity),29211.5011155292
+2025,,20810,73.1,72.5,73.7,fav,S2b IPW (completion propensity),20759.6929794801
+2026,,11314,62,61.1,62.9,fav,S2b IPW (completion propensity),11202.6046634029
+2023,24891,29325,84.9,84.5,85.3,fav,raw (default base),
+2024,22442,29217,76.8,76.3,77.3,fav,raw (default base),
+2025,15221,20810,73.1,72.5,73.7,fav,raw (default base),
+2023,13533,29283,46.2,45.6,46.8,trust,S1a include QC-excluded,
+2024,12073,29142,41.4,40.9,42,trust,S1a include QC-excluded,
+2025,7962,20732,38.4,37.7,39.1,trust,S1a include QC-excluded,
+2023,13270,28859,46,45.4,46.6,trust,S1b strict QC,
+2024,11924,28853,41.3,40.8,41.9,trust,S1b strict QC,
+2025,7950,20708,38.4,37.7,39.1,trust,S1b strict QC,
+2023,,29283,46.2,45.6,46.8,trust,S2b IPW (completion propensity),29283
+2024,,29131,41.4,40.9,42,trust,S2b IPW (completion propensity),29125.5139853077
+2025,,20732,38.4,37.7,39,trust,S2b IPW (completion propensity),20681.9118286133
+2023,13533,29283,46.2,45.6,46.8,trust,raw (default base),
+2024,12066,29131,41.4,40.9,42,trust,raw (default base),
+2025,7962,20732,38.4,37.7,39.1,trust,raw (default base),
+2023,29381,66684,44.1,43.7,44.4,use,S1a include QC-excluded,
+2024,29393,46463,63.3,62.8,63.7,use,S1a include QC-excluded,
+2025,20991,25975,80.8,80.3,81.3,use,S1a include QC-excluded,
+2023,28956,65869,44,43.6,44.3,use,S1b strict QC,
+2024,29006,45908,63.2,62.7,63.6,use,S1b strict QC,
+2025,20966,25852,81.1,80.6,81.6,use,S1b strict QC,
+2023,,66684,44.1,43.7,44.4,use,S2b IPW (completion propensity),66684
+2024,,46296,63.3,62.9,63.8,use,S2b IPW (completion propensity),46287.2899844792
+2025,,25974,81,80.5,81.4,use,S2b IPW (completion propensity),25909.2773543991
+2026,,13243,86.1,85.5,86.7,use,S2b IPW (completion propensity),13110.1611757544
+2023,29381,66684,44.1,43.7,44.4,use,raw (default base),
+2024,29284,46296,63.3,62.8,63.7,use,raw (default base),
+2025,20991,25974,80.8,80.3,81.3,use,raw (default base),

@@ -1,0 +1,11 @@
+year,x,n,pct,lo,hi,base,outcome
+2023,18627,46460,40.1,39.6,40.5,users + planners (as routed in 2023),trust
+2023,13533,29283,46.2,45.6,46.8,users only (analysis base),trust
+2023,13140,46460,28.3,27.9,28.7,users + planners (as routed in 2023),distrust
+2023,7357,29283,25.1,24.6,25.6,users only (analysis base),distrust
+2025,15798,25757,61.3,60.7,61.9,all professional devs (2025 asked everyone),fav
+2025,15221,20810,73.1,72.5,73.7,users only (analysis base),fav
+2025,8324,25646,32.5,31.9,33,all professional devs (2025 asked everyone),trust
+2025,7962,20732,38.4,37.7,39.1,users only (analysis base),trust
+2025,11764,25646,45.9,45.3,46.5,all professional devs (2025 asked everyone),distrust
+2025,7863,20732,37.9,37.3,38.6,users only (analysis base),distrust

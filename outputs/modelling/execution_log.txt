@@ -1,0 +1,181 @@
+[    0.9s] default base rows: 23969
+[    0.9s] == O1 favourability: temporal 2023-24 -> 2025, all models, D ==
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[    9.1s]   fav/temporal_2324to25/D: baseline AUC=0.500 LL=0.6004; logit AUC=0.567 LL=0.5926; rf AUC=0.562 LL=0.5962; xgb AUC=0.565 LL=0.5964; lgbm AUC=0.565 LL=0.5963; ensemble AUC=0.569 LL=0.5760; logit_recal AUC=0.567 LL=0.5754; lgbm_recal AUC=0.565 LL=0.5767
+[    9.1s] == O2 trust: temporal 2023-24 -> 2025, all models, D ==
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   17.2s]   trust/temporal_2324to25/D: baseline AUC=0.500 LL=0.6815; logit AUC=0.593 LL=0.6634; rf AUC=0.592 LL=0.6641; xgb AUC=0.591 LL=0.6653; lgbm AUC=0.593 LL=0.6637; ensemble AUC=0.595 LL=0.6579; logit_recal AUC=0.593 LL=0.6584; lgbm_recal AUC=0.593 LL=0.6585
+[   17.2s] == feature-set (leakage) comparison: logit vs lgbm, B and E ==
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   20.2s]   fav/temporal_2324to25/B: baseline AUC=0.500 LL=0.6004; logit AUC=0.729 LL=0.5178; lgbm AUC=0.722 LL=0.5248; logit_recal AUC=0.729 LL=0.5142; lgbm_recal AUC=0.722 LL=0.5182
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   23.5s]   fav/temporal_2324to25/E: baseline AUC=0.500 LL=0.6004; logit AUC=0.829 LL=0.4348; lgbm AUC=0.818 LL=0.4445; logit_recal AUC=0.829 LL=0.4347; lgbm_recal AUC=0.818 LL=0.4450
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   26.4s]   trust/temporal_2324to25/B: baseline AUC=0.500 LL=0.6815; logit AUC=0.669 LL=0.6322; lgbm AUC=0.665 LL=0.6348; logit_recal AUC=0.669 LL=0.6284; lgbm_recal AUC=0.665 LL=0.6306
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\impute\_base.py:647: UserWarning: Skipping features without any observed values: ['ai_complex_5']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   29.6s]   trust/temporal_2324to25/E: baseline AUC=0.500 LL=0.6815; logit AUC=0.800 LL=0.5326; lgbm AUC=0.796 LL=0.5346; logit_recal AUC=0.800 LL=0.5275; lgbm_recal AUC=0.796 LL=0.5326
+[   29.6s] == O1 favourability: series-break test 2023-25 -> 2026, D ==
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   35.1s]   fav/temporal_232425to26/D: baseline AUC=0.500 LL=0.7447; logit AUC=0.559 LL=0.7263; rf AUC=0.534 LL=0.7352; xgb AUC=0.551 LL=0.7336; lgbm AUC=0.547 LL=0.7348; ensemble AUC=0.554 LL=0.6899; logit_recal AUC=0.559 LL=0.6878; lgbm_recal AUC=0.547 LL=0.6923
+[   35.1s] == O3 AI-use status: temporal 2023-24 -> 2025, D ==
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   42.0s]   use/temporal_2324to25/D: baseline AUC=0.500 LL=0.7056; logit AUC=0.605 LL=0.7401; rf AUC=0.606 LL=0.7413; xgb AUC=0.604 LL=0.7331; lgbm AUC=0.605 LL=0.7374; ensemble AUC=0.608 LL=0.5965; logit_recal AUC=0.605 LL=0.5948; lgbm_recal AUC=0.605 LL=0.5979
+[   42.0s] == Grouped (country) CV 2023-25 ==
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   45.4s]     fold 1/5 done (test n=2482)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   48.5s]     fold 2/5 done (test n=2482)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   53.4s]     fold 3/5 done (test n=2482)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   57.8s]     fold 4/5 done (test n=2481)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   61.7s]     fold 5/5 done (test n=2481)
+[   65.8s]   fav/groupcv_country/D: baseline AUC=0.563 LL=0.5110; logit AUC=0.595 LL=0.5082; rf AUC=0.591 LL=0.5079; xgb AUC=0.590 LL=0.5089; lgbm AUC=0.601 LL=0.5066; ensemble AUC=0.606 LL=0.5052; logit_recal AUC=0.601 LL=0.5070; lgbm_recal AUC=0.601 LL=0.5062
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   69.6s]     fold 1/5 done (test n=2475)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   73.7s]     fold 2/5 done (test n=2475)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   78.1s]     fold 3/5 done (test n=2475)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   83.1s]     fold 4/5 done (test n=2474)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   88.2s]     fold 5/5 done (test n=2474)
+[   92.1s]   trust/groupcv_country/D: baseline AUC=0.523 LL=0.6862; logit AUC=0.600 LL=0.6707; rf AUC=0.600 LL=0.6706; xgb AUC=0.597 LL=0.6720; lgbm AUC=0.596 LL=0.6719; ensemble AUC=0.592 LL=0.6732; logit_recal AUC=0.586 LL=0.6751; lgbm_recal AUC=0.589 LL=0.6738
+[   92.1s] == O2b trust 2026 (conditional scale, broad trust): grouped CV within 2026 ==
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   93.6s]     fold 1/5 done (test n=344)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   95.4s]     fold 2/5 done (test n=325)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   96.6s]     fold 3/5 done (test n=325)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[   98.1s]     fold 4/5 done (test n=325)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\mbermejocano\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[  100.1s]     fold 5/5 done (test n=324)
+[  101.4s]   trust26/groupcv_country/D: baseline AUC=0.478 LL=0.5583; logit AUC=0.559 LL=0.5539; rf AUC=0.549 LL=0.5552; xgb AUC=0.525 LL=0.5580; lgbm AUC=0.522 LL=0.5645; ensemble AUC=0.531 LL=0.5563; logit_recal AUC=0.555 LL=0.5549; lgbm_recal AUC=0.516 LL=0.5599
+[  101.4s] metrics written
+[  102.5s]   SHAP fav: top lgbm = ['region', 'log_comp', 'org_size', 'years_code', 'education']
+[  114.0s]   bootstrap stability fav done
+[  115.8s]   year stability fav done
+[  119.2s]   PDP fav done
+[  120.0s]   SHAP trust: top lgbm = ['region', 'years_code', 'education', 'log_comp', 'age_band']
+[  126.3s]   bootstrap stability trust done
+[  127.3s]   year stability trust done
+[  129.5s]   PDP trust done
+[  130.6s]   SHAP use: top lgbm = ['years_code', 'region', 'org_size', 'age_band', 'remote_work']
+[  131.9s] explanations written
+[  133.0s] audit written
+[  133.0s] site_data/modelling.json written
+[  133.0s] done; total minutes: 2.2
+sys:1: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\mbermejocano\\DEV\\ai-adoption-atlas\\outputs\\modelling\\run_log.txt' mode='w' encoding='utf-8'>

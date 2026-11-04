@@ -1,0 +1,10 @@
+ai_use_freq,x,n,pct,lo,hi,outcome
+Daily,3582,12997,27.6,26.8,28.3,distrust
+Monthly or infrequent,2134,3263,65.4,63.8,67,distrust
+Weekly,2147,4472,48,46.5,49.5,distrust
+Daily,11387,13054,87.2,86.6,87.8,fav
+Monthly or infrequent,993,3270,30.4,28.8,32,fav
+Weekly,2841,4486,63.3,61.9,64.7,fav
+Daily,6238,12997,48,47.1,48.9,trust
+Monthly or infrequent,500,3263,15.3,14.1,16.6,trust
+Weekly,1224,4472,27.4,26.1,28.7,trust

@@ -1,0 +1,146 @@
+{
+  "title": "AI Adoption Atlas - who favours and trusts AI, and does complex ML earn its place?",
+  "attribution": "Data: Stack Overflow Developer Survey 2023-2026, Stack Exchange Inc., licensed under ODbL 1.0 (https://opendatacommons.org/licenses/odbl/1-0/; https://survey.stackoverflow.co/).",
+  "seed": 20261104,
+  "generated": "2026-11-04",
+  "unweighted": true,
+  "analysis_mode": "exploratory_deterministic_subsample",
+  "analysis_note": "Exploratory deterministic 12% subsample (23,969/199,743 rows); 200/100 fixed-prediction metric bootstrap resamples; 8 driver refits (descriptive ranges, not CIs); 2 configurations per booster. Separate tuning/calibration; no test-label fitting. Analyst-selected thresholds, no preregistration or multiplicity correction.",
+  "sample_fraction": 0.12,
+  "realized_sample_fraction": 0.11999919897067732,
+  "default_base_n": 199743,
+  "sampled_base_n": 23969,
+  "threads": 2,
+  "sampling": "pandas sample without replacement, fixed seed; before outcome filtering; all default-base ages retained",
+  "bootstrap": {
+    "primary_metric_reps": 200,
+    "secondary_metric_reps": 100,
+    "subgroup_metric_reps": 100,
+    "stability_refits": 8,
+    "metric_model_refits": 0,
+    "driver_interval": "descriptive 2.5/97.5 percentiles of only these refits; not a confidence interval",
+    "metric_scope": "paired fixed-prediction percentile intervals; respondent resampling for temporal tests, country clusters for grouped CV; conditional on fitted models and selected sample",
+    "multiplicity_adjusted": false,
+    "p_values": false
+  },
+  "tuning_budget": {
+    "logit_C": [
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      1.0
+    ],
+    "rf_configs": 2,
+    "rf_trees": 100,
+    "configs_per_booster": 2,
+    "max_boost_rounds": 350,
+    "early_stopping_patience": 50,
+    "objective": "validation log-loss",
+    "boost_refit_rounds": "selected best iteration; no test-based adjustment"
+  },
+  "calibration": "Split validation year/country holdout 50:50, stratified by outcome: tune on first half, reserve second half. Refit excludes calibration rows. Fit Platt on predictions of final refit, never test labels. Equal-weight logistic/XGB/LGBM ensemble.",
+  "split_audit": "outputs/modelling/tables/split_audit.csv; grouped n_train is mean actual per-fold refit size",
+  "exploratory_thresholds": true,
+  "preregistered": false,
+  "limitations": [
+    "Self-selected unweighted survey; not population estimates or causal effects.",
+    "Repeated cross-sections, not tracked people; no deployment or individual decisions.",
+    "2026 sentiment/trust measurement break; trust26 is separate, not a trend.",
+    "B tasks and E sibling attitudes are contemporaneous, leakage-prone correlates; D is primary.",
+    "Many comparisons, no multiplicity correction; no superiority/equivalence claim.",
+    "Calibration may drift across years; grouped CV pools years and is not future forecasting.",
+    "Small tuning and refit budgets; driver ranges are descriptive, not inferential CIs."
+  ],
+  "data_sha256": "832fb96dbab7b6b90cbd907bbc157299671ed799256432a7e9ed3b321d026dd8",
+  "script_sha256": "e74946282556c6fc6a3b03bea7ce5abef6a1f0f29565ab2758142faf553095fa",
+  "outcomes": {
+    "fav": "AI favourable (Very/Favorable vs rest incl. Unsure), AI users 2023-26",
+    "trust": "Trusts AI accuracy (Somewhat/Highly trust vs rest), AI users 2023-25",
+    "trust26": "2026 conditional trust: trusts AI for many tasks vs narrower/no trust (different scale)",
+    "use": "Uses AI tools vs not (2023-25; 2025 definition CC)"
+  },
+  "feature_sets": {
+    "D": "demographics/context only",
+    "B": "D + AI-usage tasks",
+    "E": "B + sibling AI-attitude items (leakage-prone)"
+  },
+  "margin_that_matters": {
+    "d_auc": 0.01,
+    "rel_log_loss": 0.01
+  },
+  "sample_sizes": [
+    {
+      "outcome": "fav",
+      "year": 2023,
+      "n": 4704,
+      "prevalence": 0.8463
+    },
+    {
+      "outcome": "fav",
+      "year": 2024,
+      "n": 4451,
+      "prevalence": 0.765
+    },
+    {
+      "outcome": "fav",
+      "year": 2025,
+      "n": 3253,
+      "prevalence": 0.735
+    },
+    {
+      "outcome": "fav",
+      "year": 2026,
+      "n": 1671,
+      "prevalence": 0.6206
+    },
+    {
+      "outcome": "trust",
+      "year": 2023,
+      "n": 4694,
+      "prevalence": 0.4842
+    },
+    {
+      "outcome": "trust",
+      "year": 2024,
+      "n": 4436,
+      "prevalence": 0.438
+    },
+    {
+      "outcome": "trust",
+      "year": 2025,
+      "n": 3243,
+      "prevalence": 0.3901
+    },
+    {
+      "outcome": "trust26",
+      "year": 2026,
+      "n": 1643,
+      "prevalence": 0.2459
+    },
+    {
+      "outcome": "use",
+      "year": 2023,
+      "n": 10582,
+      "prevalence": 0.4462
+    },
+    {
+      "outcome": "use",
+      "year": 2024,
+      "n": 7236,
+      "prevalence": 0.6168
+    },
+    {
+      "outcome": "use",
+      "year": 2025,
+      "n": 4125,
+      "prevalence": 0.7966
+    },
+    {
+      "outcome": "use",
+      "year": 2026,
+      "n": 2026,
+      "prevalence": 0.8312
+    }
+  ]
+}

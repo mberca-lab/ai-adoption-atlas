@@ -1,0 +1,13 @@
+outcome,contrast,direction,n_checks,all_pp_checks_agree,all_or_checks_agree,manski_lo,manski_hi,manski_excludes_zero,verdict
+use,2023->2024,increase,7,TRUE,TRUE,16.3,20.8,TRUE,robust (model/QC/IPW); see Manski bounds
+use,2024->2025,increase,7,TRUE,TRUE,-2.8,24.9,FALSE,robust (model/QC/IPW); see Manski bounds
+use,2023->2025,increase,7,TRUE,TRUE,18,41.2,TRUE,robust (model/QC/IPW); see Manski bounds
+fav,2023->2024,decrease,9,TRUE,TRUE,-8.3,-7.8,TRUE,robust (model/QC/IPW); see Manski bounds
+fav,2024->2025,decrease,9,TRUE,TRUE,-4.4,-3.2,TRUE,robust (model/QC/IPW); see Manski bounds
+fav,2023->2025,decrease,9,TRUE,TRUE,-12.4,-11.3,TRUE,robust (model/QC/IPW); see Manski bounds
+trust,2023->2024,decrease,8,TRUE,TRUE,-5.2,-4.4,TRUE,robust (model/QC/IPW); see Manski bounds
+trust,2024->2025,decrease,8,TRUE,TRUE,-3.8,-2,TRUE,robust (model/QC/IPW); see Manski bounds
+trust,2023->2025,decrease,8,TRUE,TRUE,-8.5,-6.9,TRUE,robust (model/QC/IPW); see Manski bounds
+distrust,2023->2024,increase,7,TRUE,TRUE,5.7,6.6,TRUE,robust (model/QC/IPW); see Manski bounds
+distrust,2024->2025,increase,7,TRUE,TRUE,5.9,7.6,TRUE,robust (model/QC/IPW); see Manski bounds
+distrust,2023->2025,increase,7,TRUE,TRUE,12.1,13.7,TRUE,robust (model/QC/IPW); see Manski bounds

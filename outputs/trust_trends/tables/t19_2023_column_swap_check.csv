@@ -1,0 +1,3 @@
+raw_column_2023,n_nonmissing,n_distinct_values,pct_values_on_trust_scale,pct_multiselect,harmonised_use,naive_name_based_use
+AIBen,61396,5,100,0,trust (ai_trust_5) - mapped by meaning,would be read as 'benefits'
+AIAcc,38594,60,0,83.2,benefits (ai_benefits_raw),would be read as 'trust in accuracy'

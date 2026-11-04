@@ -1,0 +1,9 @@
+outcome,dimension,auc_gap_logit,auc_gap_lgbm
+fav,age_band,0.03616,0.05014
+fav,exp_band,0.03652,0.01352
+fav,region,0.07631,0.09662
+fav,role_family,0.10741,0.10898
+trust,age_band,0.04608,0.07314
+trust,exp_band,0.05933,0.06874
+trust,region,0.07601,0.06437
+trust,role_family,0.13293,0.14706

@@ -1,0 +1,217 @@
+outcome,model,feature,label,value,value_num,mean_pred,n_level_test
+fav,logit,years_code,Years coding,0,0.00000,0.83253,39
+fav,lgbm,years_code,Years coding,0,0.00000,0.83101,39
+fav,logit,years_code,Years coding,2,2.00000,0.84131,186
+fav,lgbm,years_code,Years coding,2,2.00000,0.83101,186
+fav,logit,years_code,Years coding,4,4.00000,0.84707,357
+fav,lgbm,years_code,Years coding,4,4.00000,0.83938,357
+fav,logit,years_code,Years coding,6,6.00000,0.84090,447
+fav,lgbm,years_code,Years coding,6,6.00000,0.84046,447
+fav,logit,years_code,Years coding,8,8.00000,0.82363,408
+fav,lgbm,years_code,Years coding,8,8.00000,0.81930,408
+fav,logit,years_code,Years coding,10,10.00000,0.80775,398
+fav,lgbm,years_code,Years coding,10,10.00000,0.80132,398
+fav,logit,years_code,Years coding,12,12.00000,0.80027,317
+fav,lgbm,years_code,Years coding,12,12.00000,0.80294,317
+fav,logit,years_code,Years coding,14,14.00000,0.79904,370
+fav,lgbm,years_code,Years coding,14,14.00000,0.80014,370
+fav,logit,years_code,Years coding,16,16.00000,0.80084,353
+fav,lgbm,years_code,Years coding,16,16.00000,0.80119,353
+fav,logit,years_code,Years coding,18,18.00000,0.80288,211
+fav,lgbm,years_code,Years coding,18,18.00000,0.81305,211
+fav,logit,years_code,Years coding,20,20.00000,0.80463,251
+fav,lgbm,years_code,Years coding,20,20.00000,0.81401,251
+fav,logit,years_code,Years coding,22,22.00000,0.80611,104
+fav,lgbm,years_code,Years coding,22,22.00000,0.81591,104
+fav,logit,years_code,Years coding,24,24.00000,0.80736,217
+fav,lgbm,years_code,Years coding,24,24.00000,0.80802,217
+fav,logit,years_code,Years coding,26,26.00000,0.80839,202
+fav,lgbm,years_code,Years coding,26,26.00000,0.80711,202
+fav,logit,years_code,Years coding,28,28.00000,0.80924,96
+fav,lgbm,years_code,Years coding,28,28.00000,0.80694,96
+fav,logit,years_code,Years coding,30,30.00000,0.80991,151
+fav,lgbm,years_code,Years coding,30,30.00000,0.80694,151
+fav,logit,years_code,Years coding,32,32.00000,0.81044,57
+fav,lgbm,years_code,Years coding,32,32.00000,0.81070,57
+fav,logit,years_code,Years coding,34,34.00000,0.81085,85
+fav,lgbm,years_code,Years coding,34,34.00000,0.81070,85
+fav,logit,years_code,Years coding,36,36.00000,0.81116,80
+fav,lgbm,years_code,Years coding,36,36.00000,0.81070,80
+fav,logit,years_code,Years coding,38,38.00000,0.81138,36
+fav,lgbm,years_code,Years coding,38,38.00000,0.81070,36
+fav,logit,years_code,Years coding,40,40.00000,0.81155,107
+fav,lgbm,years_code,Years coding,40,40.00000,0.81070,107
+fav,logit,age_band,Age band,25-34,,0.81571,1102
+fav,lgbm,age_band,Age band,25-34,,0.81585,1102
+fav,logit,age_band,Age band,35-44,,0.81883,942
+fav,lgbm,age_band,Age band,35-44,,0.82010,942
+fav,logit,age_band,Age band,18-24,,0.81494,518
+fav,lgbm,age_band,Age band,18-24,,0.81615,518
+fav,logit,age_band,Age band,45-54,,0.80550,437
+fav,lgbm,age_band,Age band,45-54,,0.81399,437
+fav,logit,age_band,Age band,55-64,,0.81690,185
+fav,lgbm,age_band,Age band,55-64,,0.81315,185
+fav,logit,region,Region,Europe & Central Asia,,0.79015,1549
+fav,lgbm,region,Region,Europe & Central Asia,,0.79493,1549
+fav,logit,region,Region,North America,,0.81513,752
+fav,lgbm,region,Region,North America,,0.81479,752
+fav,logit,region,Region,East Asia & Pacific,,0.83206,261
+fav,lgbm,region,Region,East Asia & Pacific,,0.82804,261
+fav,logit,region,Region,South Asia,,0.86840,247
+fav,lgbm,region,Region,South Asia,,0.86488,247
+fav,logit,region,Region,Latin America & Caribbean,,0.88442,229
+fav,lgbm,region,Region,Latin America & Caribbean,,0.87483,229
+fav,logit,region,Region,"Middle East, North Africa, Afghanistan & Pakistan",,0.82615,129
+fav,lgbm,region,Region,"Middle East, North Africa, Afghanistan & Pakistan",,0.82291,129
+fav,logit,role_family,Role family,Developer / software engineer,,0.81272,2271
+fav,lgbm,role_family,Role family,Developer / software engineer,,0.81526,2271
+fav,logit,role_family,Role family,Data / AI / analytics,,0.84652,207
+fav,lgbm,role_family,Role family,Data / AI / analytics,,0.85052,207
+fav,logit,role_family,Role family,Ops / infra / security / support,,0.81065,202
+fav,lgbm,role_family,Role family,Ops / infra / security / support,,0.80301,202
+fav,logit,role_family,Role family,Management / exec / product,,0.83944,192
+fav,lgbm,role_family,Role family,Management / exec / product,,0.84280,192
+fav,logit,role_family,Role family,Student,,0.76857,185
+fav,lgbm,role_family,Role family,Student,,0.77512,185
+fav,logit,role_family,Role family,Other,,0.80800,128
+fav,lgbm,role_family,Role family,Other,,0.80328,128
+fav,logit,dev_status,Developer status,Professional developer,,0.81420,2599
+fav,lgbm,dev_status,Developer status,Professional developer,,0.81597,2599
+fav,logit,dev_status,Developer status,Codes as part of work/studies,,0.82250,325
+fav,lgbm,dev_status,Developer status,Codes as part of work/studies,,0.82564,325
+fav,logit,dev_status,Developer status,Learning to code,,0.80335,119
+fav,lgbm,dev_status,Developer status,Learning to code,,0.81001,119
+fav,logit,org_size,Organisation size,20-99,,0.80361,488
+fav,lgbm,org_size,Organisation size,20-99,,0.81275,488
+fav,logit,org_size,Organisation size,100-499,,0.77615,473
+fav,lgbm,org_size,Organisation size,100-499,,0.78419,473
+fav,logit,org_size,Organisation size,2-19,,0.84200,428
+fav,lgbm,org_size,Organisation size,2-19,,0.84833,428
+fav,logit,org_size,Organisation size,"10,000+",,0.81905,380
+fav,lgbm,org_size,Organisation size,"10,000+",,0.82168,380
+fav,logit,org_size,Organisation size,"1,000-4,999",,0.80986,358
+fav,lgbm,org_size,Organisation size,"1,000-4,999",,0.81182,358
+fav,logit,org_size,Organisation size,500-999,,0.78917,190
+fav,lgbm,org_size,Organisation size,500-999,,0.79606,190
+fav,logit,org_size,Organisation size,Just me,,0.81445,137
+fav,lgbm,org_size,Organisation size,Just me,,0.82473,137
+fav,logit,org_size,Organisation size,"5,000-9,999",,0.82465,128
+fav,lgbm,org_size,Organisation size,"5,000-9,999",,0.83396,128
+fav,logit,remote_work,Remote/hybrid/in-person,Hybrid,,0.82163,1325
+fav,lgbm,remote_work,Remote/hybrid/in-person,Hybrid,,0.82220,1325
+fav,logit,remote_work,Remote/hybrid/in-person,Remote,,0.81993,886
+fav,lgbm,remote_work,Remote/hybrid/in-person,Remote,,0.82091,886
+fav,logit,remote_work,Remote/hybrid/in-person,In-person,,0.82709,415
+fav,lgbm,remote_work,Remote/hybrid/in-person,In-person,,0.82544,415
+fav,logit,ic_or_pm,IC vs manager,Individual contributor,,0.81333,2158
+fav,lgbm,ic_or_pm,IC vs manager,Individual contributor,,0.81585,2158
+fav,logit,ic_or_pm,IC vs manager,People manager,,0.80774,417
+fav,lgbm,ic_or_pm,IC vs manager,People manager,,0.81668,417
+trust,logit,years_code,Years coding,0,0.00000,0.58203,39
+trust,lgbm,years_code,Years coding,0,0.00000,0.55416,39
+trust,logit,years_code,Years coding,2,2.00000,0.57247,181
+trust,lgbm,years_code,Years coding,2,2.00000,0.55416,181
+trust,logit,years_code,Years coding,4,4.00000,0.54160,354
+trust,lgbm,years_code,Years coding,4,4.00000,0.53434,354
+trust,logit,years_code,Years coding,6,6.00000,0.50403,449
+trust,lgbm,years_code,Years coding,6,6.00000,0.49065,449
+trust,logit,years_code,Years coding,8,8.00000,0.47049,409
+trust,lgbm,years_code,Years coding,8,8.00000,0.46226,409
+trust,logit,years_code,Years coding,10,10.00000,0.44687,395
+trust,lgbm,years_code,Years coding,10,10.00000,0.43576,395
+trust,logit,years_code,Years coding,12,12.00000,0.43401,316
+trust,lgbm,years_code,Years coding,12,12.00000,0.43668,316
+trust,logit,years_code,Years coding,14,14.00000,0.42821,372
+trust,lgbm,years_code,Years coding,14,14.00000,0.43307,372
+trust,logit,years_code,Years coding,16,16.00000,0.42568,354
+trust,lgbm,years_code,Years coding,16,16.00000,0.42904,354
+trust,logit,years_code,Years coding,18,18.00000,0.42332,211
+trust,lgbm,years_code,Years coding,18,18.00000,0.42960,211
+trust,logit,years_code,Years coding,20,20.00000,0.42056,251
+trust,lgbm,years_code,Years coding,20,20.00000,0.43016,251
+trust,logit,years_code,Years coding,22,22.00000,0.41748,104
+trust,lgbm,years_code,Years coding,22,22.00000,0.43066,104
+trust,logit,years_code,Years coding,24,24.00000,0.41416,217
+trust,lgbm,years_code,Years coding,24,24.00000,0.43007,217
+trust,logit,years_code,Years coding,26,26.00000,0.41065,202
+trust,lgbm,years_code,Years coding,26,26.00000,0.42282,202
+trust,logit,years_code,Years coding,28,28.00000,0.40703,96
+trust,lgbm,years_code,Years coding,28,28.00000,0.42129,96
+trust,logit,years_code,Years coding,30,30.00000,0.40338,151
+trust,lgbm,years_code,Years coding,30,30.00000,0.41498,151
+trust,logit,years_code,Years coding,32,32.00000,0.39976,57
+trust,lgbm,years_code,Years coding,32,32.00000,0.41498,57
+trust,logit,years_code,Years coding,34,34.00000,0.39624,85
+trust,lgbm,years_code,Years coding,34,34.00000,0.41498,85
+trust,logit,years_code,Years coding,36,36.00000,0.39289,80
+trust,lgbm,years_code,Years coding,36,36.00000,0.41498,80
+trust,logit,years_code,Years coding,38,38.00000,0.38977,36
+trust,lgbm,years_code,Years coding,38,38.00000,0.41498,36
+trust,logit,years_code,Years coding,40,40.00000,0.38695,107
+trust,lgbm,years_code,Years coding,40,40.00000,0.41498,107
+trust,logit,age_band,Age band,25-34,,0.42734,1100
+trust,lgbm,age_band,Age band,25-34,,0.43843,1100
+trust,logit,age_band,Age band,35-44,,0.46330,940
+trust,lgbm,age_band,Age band,35-44,,0.46160,940
+trust,logit,age_band,Age band,18-24,,0.40581,513
+trust,lgbm,age_band,Age band,18-24,,0.42913,513
+trust,logit,age_band,Age band,45-54,,0.47019,437
+trust,lgbm,age_band,Age band,45-54,,0.45555,437
+trust,logit,age_band,Age band,55-64,,0.52054,185
+trust,lgbm,age_band,Age band,55-64,,0.46573,185
+trust,logit,region,Region,Europe & Central Asia,,0.39952,1553
+trust,lgbm,region,Region,Europe & Central Asia,,0.40329,1553
+trust,logit,region,Region,North America,,0.44106,750
+trust,lgbm,region,Region,North America,,0.43917,750
+trust,logit,region,Region,East Asia & Pacific,,0.50902,260
+trust,lgbm,region,Region,East Asia & Pacific,,0.50042,260
+trust,logit,region,Region,South Asia,,0.55747,239
+trust,lgbm,region,Region,South Asia,,0.54018,239
+trust,logit,region,Region,Latin America & Caribbean,,0.51181,229
+trust,lgbm,region,Region,Latin America & Caribbean,,0.50511,229
+trust,logit,region,Region,"Middle East, North Africa, Afghanistan & Pakistan",,0.52160,128
+trust,lgbm,region,Region,"Middle East, North Africa, Afghanistan & Pakistan",,0.50490,128
+trust,logit,role_family,Role family,Developer / software engineer,,0.45228,2263
+trust,lgbm,role_family,Role family,Developer / software engineer,,0.45309,2263
+trust,logit,role_family,Role family,Data / AI / analytics,,0.45465,207
+trust,lgbm,role_family,Role family,Data / AI / analytics,,0.46049,207
+trust,logit,role_family,Role family,Ops / infra / security / support,,0.39997,204
+trust,lgbm,role_family,Role family,Ops / infra / security / support,,0.40959,204
+trust,logit,role_family,Role family,Management / exec / product,,0.47226,192
+trust,lgbm,role_family,Role family,Management / exec / product,,0.46519,192
+trust,logit,role_family,Role family,Student,,0.40298,184
+trust,lgbm,role_family,Role family,Student,,0.40844,184
+trust,logit,role_family,Role family,Other,,0.46265,125
+trust,lgbm,role_family,Role family,Other,,0.46479,125
+trust,logit,dev_status,Developer status,Professional developer,,0.43786,2596
+trust,lgbm,dev_status,Developer status,Professional developer,,0.44329,2596
+trust,logit,dev_status,Developer status,Codes as part of work/studies,,0.46237,325
+trust,lgbm,dev_status,Developer status,Codes as part of work/studies,,0.47189,325
+trust,logit,dev_status,Developer status,Learning to code,,0.50356,114
+trust,lgbm,dev_status,Developer status,Learning to code,,0.47793,114
+trust,logit,org_size,Organisation size,20-99,,0.44760,487
+trust,lgbm,org_size,Organisation size,20-99,,0.44635,487
+trust,logit,org_size,Organisation size,100-499,,0.43325,473
+trust,lgbm,org_size,Organisation size,100-499,,0.43412,473
+trust,logit,org_size,Organisation size,2-19,,0.46426,427
+trust,lgbm,org_size,Organisation size,2-19,,0.46098,427
+trust,logit,org_size,Organisation size,"10,000+",,0.45854,380
+trust,lgbm,org_size,Organisation size,"10,000+",,0.45580,380
+trust,logit,org_size,Organisation size,"1,000-4,999",,0.44931,357
+trust,lgbm,org_size,Organisation size,"1,000-4,999",,0.44123,357
+trust,logit,org_size,Organisation size,500-999,,0.43300,189
+trust,lgbm,org_size,Organisation size,500-999,,0.44377,189
+trust,logit,org_size,Organisation size,Just me,,0.44778,138
+trust,lgbm,org_size,Organisation size,Just me,,0.45152,138
+trust,logit,org_size,Organisation size,"5,000-9,999",,0.45616,128
+trust,lgbm,org_size,Organisation size,"5,000-9,999",,0.44941,128
+trust,logit,remote_work,Remote/hybrid/in-person,Hybrid,,0.43987,1324
+trust,lgbm,remote_work,Remote/hybrid/in-person,Hybrid,,0.44428,1324
+trust,logit,remote_work,Remote/hybrid/in-person,Remote,,0.44331,885
+trust,lgbm,remote_work,Remote/hybrid/in-person,Remote,,0.44762,885
+trust,logit,remote_work,Remote/hybrid/in-person,In-person,,0.47952,415
+trust,lgbm,remote_work,Remote/hybrid/in-person,In-person,,0.46612,415
+trust,logit,ic_or_pm,IC vs manager,Individual contributor,,0.43793,2157
+trust,lgbm,ic_or_pm,IC vs manager,Individual contributor,,0.44376,2157
+trust,logit,ic_or_pm,IC vs manager,People manager,,0.44599,417
+trust,lgbm,ic_or_pm,IC vs manager,People manager,,0.44737,417

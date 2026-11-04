@@ -12,6 +12,16 @@
 Full hashes are in `scripts/01_harmonise.R` (`RAWFILES`); the script refuses to run on a file whose
 hash, shape or year-specific "signature" columns don't match.
 
+### Recovery verification (4 November 2026)
+
+The official [`releases/2026` question bank](https://github.com/StackExchange/Survey/tree/releases/2026/questions)
+confirms the `CodeMain` primary-job definition and all four work-related `AISelect` tool categories.
+[`AITrust`](https://github.com/StackExchange/Survey/blob/releases/2026/questions/ai/AITrust.yaml)
+confirms that 2026 measures conditions of trust, not the earlier accuracy scale.
+The [2026 archive](https://github.com/StackExchange/Survey/tree/main/packages/archive/2026)
+now directs instrument users to that release. These checks support treating 2026 as a separate series;
+they do not resolve the previously recorded fieldwork-date typo or 2025 row-count discrepancy.
+
 ### File verification (done before any analysis)
 * Every file is the year its name says — confirmed by row/column counts, year-only questions
   (2023 `Q120`/`AIDev*`; 2024 `Check`/`AIEthics`/`AIChallenges`; 2025 `AIAgents`/`AIFrustration`;

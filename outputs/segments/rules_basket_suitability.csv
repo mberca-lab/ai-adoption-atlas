@@ -1,0 +1,6 @@
+basket,year,description,n_baskets,n_empty,n_distinct_items,n_items_supp_ge_1pct,mean_size,median_size,share_size_ge2,share_size_ge3,top_item,top_item_support,suitable,verdict
+B23,2023,2023 AI search/chat + AI developer tools used (past year),59369,0,21,11,1.97825464467988,2,0.563475888089744,0.247587124593643,ChatGPT,0.88365982246627,FALSE,limited: many single-item baskets; 
+B24,2024,2024 AI search & developer tools used (past year),44195,0,25,17,2.33711958366331,2,0.654893087453332,0.343613530942414,ChatGPT,0.852924538974997,TRUE,suitable
+B25M,2025,2025 AI model families used (past year) + AI-native IDEs/agents from the dev-environment list,15086,0,25,23,4.12852976269389,3,0.834349728224844,0.643046533209598,M:OpenAI GPT,0.830306244199921,TRUE,suitable
+B25A,2025,2025 external AI agent tools used (asked of AI-agent users only),8325,0,20,20,3.45129129129129,3,0.847927927927928,0.62954954954955,ChatGPT,0.817057057057057,TRUE,suitable
+B26,2026,2026 AI coding agents/assistants + LLM providers used (past year),9272,0,55,41,6.25496117342537,5,0.998597929249353,0.932592752372735,LLM:Anthropic,0.817191544434858,TRUE,suitable

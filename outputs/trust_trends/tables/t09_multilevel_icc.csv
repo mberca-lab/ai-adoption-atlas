@@ -1,0 +1,5 @@
+outcome,n_countries,country_var,icc_latent,justified
+use,128,0.034,0.01,TRUE
+fav,117,0.038,0.011,TRUE
+trust,117,0.057,0.017,TRUE
+distrust,117,0.128,0.037,TRUE

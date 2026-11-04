@@ -9,3 +9,8 @@ scratch/
 .Rproj.user/
 __pycache__/
 .DS_Store
+site/screenshots/
+outputs/**/_model_params/
+outputs/**/_full_out.txt
+outputs/**/*run*.log
+outputs/**/run_log.txt

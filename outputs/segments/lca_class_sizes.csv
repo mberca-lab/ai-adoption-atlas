@@ -1,0 +1,4 @@
+class_id,class_name,n_model,share_model,n_modal,share_modal,avepp,share_lo,share_hi
+1,"Class 1: Favourable, trusting",25780,0.468443373567181,12271,0.475989138867339,0.89304283192722,,
+2,"Class 2: Favourable, cautious on accuracy",25780,0.345347567128715,8624,0.334522885958107,0.795069119599534,,
+3,"Class 3: Unfavourable, cautious on accuracy",25780,0.186209059304103,4885,0.189487975174554,0.833583987745968,,

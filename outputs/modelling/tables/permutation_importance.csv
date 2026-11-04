@@ -1,0 +1,67 @@
+outcome,model,feature,label,auc_drop,auc_drop_sd,n_test
+fav,logit,age_band,Age band,0.00048,0.00057,3253
+fav,logit,dev_status,Developer status,0.00592,0.00212,3253
+fav,logit,employment_status,Employment,0.00218,0.00153,3253
+fav,logit,remote_work,Remote/hybrid/in-person,0.00203,0.00119,3253
+fav,logit,education,Education,0.00850,0.00337,3253
+fav,logit,role_family,Role family,0.01187,0.00502,3253
+fav,logit,org_size,Organisation size,0.00955,0.00240,3253
+fav,logit,ic_or_pm,IC vs manager,0.00018,0.00066,3253
+fav,logit,region,Region,0.03363,0.00630,3253
+fav,logit,years_code,Years coding,0.00075,0.00279,3253
+fav,logit,log_comp,Compensation (log),0.01093,0.00539,3253
+fav,lgbm,age_band,Age band,-0.00042,0.00059,3253
+fav,lgbm,dev_status,Developer status,0.00179,0.00100,3253
+fav,lgbm,employment_status,Employment,-0.00166,0.00055,3253
+fav,lgbm,remote_work,Remote/hybrid/in-person,0.00360,0.00046,3253
+fav,lgbm,education,Education,0.00919,0.00551,3253
+fav,lgbm,role_family,Role family,0.01311,0.00484,3253
+fav,lgbm,org_size,Organisation size,0.00752,0.00467,3253
+fav,lgbm,ic_or_pm,IC vs manager,0.00017,0.00016,3253
+fav,lgbm,region,Region,0.03366,0.00672,3253
+fav,lgbm,years_code,Years coding,0.00105,0.00360,3253
+fav,lgbm,log_comp,Compensation (log),0.01071,0.00817,3253
+trust,logit,age_band,Age band,0.01246,0.00316,3243
+trust,logit,dev_status,Developer status,0.00465,0.00277,3243
+trust,logit,employment_status,Employment,-0.00076,0.00117,3243
+trust,logit,remote_work,Remote/hybrid/in-person,-0.00045,0.00012,3243
+trust,logit,education,Education,0.00810,0.00120,3243
+trust,logit,role_family,Role family,-0.00264,0.00112,3243
+trust,logit,org_size,Organisation size,-0.00058,0.00173,3243
+trust,logit,ic_or_pm,IC vs manager,0.00156,0.00110,3243
+trust,logit,region,Region,0.03430,0.00238,3243
+trust,logit,years_code,Years coding,0.01883,0.00328,3243
+trust,logit,log_comp,Compensation (log),0.00754,0.00524,3243
+trust,lgbm,age_band,Age band,0.00625,0.00057,3243
+trust,lgbm,dev_status,Developer status,0.00167,0.00219,3243
+trust,lgbm,employment_status,Employment,0.00016,0.00004,3243
+trust,lgbm,remote_work,Remote/hybrid/in-person,0.00024,0.00031,3243
+trust,lgbm,education,Education,0.00788,0.00164,3243
+trust,lgbm,role_family,Role family,-0.00107,0.00078,3243
+trust,lgbm,org_size,Organisation size,-0.00045,0.00156,3243
+trust,lgbm,ic_or_pm,IC vs manager,0.00063,0.00039,3243
+trust,lgbm,region,Region,0.03308,0.00370,3243
+trust,lgbm,years_code,Years coding,0.01428,0.00357,3243
+trust,lgbm,log_comp,Compensation (log),0.00739,0.00478,3243
+use,logit,age_band,Age band,0.00490,0.00225,4125
+use,logit,dev_status,Developer status,0.02138,0.00176,4125
+use,logit,employment_status,Employment,-0.00083,0.00093,4125
+use,logit,remote_work,Remote/hybrid/in-person,0.01811,0.00392,4125
+use,logit,education,Education,-0.00464,0.00127,4125
+use,logit,role_family,Role family,0.00015,0.00069,4125
+use,logit,org_size,Organisation size,-0.00615,0.00231,4125
+use,logit,ic_or_pm,IC vs manager,0.00550,0.00031,4125
+use,logit,region,Region,0.01261,0.00416,4125
+use,logit,years_code,Years coding,0.02938,0.00334,4125
+use,logit,log_comp,Compensation (log),0.00319,0.00144,4125
+use,lgbm,age_band,Age band,0.00065,0.00104,4125
+use,lgbm,dev_status,Developer status,0.00630,0.00050,4125
+use,lgbm,employment_status,Employment,0.00111,0.00030,4125
+use,lgbm,remote_work,Remote/hybrid/in-person,0.01230,0.00251,4125
+use,lgbm,education,Education,0.00067,0.00146,4125
+use,lgbm,role_family,Role family,0.00015,0.00052,4125
+use,lgbm,org_size,Organisation size,0.00364,0.00478,4125
+use,lgbm,ic_or_pm,IC vs manager,0.00089,0.00048,4125
+use,lgbm,region,Region,0.01855,0.00272,4125
+use,lgbm,years_code,Years coding,0.05366,0.00293,4125
+use,lgbm,log_comp,Compensation (log),0.00366,0.00062,4125

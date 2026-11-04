@@ -1,0 +1,123 @@
+outcome,feature,level,coef,exp_penalized_coefficient,C
+fav,age_band,18-24,0.09458,1.09920,0.10000
+fav,age_band,25-34,0.09981,1.10496,0.10000
+fav,age_band,35-44,0.12109,1.12873,0.10000
+fav,age_band,45-54,0.03207,1.03259,0.10000
+fav,age_band,55-64,0.10791,1.11395,0.10000
+fav,age_band,65+,0.04779,1.04895,0.10000
+fav,age_band,Under 18,-0.28949,0.74865,0.10000
+fav,age_band,infrequent_sklearn,-0.19622,0.82183,0.10000
+fav,dev_status,Codes as part of work/studies,0.04413,1.04512,0.10000
+fav,dev_status,Former developer,0.24704,1.28022,0.10000
+fav,dev_status,Hobbyist,-0.17691,0.83785,0.10000
+fav,dev_status,Learning to code,-0.08406,0.91938,0.10000
+fav,dev_status,Professional developer,-0.01265,0.98743,0.10000
+fav,employment_status,Employed,0.04807,1.04924,0.10000
+fav,employment_status,Independent/self-employed,0.08209,1.08555,0.10000
+fav,employment_status,Not employed,0.08033,1.08365,0.10000
+fav,employment_status,Prefer not to say,-0.20712,0.81292,0.10000
+fav,employment_status,Student,-0.02449,0.97581,0.10000
+fav,employment_status,infrequent_sklearn,0.03867,1.03943,0.10000
+fav,remote_work,Hybrid,0.06235,1.06434,0.10000
+fav,remote_work,In-person,0.10068,1.10593,0.10000
+fav,remote_work,Missing,-0.19602,0.82200,0.10000
+fav,remote_work,Remote,0.05053,1.05183,0.10000
+fav,education,Associate,0.07953,1.08278,0.10000
+fav,education,Bachelor's,0.07597,1.07893,0.10000
+fav,education,Master's,0.19941,1.22068,0.10000
+fav,education,Missing,-0.21123,0.80959,0.10000
+fav,education,Other,-0.04831,0.95283,0.10000
+fav,education,Primary,0.01338,1.01347,0.10000
+fav,education,Professional/doctoral,-0.10899,0.89673,0.10000
+fav,education,Secondary,0.13712,1.14696,0.10000
+fav,education,"Some college, no degree",-0.11932,0.88753,0.10000
+fav,role_family,Data / AI / analytics,0.13806,1.14804,0.10000
+fav,role_family,Developer / software engineer,-0.10517,0.90017,0.10000
+fav,role_family,Management / exec / product,0.08385,1.08746,0.10000
+fav,role_family,Missing,0.19375,1.21379,0.10000
+fav,role_family,Ops / infra / security / support,-0.11894,0.88786,0.10000
+fav,role_family,Other,-0.13640,0.87249,0.10000
+fav,role_family,Research / education,0.33973,1.40457,0.10000
+fav,role_family,Student,-0.37731,0.68570,0.10000
+fav,org_size,"1,000-4,999",0.01743,1.01758,0.10000
+fav,org_size,"10,000+",0.07939,1.08263,0.10000
+fav,org_size,100-499,-0.19244,0.82494,0.10000
+fav,org_size,2-19,0.24545,1.27820,0.10000
+fav,org_size,20-99,-0.02347,0.97680,0.10000
+fav,org_size,"5,000-9,999",0.11834,1.12563,0.10000
+fav,org_size,500-999,-0.11426,0.89202,0.10000
+fav,org_size,Don't know,-0.42119,0.65627,0.10000
+fav,org_size,Just me,0.04809,1.04926,0.10000
+fav,org_size,Missing,0.26022,1.29722,0.10000
+fav,ic_or_pm,Individual contributor,-0.00353,0.99648,0.10000
+fav,ic_or_pm,Missing,0.06172,1.06367,0.10000
+fav,ic_or_pm,People manager,-0.04064,0.96017,0.10000
+fav,region,East Asia & Pacific,-0.05408,0.94736,0.10000
+fav,region,Europe & Central Asia,-0.33199,0.71749,0.10000
+fav,region,Latin America & Caribbean,0.38503,1.46966,0.10000
+fav,region,"Middle East, North Africa, Afghanistan & Pakistan",-0.09629,0.90820,0.10000
+fav,region,Missing,-0.04154,0.95931,0.10000
+fav,region,North America,-0.17209,0.84190,0.10000
+fav,region,South Asia,0.23558,1.26564,0.10000
+fav,region,Sub-Saharan Africa,0.09294,1.09740,0.10000
+trust,age_band,18-24,-0.24377,0.78367,0.10000
+trust,age_band,25-34,-0.15082,0.86000,0.10000
+trust,age_band,35-44,0.00191,1.00191,0.10000
+trust,age_band,45-54,0.03095,1.03143,0.10000
+trust,age_band,55-64,0.24215,1.27399,0.10000
+trust,age_band,65+,0.24960,1.28352,0.10000
+trust,age_band,Under 18,-0.15169,0.85926,0.10000
+trust,age_band,infrequent_sklearn,0.11788,1.12511,0.10000
+trust,dev_status,Codes as part of work/studies,-0.09887,0.90586,0.10000
+trust,dev_status,Former developer,0.21884,1.24464,0.10000
+trust,dev_status,Hobbyist,0.10526,1.11100,0.10000
+trust,dev_status,Learning to code,0.07300,1.07573,0.10000
+trust,dev_status,Professional developer,-0.20201,0.81708,0.10000
+trust,employment_status,Employed,0.00062,1.00062,0.10000
+trust,employment_status,Independent/self-employed,0.01540,1.01551,0.10000
+trust,employment_status,Not employed,-0.01037,0.98968,0.10000
+trust,employment_status,Prefer not to say,0.07759,1.08067,0.10000
+trust,employment_status,Student,-0.15061,0.86019,0.10000
+trust,employment_status,infrequent_sklearn,0.16358,1.17772,0.10000
+trust,remote_work,Hybrid,-0.02881,0.97160,0.10000
+trust,remote_work,In-person,0.13764,1.14756,0.10000
+trust,remote_work,Missing,0.00164,1.00164,0.10000
+trust,remote_work,Remote,-0.01426,0.98584,0.10000
+trust,education,Associate,0.19794,1.21889,0.10000
+trust,education,Bachelor's,0.21243,1.23668,0.10000
+trust,education,Master's,0.11451,1.12132,0.10000
+trust,education,Missing,0.08826,1.09227,0.10000
+trust,education,Other,0.04654,1.04764,0.10000
+trust,education,Primary,-0.12686,0.88086,0.10000
+trust,education,Professional/doctoral,-0.13812,0.87099,0.10000
+trust,education,Secondary,-0.19976,0.81892,0.10000
+trust,education,"Some college, no degree",-0.09871,0.90600,0.10000
+trust,role_family,Data / AI / analytics,0.05452,1.05604,0.10000
+trust,role_family,Developer / software engineer,0.04452,1.04552,0.10000
+trust,role_family,Management / exec / product,0.12842,1.13703,0.10000
+trust,role_family,Missing,0.23701,1.26745,0.10000
+trust,role_family,Ops / infra / security / support,-0.17897,0.83613,0.10000
+trust,role_family,Other,0.08813,1.09213,0.10000
+trust,role_family,Research / education,-0.11151,0.89448,0.10000
+trust,role_family,Student,-0.16590,0.84713,0.10000
+trust,org_size,"1,000-4,999",0.04622,1.04731,0.10000
+trust,org_size,"10,000+",0.08507,1.08880,0.10000
+trust,org_size,100-499,-0.02174,0.97849,0.10000
+trust,org_size,2-19,0.10908,1.11525,0.10000
+trust,org_size,20-99,0.03900,1.03977,0.10000
+trust,org_size,"5,000-9,999",0.07509,1.07798,0.10000
+trust,org_size,500-999,-0.02280,0.97746,0.10000
+trust,org_size,Don't know,-0.29080,0.74767,0.10000
+trust,org_size,Just me,0.03976,1.04056,0.10000
+trust,org_size,Missing,0.03733,1.03804,0.10000
+trust,ic_or_pm,Individual contributor,-0.03399,0.96658,0.10000
+trust,ic_or_pm,Missing,0.13009,1.13893,0.10000
+trust,ic_or_pm,People manager,0.00011,1.00011,0.10000
+trust,region,East Asia & Pacific,0.02169,1.02192,0.10000
+trust,region,Europe & Central Asia,-0.43157,0.64949,0.10000
+trust,region,Latin America & Caribbean,0.03311,1.03366,0.10000
+trust,region,"Middle East, North Africa, Afghanistan & Pakistan",0.07313,1.07587,0.10000
+trust,region,Missing,0.00622,1.00624,0.10000
+trust,region,North America,-0.25723,0.77319,0.10000
+trust,region,South Asia,0.22069,1.24694,0.10000
+trust,region,Sub-Saharan Africa,0.43016,1.53750,0.10000

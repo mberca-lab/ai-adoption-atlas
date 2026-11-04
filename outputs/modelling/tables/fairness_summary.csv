@@ -1,0 +1,17 @@
+outcome,dimension,model,n_groups,tpr_gap,fpr_gap,selection_gap,max_abs_calib_gap
+fav,age_band,lgbm,5,0.10684,0.14597,0.09508,0.11202
+fav,age_band,logit,5,0.12994,0.21910,0.14744,0.11018
+fav,exp_band,lgbm,4,0.19611,0.18575,0.19365,0.10067
+fav,exp_band,logit,4,0.28805,0.19023,0.26006,0.10639
+fav,region,lgbm,6,0.56998,0.67366,0.59435,0.12985
+fav,region,logit,6,0.71213,0.77622,0.72802,0.13007
+fav,role_family,lgbm,6,0.55264,0.62759,0.57859,0.09405
+fav,role_family,logit,6,0.52803,0.67931,0.56926,0.09947
+trust,age_band,lgbm,5,0.28015,0.24043,0.25146,0.12423
+trust,age_band,logit,5,0.21106,0.18449,0.19103,0.10422
+trust,exp_band,lgbm,4,0.66550,0.60503,0.64746,0.08796
+trust,exp_band,logit,4,0.61181,0.53839,0.58625,0.08972
+trust,region,lgbm,6,0.83529,0.89613,0.87251,0.08366
+trust,region,logit,6,0.80842,0.86404,0.84290,0.08457
+trust,role_family,lgbm,6,0.40885,0.32723,0.31773,0.11858
+trust,role_family,logit,6,0.34128,0.29093,0.30561,0.13448

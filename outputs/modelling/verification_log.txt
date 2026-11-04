@@ -1,0 +1,19 @@
+test_calibration_subgroup_and_stability (__main__.AggregateTests.test_calibration_subgroup_and_stability) ... ok
+test_completed_run_repeatability (__main__.AggregateTests.test_completed_run_repeatability) ... ok
+test_denominators_and_splits (__main__.AggregateTests.test_denominators_and_splits) ... ok
+test_export_matches_aggregate_tables (__main__.AggregateTests.test_export_matches_aggregate_tables) ... ok
+test_figures_match_current_tables (__main__.AggregateTests.test_figures_match_current_tables) ... ok
+test_metrics_differences_and_verdicts (__main__.AggregateTests.test_metrics_differences_and_verdicts) ... ok
+test_provenance_and_budget (__main__.AggregateTests.test_provenance_and_budget) ... ok
+test_auc_ties_and_single_class (__main__.LogicTests.test_auc_ties_and_single_class) ... ok
+test_calibration_partition_disjoint_deterministic (__main__.LogicTests.test_calibration_partition_disjoint_deterministic) ... ok
+test_equal_probabilities_are_not_arbitrarily_split (__main__.LogicTests.test_equal_probabilities_are_not_arbitrarily_split) ... ok
+test_paired_bootstrap_identical_models_and_clusters (__main__.LogicTests.test_paired_bootstrap_identical_models_and_clusters) ... ok
+test_training_refit_and_platt_never_share_calibration_rows (__main__.LogicTests.test_training_refit_and_platt_never_share_calibration_rows) ... ok
+test_unseen_category_not_learned (__main__.LogicTests.test_unseen_category_not_learned) ... ok
+test_verdict_does_not_infer_equivalence (__main__.LogicTests.test_verdict_does_not_infer_equivalence) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.605s
+
+OK

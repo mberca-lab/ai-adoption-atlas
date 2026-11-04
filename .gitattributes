@@ -1,0 +1,5 @@
+# Generated evidence is hashed by byte content; preserve it across operating systems.
+outputs/** -text -whitespace
+site_data/*.json -text -whitespace
+site/data/*.json -text -whitespace
+*.png binary

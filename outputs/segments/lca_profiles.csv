@@ -1,0 +1,46 @@
+class_id,class_name,indicator,indicator_label,category_id,category,prob
+1,"Class 1: Favourable, trusting",SENT3,Sentiment,1,Favourable,0.960998026633669
+1,"Class 1: Favourable, trusting",SENT3,Sentiment,2,Neutral/unsure,0.033322813895446
+1,"Class 1: Favourable, trusting",SENT3,Sentiment,3,Unfavourable,0.00567915947089977
+2,"Class 2: Favourable, cautious on accuracy",SENT3,Sentiment,1,Favourable,0.639405967440775
+2,"Class 2: Favourable, cautious on accuracy",SENT3,Sentiment,2,Neutral/unsure,0.314155489096335
+2,"Class 2: Favourable, cautious on accuracy",SENT3,Sentiment,3,Unfavourable,0.0464385434627919
+3,"Class 3: Unfavourable, cautious on accuracy",SENT3,Sentiment,1,Favourable,0.293901692562063
+3,"Class 3: Unfavourable, cautious on accuracy",SENT3,Sentiment,2,Neutral/unsure,0.285937190335659
+3,"Class 3: Unfavourable, cautious on accuracy",SENT3,Sentiment,3,Unfavourable,0.420161117102242
+1,"Class 1: Favourable, trusting",TRUST4,Trust in accuracy,1,Trust (highly/somewhat),0.755441070056876
+1,"Class 1: Favourable, trusting",TRUST4,Trust in accuracy,2,Neither,0.188870451012335
+1,"Class 1: Favourable, trusting",TRUST4,Trust in accuracy,3,Somewhat distrust,0.0437704062310158
+1,"Class 1: Favourable, trusting",TRUST4,Trust in accuracy,4,Highly distrust,0.0119180726997932
+2,"Class 2: Favourable, cautious on accuracy",TRUST4,Trust in accuracy,1,Trust (highly/somewhat),0.106198440565146
+2,"Class 2: Favourable, cautious on accuracy",TRUST4,Trust in accuracy,2,Neither,0.413343815070572
+2,"Class 2: Favourable, cautious on accuracy",TRUST4,Trust in accuracy,3,Somewhat distrust,0.452783929424642
+2,"Class 2: Favourable, cautious on accuracy",TRUST4,Trust in accuracy,4,Highly distrust,0.0276738149395065
+3,"Class 3: Unfavourable, cautious on accuracy",TRUST4,Trust in accuracy,1,Trust (highly/somewhat),0.0105088332032067
+3,"Class 3: Unfavourable, cautious on accuracy",TRUST4,Trust in accuracy,2,Neither,0.0112669665998793
+3,"Class 3: Unfavourable, cautious on accuracy",TRUST4,Trust in accuracy,3,Somewhat distrust,0.434175314693456
+3,"Class 3: Unfavourable, cautious on accuracy",TRUST4,Trust in accuracy,4,Highly distrust,0.544048885503418
+1,"Class 1: Favourable, trusting",CPLX5,Complex-task ability,1,Good/very good,0.683027065959962
+1,"Class 1: Favourable, trusting",CPLX5,Complex-task ability,2,Neither,0.162892850404997
+1,"Class 1: Favourable, trusting",CPLX5,Complex-task ability,3,Bad,0.116106320336741
+1,"Class 1: Favourable, trusting",CPLX5,Complex-task ability,4,Very poor,0.0176800546760939
+1,"Class 1: Favourable, trusting",CPLX5,Complex-task ability,5,Don't use for complex/don't know,0.0202937086222169
+2,"Class 2: Favourable, cautious on accuracy",CPLX5,Complex-task ability,1,Good/very good,0.105117886023064
+2,"Class 2: Favourable, cautious on accuracy",CPLX5,Complex-task ability,2,Neither,0.239432746274919
+2,"Class 2: Favourable, cautious on accuracy",CPLX5,Complex-task ability,3,Bad,0.458957660722982
+2,"Class 2: Favourable, cautious on accuracy",CPLX5,Complex-task ability,4,Very poor,0.128130681206542
+2,"Class 2: Favourable, cautious on accuracy",CPLX5,Complex-task ability,5,Don't use for complex/don't know,0.0683610257723679
+3,"Class 3: Unfavourable, cautious on accuracy",CPLX5,Complex-task ability,1,Good/very good,0.018450931834146
+3,"Class 3: Unfavourable, cautious on accuracy",CPLX5,Complex-task ability,2,Neither,0.0223197286776487
+3,"Class 3: Unfavourable, cautious on accuracy",CPLX5,Complex-task ability,3,Bad,0.238459541204899
+3,"Class 3: Unfavourable, cautious on accuracy",CPLX5,Complex-task ability,4,Very poor,0.621133440837018
+3,"Class 3: Unfavourable, cautious on accuracy",CPLX5,Complex-task ability,5,Don't use for complex/don't know,0.0996363574462559
+1,"Class 1: Favourable, trusting",THREAT3,Job threat,1,No threat,0.594846589959462
+1,"Class 1: Favourable, trusting",THREAT3,Job threat,2,Not sure,0.214090471988346
+1,"Class 1: Favourable, trusting",THREAT3,Job threat,3,Threat,0.191062938052225
+2,"Class 2: Favourable, cautious on accuracy",THREAT3,Job threat,1,No threat,0.637499244316397
+2,"Class 2: Favourable, cautious on accuracy",THREAT3,Job threat,2,Not sure,0.247647869177711
+2,"Class 2: Favourable, cautious on accuracy",THREAT3,Job threat,3,Threat,0.114852886505789
+3,"Class 3: Unfavourable, cautious on accuracy",THREAT3,Job threat,1,No threat,0.714234027406047
+3,"Class 3: Unfavourable, cautious on accuracy",THREAT3,Job threat,2,Not sure,0.172424569130186
+3,"Class 3: Unfavourable, cautious on accuracy",THREAT3,Job threat,3,Threat,0.113341403463737

@@ -1,0 +1,4 @@
+PASS: missing-item / single-row posterior; empty-prefix regression;
+class probability normalization, selection gates and null intervals;
+fresh bootstrap ranges, bounded antecedents, basket suitability;
+JSON genuine pair-edge provenance and fractions.
