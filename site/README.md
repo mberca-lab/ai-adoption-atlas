@@ -1,4 +1,4 @@
-# AI Adoption Atlas: front end
+# AI, in Practice: front end
 
 This is a static, scroll-driven data story. There is no build step, it uses no CDN and no tracking, and every path is relative, so it is ready for GitHub Pages.
 

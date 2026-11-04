@@ -1,4 +1,4 @@
-# AI Adoption Atlas
+# AI, in Practice
 
 **Developers are adopting AI at speed. Do they trust what they use?**
 
