@@ -96,9 +96,17 @@ python -m http.server 8000 --bind 127.0.0.1 --directory site
 Open `http://127.0.0.1:8000/`. Serving the site is necessary; `file://` cannot load JSON.
 Browser QA checks every chapter at desktop/mobile sizes, dark/reduced-motion variants,
 keyboard interactions, real-data status, missing-data failure, and console errors.
-GitHub Actions runs release checks and browser QA before publishing **only `site/`**
-to the `gh-pages` branch and requesting a native Pages build. Raw data and analysis
-outputs outside the website are never included in the deployed branch.
+GitHub Actions runs the lightweight release checks and data-adapter tests.
+Browser QA runs locally with the command above. Hosting uses GitHub's built-in
+Pages publishing from `gh-pages`, without a custom deployment pipeline.
+After checking a website update, publish **only `site/`** from the repository root:
+
+```powershell
+$snapshot = git subtree split --prefix=site
+git push origin "${snapshot}:gh-pages"
+```
+
+Raw data and analysis outputs outside the website are never included in that branch.
 
 ## Limits
 
