@@ -2,7 +2,7 @@
 
 **Developers are adopting AI at speed. Do they trust what they use?**
 
-[Explore the interactive story](https://mberca.github.io/ai-adoption-atlas/) |
+[Explore the interactive story](https://mbc81.github.io/ai-adoption-atlas/) |
 [Trust and trends](outputs/trust_trends/FINDINGS.md) |
 [Model comparison](outputs/modelling/FINDINGS.md) |
 [Segments and tool baskets](outputs/segments/FINDINGS.md)
@@ -42,7 +42,7 @@ and explicitly distinguished from this follow-up.
 
 ## Explore without installing anything
 
-The [published story](https://mberca.github.io/ai-adoption-atlas/) is a static website.
+The [published story](https://mbc81.github.io/ai-adoption-atlas/) is a static website.
 It includes keyboard-operable controls, accessible data tables, light/dark themes, print styles,
 and reduced-motion support. Charts load only the checked aggregate JSON exports.
 Missing or malformed results produce an explicit error, never silently invented findings.
