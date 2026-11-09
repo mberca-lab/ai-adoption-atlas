@@ -27,10 +27,10 @@ window.AtlasStory = {
     edition: "Edition 01 · {{years_span}}",
     author: "Margarita Bermejo Cano",
     links: {
-      repo: "https://github.com/Mbc81/ai-adoption-atlas",
-      cv: "https://mbc81.github.io/cv-margarita/",
+      repo: "https://github.com/mberca-lab/ai-adoption-atlas",
+      cv: "https://mberca-lab.github.io/cv-margarita/",
       linkedin: "https://www.linkedin.com/in/margaritabermejocano/",
-      sibling: "https://mbc81.github.io/engagement-atlas/",
+      sibling: "https://mberca-lab.github.io/engagement-atlas/",
       survey: "https://survey.stackoverflow.co/",
       surveyArchive: "https://github.com/StackExchange/Survey",
       odbl: "https://opendatacommons.org/licenses/odbl/1-0/"
